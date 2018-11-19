@@ -15,12 +15,12 @@
         <jenkins.version>2.7.3</jenkins.version>
         <java.level>7</java.level>
     </properties>
-    <name>TODO Plugin</name>
-    <description>TODO</description>
+    <name>Jenkins Timeline</name>
+    <description>An interactive build timeline to help you visualize your build pipeline and identify bottlenecks.</description>
     <licenses>
         <license>
-            <name>MIT License</name>
-            <url>https://opensource.org/licenses/MIT</url>
+            <name>Apache 2.0</name>
+            <url>https://opensource.org/licenses/Apache-2.0</url>
         </license>
     </licenses>
     <!-- Assuming you want to host on @jenkinsci:

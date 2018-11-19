@@ -1,4 +1,4 @@
 <?jelly escape-by-default='true'?>
 <div>
-    TODO
+    An interactive build timeline to help you visualize your build pipeline and identify bottlenecks.
 </div>
