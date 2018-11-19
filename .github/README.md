@@ -37,5 +37,7 @@ Thanks goes to these wonderful people [emoji key](https://github.com/kentcdodds/
 | [<img src="https://avatars.githubusercontent.com/u/39271619?s=100" width="100px;"/><br /><sub><b>Brandon Baksh</b></sub>](https://github.com/brandonbaksh)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=brandonbaksh) | [<img src="https://avatars0.githubusercontent.com/u/6210361?s=400&v=4" width="100px;"/><br /><sub><b>Marc Cataford</b></sub>](https://github.com/mcataford)<br />[💻](https://github.com/tophat/tophat/jenkins-timeline-plugin/commits?author=mcataford) |
 |---|---|
 
+We welcome contributions from the community, Top Hatters and non-Top Hatters alike. Check out our [contributing guidelines](CONTRIBUTING.md) for more details.
+
 ## Credits
 Thanks to [Carol Skelly](https://github.com/iatek) for donating the github organization!
