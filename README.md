@@ -1,5 +1,7 @@
 # Overview
 
+[![Builds](https://img.shields.io/circleci/project/github/tophat/jenkins-timeline-plugin.svg)](https://circleci.com/gh/tophat/jenkins-timeline-plugin)
+
 Jenkins Timeline Plugin
 
 Jenkins TL is a jenkins plugin that allows users to gain knowledge about the execution of their builds.
