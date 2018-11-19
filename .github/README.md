@@ -31,5 +31,10 @@ To work on the project, you will need ...
 
 The makefile is set up with a few useful commands to abstract away `mvn` calls. Call `make build` to build the `hpi` file that you can import in your Jenkins instance to install the plugin.
 
+## Contributors
+Thanks goes to these wonderful people [emoji key](https://github.com/kentcdodds/all-contributors#emoji-key):
+
+| [<img src="https://avatars.githubusercontent.com/u/39271619?s=100" width="100px;"/><br /><sub><b>Brandon Baksh</b></sub>](https://github.com/brandonbaksh)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=brandonbaksh) | [<img src="https://avatars0.githubusercontent.com/u/6210361?s=400&v=4" width="100px;"/><br /><sub><b>Marc Cataford</b></sub>](https://github.com/mcataford)<br />[💻](https://github.com/tophat/tophat/jenkins-timeline-plugin/commits?author=mcataford) |
+
 ## Credits
 Thanks to [Carol Skelly](https://github.com/iatek) for donating the github organization!
