@@ -1,6 +1,7 @@
 version: 2
 jobs:
   test:
+    working_directory: ~/jenkins-timeline-plugin
     docker:
       - image: circleci/openjdk:8-jdk-node-browsers-legacy
     steps:
@@ -8,6 +9,7 @@ jobs:
       - run: make clean_install
       - run: make test
   build:
+    working_directory: ~/jenkins-timeline-plugin
     docker:
       - image: circleci/openjdk:8-jdk-node-browsers-legacy
     steps:
