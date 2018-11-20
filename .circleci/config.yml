@@ -6,8 +6,9 @@ jobs:
       - image: maven:3.5.4-jdk-8-alpine
     steps:
       - checkout
-      - run: mvn clean install
-      - run: mvn test
+      - run: sudo apt-get install make
+      - run: make clean install
+      - run: make test
   build:
     working_directory: ~/jenkins-timeline-plugin
     docker:
