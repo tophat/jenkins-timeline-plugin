@@ -3,7 +3,7 @@ jobs:
   test:
     working_directory: ~/jenkins-timeline-plugin
     docker:
-      - image: circleci/openjdk:8-jdk-node-browsers-legacy
+      - image: circleci/maven:3.5.4-jdk-8-alpine
     steps:
       - checkout
       - run: make clean_install
