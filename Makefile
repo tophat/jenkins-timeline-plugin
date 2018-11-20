@@ -9,3 +9,7 @@ package:
 .PHONY: test
 test:
 	mvn test
+
+.PHONY: clean_install
+clean_install:
+	mvn clean install

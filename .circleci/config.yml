@@ -5,11 +5,11 @@ jobs:
       - image: circleci/openjdk:8-jdk-node-browsers-legacy
     steps:
       - checkout
-      - run: make build
+      - run: make clean_install
       - run: make test
   build:
     docker:
-      - image: debian:stretch
+      - image: circleci/openjdk:8-jdk-node-browsers-legacy
     steps:
       - checkout
       - run: make build
