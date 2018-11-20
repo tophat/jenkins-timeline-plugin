@@ -2,7 +2,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: debian:stretch
+      - image: circleci/openjdk:8-jdk-node-browsers-legacy
     steps:
       - checkout
       - run: make test
