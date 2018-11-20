@@ -1,21 +1,22 @@
 package io.jenkins.plugins.jenkinstl;
 
-import jenkins.model.TransientActionFactory;
+import hudson.Extension;
 import hudson.model.Action;
 import java.util.Collection;
 import java.util.Collections;
-import hudson.Extension;
-import hudson.model.Build;
+import jenkins.model.TransientActionFactory;
+import org.jenkinsci.plugins.workflow.job.WorkflowRun;
 
 @Extension
-public class MenuItemFactory extends TransientActionFactory<Build> {
+public class MenuItemFactory extends TransientActionFactory<WorkflowRun> {
     @Override
-    public Class<Build> type() {
-        return Build.class; 
+    public Class<WorkflowRun> type() {
+        return WorkflowRun.class; 
     }
 
     @Override
-    public Collection<? extends Action> createFor(Build build) {
-        return Collections.singleton(new MenuItem()); 
+    public Collection<? extends Action> createFor(WorkflowRun build) {
+        String buildUrl = build.getAbsoluteUrl();
+        return Collections.singleton(new MenuItem(buildUrl)); 
     }
 }
