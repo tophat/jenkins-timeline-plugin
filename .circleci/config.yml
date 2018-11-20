@@ -5,9 +5,7 @@ jobs:
       - image: debian:stretch
     steps:
       - checkout
-      - run:
-          name: Maven tests
-          command: make test
+      - run: make test
   build:
     docker:
       - image: debian:stretch
