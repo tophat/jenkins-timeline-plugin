@@ -11,7 +11,7 @@ public class MenuItem implements Action {
 
     @Override
     public String getIconFileName() {
-        return "plugin/jenkins-timeline/jenkinstl.png";
+        return "plugin/jenkins-timeline/logo_sidepanel.png";
     }
 
     @Override
