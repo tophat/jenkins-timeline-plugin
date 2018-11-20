@@ -4,3 +4,5 @@ src/main/webapp/*.js
 src/main/webapp/*.json
 src/main/webapp/*.html
 work/*
+*.log
+node_modules
