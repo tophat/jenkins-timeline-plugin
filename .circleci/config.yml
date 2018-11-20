@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: apk add make
-      - run: make clean install
+      - run: make clean_install
       - run: make test
   build:
     working_directory: ~/jenkins-timeline-plugin
