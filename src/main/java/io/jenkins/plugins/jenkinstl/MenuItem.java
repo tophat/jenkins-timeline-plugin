@@ -3,7 +3,11 @@ package io.jenkins.plugins.jenkinstl;
 import hudson.model.Action;
 
 public class MenuItem implements Action {
-    public MenuItem() {}
+    private String buildUrl;
+
+    public MenuItem(String buildUrl) {
+        this.buildUrl = buildUrl;
+    }
 
     @Override
     public String getIconFileName() {
@@ -17,6 +21,6 @@ public class MenuItem implements Action {
 
     @Override
     public String getUrlName() {
-        return "/plugin/jenkins-timeline/index.html";
+        return "/plugin/jenkins-timeline/index.html?build_url="+this.buildUrl;
     }
 }
