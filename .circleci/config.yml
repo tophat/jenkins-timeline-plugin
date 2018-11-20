@@ -1,5 +1,13 @@
 version: 2
 jobs:
+  test:
+    docker:
+      - image: debian:stretch
+    steps:
+      - checkout
+      - run:
+          name: Maven tests
+          command: make test
   build:
     docker:
       - image: debian:stretch
