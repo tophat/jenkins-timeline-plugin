@@ -50,7 +50,7 @@ export default class Dashboard extends React.Component {
     }
 
     getStageInfo = stageEndpoint => {
-        stageEndpoint = 'http://localhost:8080' + stageEndpoint
+        // stageEndpoint = 'http://localhost:8080' + stageEndpoint
         return axios.get(stageEndpoint)
             .then(result => {
                 const stageData = result.data

@@ -54,7 +54,9 @@ export default class DashHeader extends React.PureComponent {
                     <Label>{runningTime}</Label>
                 </Row>
                 <Row>
-                    
+                    <Label>{buildStatus}</Label>
+                    <Label>{startTime}</Label>
+                    <Label>{runningTime}</Label>
                 </Row>
             </Container>
         )
