@@ -33,8 +33,20 @@ The plugin adds a __Build Timeline__ link in every Pipeline build page menu. Cli
 To work on the project, you will need ...
 
 - [Maven 3.1.0+](https://maven.apache.org/download.cgi);
-- [A Java development environment](https://www.oracle.com/technetwork/java/javase/downloads/index.html);
+- [A Java development environment](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html);
 - [A local instance of Jenkins](https://jenkins.io/doc/book/installing/);
+
+__Compatibility note__: The linked version of Java (JDK 8) is the preferred version for this project, as Maven seems to have trouble building with other versions.
+
+#### Common errors
+
+If a `java.nio.file.NoSuchFileException` about `hudson.Extension` prevents building using `make build`, make sure that you have set up your `JAVA_HOME` properly.
+
+In `~/.bash_profile`, make sure to export it as:
+
+```
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+```
 
 ### Building
 
