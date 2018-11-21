@@ -1,9 +1,10 @@
-import React from 'react'
-import Dashboard from '../Dashboard'
-import Enzyme, { shallow, mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
-import Chart from 'react-google-charts'
 import axios from 'axios'
+import Chart from 'react-google-charts'
+import Enzyme, { shallow, mount } from 'enzyme'
+import React from 'react'
+
+import Dashboard from '../Dashboard'
 import { mockWfApiResponse, mockNodeApiResponse } from './mockData'
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -41,7 +42,7 @@ describe('Dashboard', () => {
     describe('Formatting endpoint data', () => {
         it('calls the workflow api on mount', () => {
             const spy = jest.spyOn(axios, 'get')
-            const dashboard = shallow(<Dashboard buildUrl={mockBuildUrl} />)
+            shallow(<Dashboard buildUrl={mockBuildUrl} />)
             const expectedUrl = mockBuildUrl + 'wfapi/describe'
             expect(spy).toHaveBeenCalledWith(expectedUrl)
         })
@@ -57,7 +58,7 @@ describe('Dashboard', () => {
         })
 
         it('sets the state correctly from the api data', () => {
-            const spy = jest.spyOn(axios, 'get')
+            jest.spyOn(axios, 'get')
                 .mockImplementationOnce(() => Promise.resolve(mockWfApiResponse))
                 .mockImplementationOnce(() => Promise.resolve(mockNodeApiResponse))
                 .mockImplementation(() => Promise.resolve())
@@ -82,9 +83,9 @@ describe('Dashboard', () => {
                 expect(stages.length).toEqual(mockWfApiResponse.data.stages.length)
                 expect(stage.steps.length).toEqual(mockNodeApiResponse.data.stageFlowNodes.length)
                 expect(stage).toEqual(expectedStage)
-                
+
             })
         })
     })
-    
+
 })
