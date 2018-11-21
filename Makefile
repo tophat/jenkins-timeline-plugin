@@ -1,6 +1,6 @@
 .PHONY: clean_webapp
 clean_webapp:
-	find ./src/main/webapp -not -name 'jenkins_assets' -delete
+	find ./src/main/webapp/* | grep -v "jenkins_assets*" | xargs rm -rf
 
 .PHONY: build_all
 build_all:
@@ -12,7 +12,7 @@ build:
 
 .PHONY: build_webapp
 build_webapp:
-	cd jenkinstl && yarn install && PUBLIC_URL=/plugin/jenkins-timeline npm run build-to-plugin
+	make clean_webapp && cd jenkinstl && npm install && PUBLIC_URL=/plugin/jenkins-timeline npm run build-to-plugin
 
 .PHONY: package
 package:
