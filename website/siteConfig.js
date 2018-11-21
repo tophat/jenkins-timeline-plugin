@@ -2,7 +2,7 @@ const siteConfig = {
     title: 'Jenkins Timeline Plugin',
     tagline: 'A build timeline to facilitate the inspection of Jenkins pipelines and identify bottlenecks',
     // For deploy
-    cname: 'jenkins-timeline-plugin.js.org',
+    // cname: 'jenkins-timeline-plugin.js.org',
     url: 'https://tophat.github.io',
     baseUrl: '/jenkins-timeline-plugin/',
     projectName: 'jenkins-timeline-plugin',
