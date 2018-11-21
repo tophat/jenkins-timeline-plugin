@@ -12,7 +12,7 @@ build:
 
 .PHONY: build_webapp
 build_webapp:
-	cd jenkinstl && PUBLIC_URL=/plugin/jenkins-timeline npm run build-to-plugin
+	cd jenkinstl && yarn install && PUBLIC_URL=/plugin/jenkins-timeline npm run build-to-plugin
 
 .PHONY: package
 package:
