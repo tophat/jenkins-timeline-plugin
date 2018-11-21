@@ -20,6 +20,22 @@ ShallowWrapper {
       "children": Array [
         <ForwardRef>
           <ForwardRef>
+            <img
+              alt="Build timeline"
+              src="logo.png"
+            />
+            <ForwardRef>
+              Build timeline
+            </ForwardRef>
+          </ForwardRef>
+          <ForwardRef>
+            <ForwardRef>
+              Back to Jenkins
+            </ForwardRef>
+          </ForwardRef>
+        </ForwardRef>,
+        <ForwardRef>
+          <ForwardRef>
             Status: undefined
           </ForwardRef>
           <ForwardRef>
@@ -31,9 +47,13 @@ ShallowWrapper {
         </ForwardRef>,
         <ForwardRef>
           <ForwardRef>
-            <a>
-              Back to Jenkins
-            </a>
+            Status: undefined
+          </ForwardRef>
+          <ForwardRef>
+            Started on undefined
+          </ForwardRef>
+          <ForwardRef>
+            Ran for 
           </ForwardRef>
         </ForwardRef>,
       ],
@@ -41,6 +61,212 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <ForwardRef>
+              <img
+                alt="Build timeline"
+                src="logo.png"
+              />
+              <ForwardRef>
+                Build timeline
+              </ForwardRef>
+            </ForwardRef>,
+            <ForwardRef>
+              <ForwardRef>
+                Back to Jenkins
+              </ForwardRef>
+            </ForwardRef>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="Build timeline"
+                  src="logo.png"
+                />,
+                <ForwardRef>
+                  Build timeline
+                </ForwardRef>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Build timeline",
+                  "src": "logo.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Build timeline",
+                },
+                "ref": null,
+                "rendered": "Build timeline",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bZQynM",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
+    margin-left: 10px;
+    width: 100%;
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "render": [Function],
+                  "styledComponentId": "sc-bZQynM",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-gzVnrw",
+                "isStatic": true,
+                "rules": Array [
+                  "
+    display: flex;
+    align-items: center;
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "render": [Function],
+              "styledComponentId": "sc-gzVnrw",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <ForwardRef>
+                Back to Jenkins
+              </ForwardRef>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Back to Jenkins",
+                "href": undefined,
+              },
+              "ref": null,
+              "rendered": "Back to Jenkins",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htoDjs",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+    padding: 10px;
+    border: 3px solid rgba(0,0,0,0.3);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    color: ",
+                    "#fff",
+                    ";
+
+    &:hover {
+        background-color: rgba(0,0,0,0.3);
+        border-color: transparent;
+    }
+",
+                  ],
+                },
+                "displayName": "styled.button",
+                "render": [Function],
+                "styledComponentId": "sc-htoDjs",
+                "target": "button",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "rules": Array [
+                  "
+",
+                ],
+              },
+              "displayName": "styled.span",
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-EHOje",
+            "isStatic": true,
+            "rules": Array [
+              "
+    box-shadow: inset 9999px 0 0 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "render": [Function],
+          "styledComponentId": "sc-EHOje",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -73,7 +299,7 @@ ShallowWrapper {
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-htpNat",
+                "componentId": "sc-bxivhb",
                 "isStatic": true,
                 "rules": Array [
                   "
@@ -82,7 +308,7 @@ ShallowWrapper {
               },
               "displayName": "styled.span",
               "render": [Function],
-              "styledComponentId": "sc-htpNat",
+              "styledComponentId": "sc-bxivhb",
               "target": "span",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -102,7 +328,7 @@ ShallowWrapper {
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-htpNat",
+                "componentId": "sc-bxivhb",
                 "isStatic": true,
                 "rules": Array [
                   "
@@ -111,7 +337,7 @@ ShallowWrapper {
               },
               "displayName": "styled.span",
               "render": [Function],
-              "styledComponentId": "sc-htpNat",
+              "styledComponentId": "sc-bxivhb",
               "target": "span",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -131,7 +357,7 @@ ShallowWrapper {
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-htpNat",
+                "componentId": "sc-bxivhb",
                 "isStatic": true,
                 "rules": Array [
                   "
@@ -140,7 +366,7 @@ ShallowWrapper {
               },
               "displayName": "styled.span",
               "render": [Function],
-              "styledComponentId": "sc-htpNat",
+              "styledComponentId": "sc-bxivhb",
               "target": "span",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -158,6 +384,7 @@ ShallowWrapper {
               "
     display: flex;
     justify-content: space-between;
+    padding: 10px;
 ",
             ],
           },
@@ -175,55 +402,108 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <ForwardRef>
-            <a>
-              Back to Jenkins
-            </a>
-          </ForwardRef>,
+          "children": Array [
+            <ForwardRef>
+              Status: undefined
+            </ForwardRef>,
+            <ForwardRef>
+              Started on undefined
+            </ForwardRef>,
+            <ForwardRef>
+              Ran for 
+            </ForwardRef>,
+          ],
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": <a>
-              Back to Jenkins
-            </a>,
-          },
-          "ref": null,
-          "rendered": Object {
+        "rendered": Array [
+          Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": "Back to Jenkins",
-              "href": undefined,
+              "children": "Status: undefined",
             },
             "ref": null,
-            "rendered": "Back to Jenkins",
-            "type": "a",
-          },
-          "type": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
-              "isStatic": true,
-              "rules": Array [
-                "
+            "rendered": "Status: undefined",
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "rules": Array [
+                  "
 ",
-              ],
+                ],
+              },
+              "displayName": "styled.span",
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
             },
-            "displayName": "styled.span",
-            "render": [Function],
-            "styledComponentId": "sc-htpNat",
-            "target": "span",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
           },
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Started on undefined",
+            },
+            "ref": null,
+            "rendered": "Started on undefined",
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "rules": Array [
+                  "
+",
+                ],
+              },
+              "displayName": "styled.span",
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Ran for ",
+            },
+            "ref": null,
+            "rendered": "Ran for ",
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "rules": Array [
+                  "
+",
+                ],
+              },
+              "displayName": "styled.span",
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+        ],
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
@@ -234,6 +514,7 @@ ShallowWrapper {
               "
     display: flex;
     justify-content: space-between;
+    padding: 10px;
 ",
             ],
           },
@@ -261,8 +542,10 @@ ShallowWrapper {
     color: ",
           "#fff",
           ";
-    padding: 10px;
+
     font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
 ",
         ],
       },
@@ -284,6 +567,22 @@ ShallowWrapper {
         "children": Array [
           <ForwardRef>
             <ForwardRef>
+              <img
+                alt="Build timeline"
+                src="logo.png"
+              />
+              <ForwardRef>
+                Build timeline
+              </ForwardRef>
+            </ForwardRef>
+            <ForwardRef>
+              <ForwardRef>
+                Back to Jenkins
+              </ForwardRef>
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
               Status: undefined
             </ForwardRef>
             <ForwardRef>
@@ -295,9 +594,13 @@ ShallowWrapper {
           </ForwardRef>,
           <ForwardRef>
             <ForwardRef>
-              <a>
-                Back to Jenkins
-              </a>
+              Status: undefined
+            </ForwardRef>
+            <ForwardRef>
+              Started on undefined
+            </ForwardRef>
+            <ForwardRef>
+              Ran for 
             </ForwardRef>
           </ForwardRef>,
         ],
@@ -305,6 +608,212 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <ForwardRef>
+                <img
+                  alt="Build timeline"
+                  src="logo.png"
+                />
+                <ForwardRef>
+                  Build timeline
+                </ForwardRef>
+              </ForwardRef>,
+              <ForwardRef>
+                <ForwardRef>
+                  Back to Jenkins
+                </ForwardRef>
+              </ForwardRef>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="Build timeline"
+                    src="logo.png"
+                  />,
+                  <ForwardRef>
+                    Build timeline
+                  </ForwardRef>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "Build timeline",
+                    "src": "logo.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Build timeline",
+                  },
+                  "ref": null,
+                  "rendered": "Build timeline",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bZQynM",
+                      "isStatic": true,
+                      "rules": Array [
+                        "
+    margin-left: 10px;
+    width: 100%;
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "render": [Function],
+                    "styledComponentId": "sc-bZQynM",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  },
+                },
+              ],
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-gzVnrw",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+    display: flex;
+    align-items: center;
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "render": [Function],
+                "styledComponentId": "sc-gzVnrw",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <ForwardRef>
+                  Back to Jenkins
+                </ForwardRef>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Back to Jenkins",
+                  "href": undefined,
+                },
+                "ref": null,
+                "rendered": "Back to Jenkins",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htoDjs",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
+    padding: 10px;
+    border: 3px solid rgba(0,0,0,0.3);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    color: ",
+                      "#fff",
+                      ";
+
+    &:hover {
+        background-color: rgba(0,0,0,0.3);
+        border-color: transparent;
+    }
+",
+                    ],
+                  },
+                  "displayName": "styled.button",
+                  "render": [Function],
+                  "styledComponentId": "sc-htoDjs",
+                  "target": "button",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+",
+                  ],
+                },
+                "displayName": "styled.span",
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "span",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-EHOje",
+              "isStatic": true,
+              "rules": Array [
+                "
+    box-shadow: inset 9999px 0 0 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "render": [Function],
+            "styledComponentId": "sc-EHOje",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -337,7 +846,7 @@ ShallowWrapper {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "sc-bxivhb",
                   "isStatic": true,
                   "rules": Array [
                     "
@@ -346,7 +855,7 @@ ShallowWrapper {
                 },
                 "displayName": "styled.span",
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "sc-bxivhb",
                 "target": "span",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -366,7 +875,7 @@ ShallowWrapper {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "sc-bxivhb",
                   "isStatic": true,
                   "rules": Array [
                     "
@@ -375,7 +884,7 @@ ShallowWrapper {
                 },
                 "displayName": "styled.span",
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "sc-bxivhb",
                 "target": "span",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -395,7 +904,7 @@ ShallowWrapper {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "sc-bxivhb",
                   "isStatic": true,
                   "rules": Array [
                     "
@@ -404,7 +913,7 @@ ShallowWrapper {
                 },
                 "displayName": "styled.span",
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "sc-bxivhb",
                 "target": "span",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -422,6 +931,7 @@ ShallowWrapper {
                 "
     display: flex;
     justify-content: space-between;
+    padding: 10px;
 ",
               ],
             },
@@ -439,55 +949,108 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <ForwardRef>
-              <a>
-                Back to Jenkins
-              </a>
-            </ForwardRef>,
+            "children": Array [
+              <ForwardRef>
+                Status: undefined
+              </ForwardRef>,
+              <ForwardRef>
+                Started on undefined
+              </ForwardRef>,
+              <ForwardRef>
+                Ran for 
+              </ForwardRef>,
+            ],
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "children": <a>
-                Back to Jenkins
-              </a>,
-            },
-            "ref": null,
-            "rendered": Object {
+          "rendered": Array [
+            Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "children": "Back to Jenkins",
-                "href": undefined,
+                "children": "Status: undefined",
               },
               "ref": null,
-              "rendered": "Back to Jenkins",
-              "type": "a",
-            },
-            "type": Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-htpNat",
-                "isStatic": true,
-                "rules": Array [
-                  "
+              "rendered": "Status: undefined",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
 ",
-                ],
+                  ],
+                },
+                "displayName": "styled.span",
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "span",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
               },
-              "displayName": "styled.span",
-              "render": [Function],
-              "styledComponentId": "sc-htpNat",
-              "target": "span",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
             },
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Started on undefined",
+              },
+              "ref": null,
+              "rendered": "Started on undefined",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+",
+                  ],
+                },
+                "displayName": "styled.span",
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "span",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Ran for ",
+              },
+              "ref": null,
+              "rendered": "Ran for ",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+",
+                  ],
+                },
+                "displayName": "styled.span",
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "span",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+          ],
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
@@ -498,6 +1061,7 @@ ShallowWrapper {
                 "
     display: flex;
     justify-content: space-between;
+    padding: 10px;
 ",
               ],
             },
@@ -525,8 +1089,10 @@ ShallowWrapper {
     color: ",
             "#fff",
             ";
-    padding: 10px;
+
     font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
 ",
           ],
         },
