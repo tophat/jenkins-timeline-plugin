@@ -1,6 +1,6 @@
 .PHONY: clean_webapp
 clean_webapp:
-	find ./src/main/webapp -not -name '*jenkins*' -delete
+	find ./src/main/webapp -not -name 'jenkins_assets' -delete
 
 .PHONY: build_all
 build_all:
