@@ -13,9 +13,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build-to-plugin": "npm run build && mv build/* ../src/main/webapp"
+    "test": "react-scripts test --watchAll=false",
+    "test-watch": "react-scripts test",
+    "build-to-plugin": "npm run build && mv build/* ../src/main/webapp",
+    "deploy": "npm run test && npm run build-to-plugin"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -25,5 +26,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0"
+  }
 }
