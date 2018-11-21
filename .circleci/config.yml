@@ -15,8 +15,8 @@ jobs:
       - image: maven:3.6.0-jdk-8-alpine
     steps:
       - checkout
-      - run: apk add make
-      - run: make test_webapp
+      - run: apk add make npm
+      - run: make clean_install
       - run: make test
           
 workflows:
