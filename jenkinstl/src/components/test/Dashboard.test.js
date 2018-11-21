@@ -40,7 +40,7 @@ describe('Dashboard', () => {
     describe('Formatting endpoint data', () => {
         it('calls the workflow api on mount', () => {
             const spy = jest.spyOn(axios, 'get')
-            shallow(<Dashboard buildUrl={mockBuildUrl} />)
+            mount(<Dashboard buildUrl={mockBuildUrl} />)
             const expectedUrl = mockBuildUrl + 'wfapi/describe'
             expect(spy).toHaveBeenCalledWith(expectedUrl)
         })

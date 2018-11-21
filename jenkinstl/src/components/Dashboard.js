@@ -2,13 +2,19 @@ import React from 'react'
 import axios from 'axios'
 import Chart from 'react-google-charts'
 
+import DashHeader from './DashHeader'
+import {DashContainer} from './Dashboard.style'
+
 export default class Dashboard extends React.Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            stages: []
+            stages: [],
+            status: 'N/A'
         }
+
+        this.interval = null
     }
 
     buildApiURL = url => {
@@ -31,14 +37,20 @@ export default class Dashboard extends React.Component {
                             stages: r,
                             start: result.data.startTimeMillis,
                             duration: result.data.durationMillis,
-                            end: result.data.startTimeMillis + result.data.durationMillis
+                            end: result.data.startTimeMillis + result.data.durationMillis,
+                            status: result.data.status,
                         }
                     )
                 })
             })
     }
 
+    componentDidUpdate() {
+        if (this.state.status !== 'IN_PROGRESS') clearInterval(this.interval)
+    }
+
     getStageInfo = stageEndpoint => {
+        stageEndpoint = 'http://localhost:8080' + stageEndpoint
         return axios.get(stageEndpoint)
             .then(result => {
                 const stageData = result.data
@@ -84,15 +96,29 @@ export default class Dashboard extends React.Component {
     }
 
     render() {
-        if (this.state.stages.length == 0) return null
+        if (this.state.stages.length === 0) return null
+
+        const startDate = new Date(this.state.start).toString()
+        const duration = this.state.duration
 
         return (
-            <Chart
-                width={`100%`}
-                chartType="Timeline"
-                loader={<div>Loading...</div>}
-                data={this.formatChartRows()}
-            />
+            <React.Fragment>
+                <DashHeader
+                    buildStatus={this.state.status}
+                    startTime={startDate}
+                    duration={duration}
+                    buildUrl={this.props.buildUrl}
+                />
+                <DashContainer>
+                    <Chart
+                        width={`100%`}
+                        chartType="Timeline"
+                        loader={<div>Loading...</div>}
+                        data={this.formatChartRows()}
+                    />
+                </DashContainer>
+            </React.Fragment>
+
         )
     }
 }
