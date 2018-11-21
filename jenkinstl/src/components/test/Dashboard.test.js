@@ -1,13 +1,11 @@
-import Adapter from 'enzyme-adapter-react-16'
+
 import axios from 'axios'
 import Chart from 'react-google-charts'
-import Enzyme, { shallow, mount } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import React from 'react'
 
 import Dashboard from '../Dashboard'
 import { mockWfApiResponse, mockNodeApiResponse } from './mockData'
-
-Enzyme.configure({ adapter: new Adapter() });
 
 function flushPromises() {
     return new Promise(resolve => setImmediate(resolve));

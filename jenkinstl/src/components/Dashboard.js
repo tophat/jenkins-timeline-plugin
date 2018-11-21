@@ -21,10 +21,9 @@ export default class Dashboard extends React.Component {
             .get(buildEndpoint)
             .then(result => {
                 const stages = result.data.stages
-                const promises = []
-                stages.forEach(stage => {
+                const promises = stages.map(stage => {
                     const stageLink = stage._links.self.href
-                    promises.push(this.getStageInfo(stageLink))
+                    return this.getStageInfo(stageLink)
                 })
                 Promise.all(promises).then(r => {
                     this.setState(
