@@ -24,7 +24,7 @@ test:
 
 .PHONY: test_webapp
 test_webapp:
-	cd jenkinstl && npm run test
+	cd jenkinstl && npm install && npm run test
 
 .PHONY: clean_install
 clean_install:
