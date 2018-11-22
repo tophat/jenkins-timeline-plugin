@@ -32,6 +32,8 @@ The plugin adds a __Build Timeline__ link in every Pipeline build page menu. Cli
 
 The timeline can be opened during a build for an incremental breakdown of the job or after a build is completed for an overview of old jobs.
 
+![The timeline for a sample build](assets/timeline.png)
+
 # Contributing
 
 ## Helpful resources
