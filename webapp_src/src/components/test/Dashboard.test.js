@@ -41,7 +41,7 @@ describe('Dashboard', () => {
         it('calls the workflow api on mount', () => {
             const spy = jest.spyOn(axios, 'get')
             mount(<Dashboard buildUrl={mockBuildUrl} />)
-            const expectedUrl = mockBuildUrl + 'wfapi/describe'
+            const expectedUrl = `${mockBuildUrl}wfapi/describe`
             expect(spy).toHaveBeenCalledWith(expectedUrl)
         })
 
@@ -78,13 +78,17 @@ describe('Dashboard', () => {
                     title: mockNodeApiResponse.data.name,
                     start: moment(mockNodeApiResponse.data.startTimeMillis),
                     duration: mockNodeApiResponse.data.durationMillis,
-                    steps: mockNodeApiResponse.data.stageFlowNodes.map(step => ({
-                        title: step.name,
-                        start: moment(step.startTimeMillis),
-                        end: moment(step.startTimeMillis + step.durationMillis),
-                        status: step.status,
-                        stage: mockNodeApiResponse.data.name,
-                    }))
+                    steps: mockNodeApiResponse.data.stageFlowNodes.map(
+                        step => ({
+                            title: step.name,
+                            start: moment(step.startTimeMillis),
+                            end: moment(
+                                step.startTimeMillis + step.durationMillis,
+                            ),
+                            status: step.status,
+                            stage: mockNodeApiResponse.data.name,
+                        }),
+                    ),
                 }
                 expect(stages.length).toEqual(
                     mockWfApiResponse.data.stages.length,
