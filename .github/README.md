@@ -25,7 +25,7 @@ Using the Jenkins timeline plugin we are able to identify sequential and paralle
 
 ## Manual build
 
-_Make sure that you follow the [development setup and building](###Setting-up-a-development-environment) steps before you attempt building your own plugin package._
+_Make sure that you follow the [development setup and building](#Setting-up-a-development-environment) steps before you attempt building your own plugin package._
 - Clone the repository and use `make build_all` to build the plugin `hpi` package.
 - _After a successful build, the packaged file is available in `target/jenkins-timeline.hpi`._
 - In Jenkins, head to __Manage Jenkins__ > __Manage Plugins__ and use the __Upload Plugin__ functionality available under the __Advanced__ tab.
