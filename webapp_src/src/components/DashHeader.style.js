@@ -29,6 +29,20 @@ export const Rows = styled.div`
 `
 
 export const Label = styled.span`
+    display: flex;
+    flex: 1 0;
+
+    justify-content: center;
+
+    &:first-child {
+        justify-content: flex-start;
+        max-width: 20%;
+    }
+
+    &:last-child {
+        justify-content: flex-end;
+        max-width: 20%;
+    }
 `
 
 export const Subcontainer = styled.aside`

@@ -43,12 +43,14 @@ export default class DashHeader extends React.PureComponent {
 
     getDetailsBar = () => {
         const buildStatus = `Status: ${statusMap[this.props.buildStatus]}`
-        const startTime = `Started on ${this.props.startTime}`
+        const formattedStartTime = this.props.startTime.format("MMMM Do YYYY, hh:mm:ss a")
+        const formattedEndTime = this.props.endTime ? this.props.endTime.format("MMMM Do YYYY, hh:mm:ss a") : null
+        const startTime = `Started on ${formattedStartTime}`
         const runningTimePrefix = this.props.buildStatus === buildStatuses.IN_PROGRESS ? `Running` : `Ran`
         const runningTime = `${runningTimePrefix} for ${this.formatTime(this.props.duration)}`
         const longestStage =
             `Longest stage: ${this.props.longestStage.title} (${this.formatTime(this.props.longestStage.duration)})`
-        const endedOn = this.props.end ? `Ended at ${this.props.end}` : null
+        const endedOn = this.props.endTime ? `Ended on ${formattedEndTime}` : null
 
         return (
             <React.Fragment>

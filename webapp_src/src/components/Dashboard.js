@@ -48,14 +48,13 @@ export default class Dashboard extends React.Component {
     }
 
     getStageInfo = stageEndpoint => {
-        // stageEndpoint = 'http://localhost:8080' + stageEndpoint
         return axios.get(stageEndpoint)
             .then(result => {
                 const stageData = result.data
                 const stage = {
                     title: stageData.name,
                     start: moment(stageData.startTimeMillis),
-                    duration: moment(stageData.durationMillis),
+                    duration: stageData.durationMillis,
                     steps: result.data.stageFlowNodes.map(node => {
                         return {
                             start: moment(node.startTimeMillis),
@@ -120,19 +119,18 @@ export default class Dashboard extends React.Component {
     render() {
         if (this.state.stages.length === 0) return null
 
-        const startDate = new Date(this.state.start).toString()
-        const endTime = this.state.status !== 'IN_PROGRESS' ? new Date(this.state.end) : null
+        const endTime = this.state.status !== 'IN_PROGRESS' ? this.state.end : null
 
         return (
             <React.Fragment>
                 <DashHeader
                     buildStatus={this.state.status}
-                    startTime={startDate}
+                    startTime={this.state.start}
                     duration={this.state.duration}
                     buildUrl={this.props.buildUrl}
                     buildName={this.state.title}
                     longestStage={this.state.longestStage}
-                    end={endTime}
+                    endTime={endTime}
                 />
                 <DashContainer>
                     <Chart
