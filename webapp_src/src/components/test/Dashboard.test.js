@@ -2,6 +2,7 @@ import axios from 'axios'
 import Chart from 'react-google-charts'
 import { shallow, mount } from 'enzyme'
 import React from 'react'
+import moment from 'moment'
 
 import Dashboard from '../Dashboard'
 import { mockWfApiResponse, mockNodeApiResponse } from './mockData'
@@ -39,8 +40,8 @@ describe('Dashboard', () => {
     describe('Formatting endpoint data', () => {
         it('calls the workflow api on mount', () => {
             const spy = jest.spyOn(axios, 'get')
-            shallow(<Dashboard buildUrl={mockBuildUrl} />)
-            const expectedUrl = `${mockBuildUrl}wfapi/describe`
+            mount(<Dashboard buildUrl={mockBuildUrl} />)
+            const expectedUrl = mockBuildUrl + 'wfapi/describe'
             expect(spy).toHaveBeenCalledWith(expectedUrl)
         })
 
@@ -75,18 +76,15 @@ describe('Dashboard', () => {
                 const stage = stages[0]
                 const expectedStage = {
                     title: mockNodeApiResponse.data.name,
-                    start: mockNodeApiResponse.data.startTimeMillis,
-                    steps: mockNodeApiResponse.data.stageFlowNodes.map(
-                        step => ({
-                            title: step.name,
-                            start: new Date(step.startTimeMillis),
-                            end: new Date(
-                                step.startTimeMillis + step.durationMillis,
-                            ),
-                            status: step.status,
-                            stage: mockNodeApiResponse.data.name,
-                        }),
-                    ),
+                    start: moment(mockNodeApiResponse.data.startTimeMillis),
+                    duration: mockNodeApiResponse.data.durationMillis,
+                    steps: mockNodeApiResponse.data.stageFlowNodes.map(step => ({
+                        title: step.name,
+                        start: moment(step.startTimeMillis),
+                        end: moment(step.startTimeMillis + step.durationMillis),
+                        status: step.status,
+                        stage: mockNodeApiResponse.data.name,
+                    }))
                 }
                 expect(stages.length).toEqual(
                     mockWfApiResponse.data.stages.length,
