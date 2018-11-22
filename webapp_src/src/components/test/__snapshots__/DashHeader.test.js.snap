@@ -5,6 +5,9 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DashHeader
     buildStatus="NOT_AVAILABLE"
+    duration={0}
+    endTime={"2018-11-22T20:37:54.221Z"}
+    startTime={"2018-11-22T20:37:54.222Z"}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -27,7 +30,7 @@ ShallowWrapper {
               src="logo.png"
             />
             <ForwardRef>
-              Build timeline &gt; 
+              Build timeline &gt; undefined
             </ForwardRef>
           </ForwardRef>
           <ForwardRef
@@ -43,8 +46,18 @@ ShallowWrapper {
             >
               Status: N/A
             </ForwardRef>
+            <ForwardRef
+              clickId="timeline start time"
+            >
+              Started on November 22nd 2018, 03:37:54 pm
+            </ForwardRef>
           </ForwardRef>
           <ForwardRef>
+            <ForwardRef
+              clickId="timeline end time"
+            >
+              Ended on November 22nd 2018, 03:37:54 pm
+            </ForwardRef>
             <ForwardRef />
           </ForwardRef>
         </React.Fragment>,
@@ -65,7 +78,7 @@ ShallowWrapper {
                 src="logo.png"
               />
               <ForwardRef>
-                Build timeline &gt; 
+                Build timeline &gt; undefined
               </ForwardRef>
             </ForwardRef>,
             <ForwardRef
@@ -88,7 +101,7 @@ ShallowWrapper {
                   src="logo.png"
                 />,
                 <ForwardRef>
-                  Build timeline &gt; 
+                  Build timeline &gt; undefined
                 </ForwardRef>,
               ],
             },
@@ -111,16 +124,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": Array [
-                    "Build timeline > ",
-                    undefined,
-                  ],
+                  "children": "Build timeline > undefined",
                 },
                 "ref": null,
-                "rendered": Array [
-                  "Build timeline > ",
-                  undefined,
-                ],
+                "rendered": "Build timeline > undefined",
                 "type": Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
@@ -248,8 +255,18 @@ ShallowWrapper {
               >
                 Status: N/A
               </ForwardRef>
+              <ForwardRef
+                clickId="timeline start time"
+              >
+                Started on November 22nd 2018, 03:37:54 pm
+              </ForwardRef>
             </ForwardRef>,
             <ForwardRef>
+              <ForwardRef
+                clickId="timeline end time"
+              >
+                Ended on November 22nd 2018, 03:37:54 pm
+              </ForwardRef>
               <ForwardRef />
             </ForwardRef>,
           ],
@@ -267,7 +284,11 @@ ShallowWrapper {
                 >
                   Status: N/A
                 </ForwardRef>,
-                null,
+                <ForwardRef
+                  clickId="timeline start time"
+                >
+                  Started on November 22nd 2018, 03:37:54 pm
+                </ForwardRef>,
                 null,
               ],
             },
@@ -317,7 +338,50 @@ ShallowWrapper {
                   "withComponent": [Function],
                 },
               },
-              null,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Started on November 22nd 2018, 03:37:54 pm",
+                  "clickId": "timeline start time",
+                },
+                "ref": null,
+                "rendered": "Started on November 22nd 2018, 03:37:54 pm",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
+    display: flex;
+    flex: 1 0;
+
+    justify-content: center;
+
+    &:first-child {
+        justify-content: flex-start;
+        max-width: 20%;
+    }
+
+    &:last-child {
+        justify-content: flex-end;
+        max-width: 20%;
+    }
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
               null,
             ],
             "type": Object {
@@ -350,14 +414,61 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 null,
-                null,
+                <ForwardRef
+                  clickId="timeline end time"
+                >
+                  Ended on November 22nd 2018, 03:37:54 pm
+                </ForwardRef>,
                 <ForwardRef />,
               ],
             },
             "ref": null,
             "rendered": Array [
               null,
-              null,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Ended on November 22nd 2018, 03:37:54 pm",
+                  "clickId": "timeline end time",
+                },
+                "ref": null,
+                "rendered": "Ended on November 22nd 2018, 03:37:54 pm",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
+    display: flex;
+    flex: 1 0;
+
+    justify-content: center;
+
+    &:first-child {
+        justify-content: flex-start;
+        max-width: 20%;
+    }
+
+    &:last-child {
+        justify-content: flex-end;
+        max-width: 20%;
+    }
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
               Object {
                 "instance": null,
                 "key": undefined,
@@ -471,7 +582,7 @@ ShallowWrapper {
                 src="logo.png"
               />
               <ForwardRef>
-                Build timeline &gt; 
+                Build timeline &gt; undefined
               </ForwardRef>
             </ForwardRef>
             <ForwardRef
@@ -487,8 +598,18 @@ ShallowWrapper {
               >
                 Status: N/A
               </ForwardRef>
+              <ForwardRef
+                clickId="timeline start time"
+              >
+                Started on November 22nd 2018, 03:37:54 pm
+              </ForwardRef>
             </ForwardRef>
             <ForwardRef>
+              <ForwardRef
+                clickId="timeline end time"
+              >
+                Ended on November 22nd 2018, 03:37:54 pm
+              </ForwardRef>
               <ForwardRef />
             </ForwardRef>
           </React.Fragment>,
@@ -509,7 +630,7 @@ ShallowWrapper {
                   src="logo.png"
                 />
                 <ForwardRef>
-                  Build timeline &gt; 
+                  Build timeline &gt; undefined
                 </ForwardRef>
               </ForwardRef>,
               <ForwardRef
@@ -532,7 +653,7 @@ ShallowWrapper {
                     src="logo.png"
                   />,
                   <ForwardRef>
-                    Build timeline &gt; 
+                    Build timeline &gt; undefined
                   </ForwardRef>,
                 ],
               },
@@ -555,16 +676,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "children": Array [
-                      "Build timeline > ",
-                      undefined,
-                    ],
+                    "children": "Build timeline > undefined",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    "Build timeline > ",
-                    undefined,
-                  ],
+                  "rendered": "Build timeline > undefined",
                   "type": Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
@@ -692,8 +807,18 @@ ShallowWrapper {
                 >
                   Status: N/A
                 </ForwardRef>
+                <ForwardRef
+                  clickId="timeline start time"
+                >
+                  Started on November 22nd 2018, 03:37:54 pm
+                </ForwardRef>
               </ForwardRef>,
               <ForwardRef>
+                <ForwardRef
+                  clickId="timeline end time"
+                >
+                  Ended on November 22nd 2018, 03:37:54 pm
+                </ForwardRef>
                 <ForwardRef />
               </ForwardRef>,
             ],
@@ -711,7 +836,11 @@ ShallowWrapper {
                   >
                     Status: N/A
                   </ForwardRef>,
-                  null,
+                  <ForwardRef
+                    clickId="timeline start time"
+                  >
+                    Started on November 22nd 2018, 03:37:54 pm
+                  </ForwardRef>,
                   null,
                 ],
               },
@@ -761,7 +890,50 @@ ShallowWrapper {
                     "withComponent": [Function],
                   },
                 },
-                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Started on November 22nd 2018, 03:37:54 pm",
+                    "clickId": "timeline start time",
+                  },
+                  "ref": null,
+                  "rendered": "Started on November 22nd 2018, 03:37:54 pm",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-htpNat",
+                      "isStatic": true,
+                      "rules": Array [
+                        "
+    display: flex;
+    flex: 1 0;
+
+    justify-content: center;
+
+    &:first-child {
+        justify-content: flex-start;
+        max-width: 20%;
+    }
+
+    &:last-child {
+        justify-content: flex-end;
+        max-width: 20%;
+    }
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "render": [Function],
+                    "styledComponentId": "sc-htpNat",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  },
+                },
                 null,
               ],
               "type": Object {
@@ -794,14 +966,61 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   null,
-                  null,
+                  <ForwardRef
+                    clickId="timeline end time"
+                  >
+                    Ended on November 22nd 2018, 03:37:54 pm
+                  </ForwardRef>,
                   <ForwardRef />,
                 ],
               },
               "ref": null,
               "rendered": Array [
                 null,
-                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Ended on November 22nd 2018, 03:37:54 pm",
+                    "clickId": "timeline end time",
+                  },
+                  "ref": null,
+                  "rendered": "Ended on November 22nd 2018, 03:37:54 pm",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-htpNat",
+                      "isStatic": true,
+                      "rules": Array [
+                        "
+    display: flex;
+    flex: 1 0;
+
+    justify-content: center;
+
+    &:first-child {
+        justify-content: flex-start;
+        max-width: 20%;
+    }
+
+    &:last-child {
+        justify-content: flex-end;
+        max-width: 20%;
+    }
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "render": [Function],
+                    "styledComponentId": "sc-htpNat",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  },
+                },
                 Object {
                   "instance": null,
                   "key": undefined,
