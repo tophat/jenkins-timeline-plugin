@@ -28,7 +28,7 @@ _Available soon!_
 
 The plugin adds a __Build Timeline__ link in every Pipeline build page menu. Clicking it will open up the build timeline in a new tab.
 
-<div style="text-align:center'"><img src="assets/jenkins_menu.png"/></div>
+<div style="text-align:center;"><img src="assets/jenkins_menu.png"/></div>
 
 The timeline can be opened during a build for an incremental breakdown of the job or after a build is completed for an overview of old jobs.
 
