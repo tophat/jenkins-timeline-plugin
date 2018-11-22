@@ -34,6 +34,12 @@ The timeline can be opened during a build for an incremental breakdown of the jo
 
 # Contributing
 
+## Helpful resources
+
+If you want to know more about the structure of Jenkins plugins and the Java-side of their development, you can peruse the [Jenkins Wiki](https://wiki.jenkins.io/display/JENKINS/Plugin+tutorial) and the [Jenkins Core API reference](https://javadoc.jenkins.io/). You might find the API reference especially useful if you want to tinker with the Java portion of the plugin.
+
+The web application is a standard React app. The [Getting started guide for React](https://reactjs.org/docs/getting-started.html) is a great way to get up to speed with the framework.
+
 ## Setting up a development environment
 
 To work on the project, you will need ...
