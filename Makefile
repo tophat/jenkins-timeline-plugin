@@ -32,3 +32,11 @@ test_webapp:
 .PHONY: clean_install
 clean_install:
 	mvn clean install
+
+.PHONY: lint_webapp
+lint_webapp:
+	cd $(WEBAPP_ROOT) && npm run lint
+
+.PHONY: lintfix_webapp
+lintfix_webapp:
+	cd $(WEBAPP_ROOT) && npm run lint-fix

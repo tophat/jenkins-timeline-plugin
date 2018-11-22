@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-google-charts": "^3.0.10",
@@ -14,12 +15,21 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
+    "lint": "eslint src --ignore-pattern *.style.js --ignore-pattern serviceWorker.js",
+    "lint-fix": "eslint src --ignore-pattern *.style.js --ignore-pattern serviceWorker.js --fix",
     "test-watch": "react-scripts test",
     "build-to-plugin": "npm run build && mv build/* ../src/main/webapp",
     "deploy": "npm run test && npm run build-to-plugin"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "parser": "babel-eslint",
+    "extends": [
+      "@tophat",
+      "@tophat/eslint-config/react"
+    ],
+    "env": {
+      "jest": true
+    }
   },
   "browserslist": [
     ">0.2%",
@@ -28,7 +38,15 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@tophat/eslint-config": "^0.1.4",
     "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.7.0"
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-jest": "^22.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "install": "^0.12.2",
+    "npm": "^6.4.1",
+    "prettier": "^1.15.2"
   }
 }
