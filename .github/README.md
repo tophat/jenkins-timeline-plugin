@@ -1,5 +1,5 @@
 <div align="center">
-<img src="assets/logo.png"/>
+<img src="../website/static/img/logo.png"/>
 </div>
 <div align="center">
 <strong>
@@ -50,13 +50,13 @@ _Available soon!_
 The plugin adds a __Build Timeline__ link in every Pipeline build page menu. Clicking it will open up the build timeline in a new tab.
 
 <div align="center">
-<img src="assets/jenkins_menu.png"/>
+<img src="../website/static/img/jenkins_menu.png"/>
 </div>
 
 The timeline can be opened during a build for an incremental breakdown of the job or after a build is completed for an overview of old jobs.
 
 <div align="center">
-<img src="assets/timeline.png"/>
+<img src="../website/static/img/timeline.png"/>
 </div>
 
 # Contributing

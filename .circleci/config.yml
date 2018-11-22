@@ -24,6 +24,14 @@ commands:
             - node_modules/
 
 jobs:
+  lint_webapp:
+    working_directory: ~/jenkins-timeline-plugin
+    docker:
+      - image: maven:3.6.0-jdk-8-alpine
+    steps:
+      - checkout
+      - run: apk add make npm
+      - run: make lint_webapp
   test_webapp:
     working_directory: ~/jenkins-timeline-plugin
     docker:
@@ -102,8 +110,18 @@ workflows:
   version: 2
   build_and_test:
       jobs:
+          - lint_webapp
           - test_webapp
-          - test
+          - test:
+              requires:
+                  - lint_webapp
+                  - test_webapp
+          - package:
+              requires:
+                  - test
+          - publish-github-release:
+              requires:
+                  - package
           - website
           - deploy_website:
               requires:

@@ -5,6 +5,9 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DashHeader
     buildStatus="NOT_AVAILABLE"
+    duration={0}
+    endTime={null}
+    startTime={null}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -27,7 +30,7 @@ ShallowWrapper {
               src="logo.png"
             />
             <ForwardRef>
-              Build timeline &gt; 
+              Build timeline &gt; undefined
             </ForwardRef>
           </ForwardRef>
           <ForwardRef
@@ -65,7 +68,7 @@ ShallowWrapper {
                 src="logo.png"
               />
               <ForwardRef>
-                Build timeline &gt; 
+                Build timeline &gt; undefined
               </ForwardRef>
             </ForwardRef>,
             <ForwardRef
@@ -88,7 +91,7 @@ ShallowWrapper {
                   src="logo.png"
                 />,
                 <ForwardRef>
-                  Build timeline &gt; 
+                  Build timeline &gt; undefined
                 </ForwardRef>,
               ],
             },
@@ -111,16 +114,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": Array [
-                    "Build timeline > ",
-                    undefined,
-                  ],
+                  "children": "Build timeline > undefined",
                 },
                 "ref": null,
-                "rendered": Array [
-                  "Build timeline > ",
-                  undefined,
-                ],
+                "rendered": "Build timeline > undefined",
                 "type": Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
@@ -471,7 +468,7 @@ ShallowWrapper {
                 src="logo.png"
               />
               <ForwardRef>
-                Build timeline &gt; 
+                Build timeline &gt; undefined
               </ForwardRef>
             </ForwardRef>
             <ForwardRef
@@ -509,7 +506,7 @@ ShallowWrapper {
                   src="logo.png"
                 />
                 <ForwardRef>
-                  Build timeline &gt; 
+                  Build timeline &gt; undefined
                 </ForwardRef>
               </ForwardRef>,
               <ForwardRef
@@ -532,7 +529,7 @@ ShallowWrapper {
                     src="logo.png"
                   />,
                   <ForwardRef>
-                    Build timeline &gt; 
+                    Build timeline &gt; undefined
                   </ForwardRef>,
                 ],
               },
@@ -555,16 +552,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "children": Array [
-                      "Build timeline > ",
-                      undefined,
-                    ],
+                    "children": "Build timeline > undefined",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    "Build timeline > ",
-                    undefined,
-                  ],
+                  "rendered": "Build timeline > undefined",
                   "type": Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
