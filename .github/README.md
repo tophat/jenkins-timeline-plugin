@@ -8,9 +8,19 @@ Jenkins Timeline (TL) Plugin
 </div>
 <br>
 <div align="center">
-<a href="https://circleci.com/gh/tophat/jenkins-timeline-plugin">
+<a href="https://jenkins.io/">
 <img alt="Build" src="https://img.shields.io/circleci/project/github/tophat/jenkins-timeline-plugin.svg"/>
 </a>
+<a href="https://circleci.com/gh/tophat/jenkins-timeline-plugin">
+<img alt="Jenkins version" src="https://img.shields.io/badge/jenkinsci-%3E%3D2.7.3-brightgreen.svg"/>
+</a>
+<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">
+<img alt="Java version" src="https://img.shields.io/badge/JDK-8-brightgreen.svg"/>
+</a>
+<a href="https://www.npmjs.com/package/react">
+<img alt="React version" src="https://img.shields.io/badge/ReactJS-%3E%3D16.6.3-brightgreen.svg"/>
+</a>
+
 </div>
 
 # Overview
