@@ -51,12 +51,17 @@ To work on the project, you will need ...
 - [A local instance of Jenkins](https://jenkins.io/doc/book/installing/);
 - [npm](https://www.npmjs.com/get-npm)
 
-__Compatibility note__: The linked version of Java (JDK 8) is the preferred version for this project, as Maven seems to have trouble building with other versions.
+### Compatibility note
+The linked version of Java (JDK 8) is the preferred version for this project, as Maven seems to have trouble building with other versions.
 
+### Jenkins setup
+When installing Jenkins, make sure to allow the installer to add the recommended plugins to Jenkins. This project depends on the [`pipeline`](https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Plugin) plugin, installed by default as part of the recommended package.
 
 ## Building
 
 The makefile is set up with a few useful commands to abstract away `mvn` calls. Call `make build_all` to build the `hpi` file that you can import in your Jenkins instance to install the plugin.
+
+You can find a sample [Jenkinsfile](../devResources/SampleJenkinsfile) under `/devResources` if you need a sample pipeline to visualize or start from.
 
 ### Working on the web app
 
