@@ -1,5 +1,5 @@
 <div align="center">
-<img src="assets/logo.png" size="200%"/>
+<img src="assets/logo.png"/>
 </div>
 <div align="center">
 <strong>
@@ -12,6 +12,7 @@ Jenkins Timeline (TL) Plugin
 <img alt="Build" src="https://img.shields.io/circleci/project/github/tophat/jenkins-timeline-plugin.svg"/>
 </a>
 </div>
+
 # Overview
 
 Jenkins TL is a Jenkins plugin that allows users to gain knowledge about the execution of their pipeline builds.
@@ -38,11 +39,15 @@ _Available soon!_
 
 The plugin adds a __Build Timeline__ link in every Pipeline build page menu. Clicking it will open up the build timeline in a new tab.
 
-![Build timeline in the Jenkins build menu](assets/jenkins_menu.png)
+<div align="center">
+<img src="assets/jenkins_menu.png"/>
+</div>
 
 The timeline can be opened during a build for an incremental breakdown of the job or after a build is completed for an overview of old jobs.
 
-![The timeline for a sample build](assets/timeline.png)
+<div align="center">
+<img src="assets/timeline.png"/>
+</div>
 
 # Contributing
 
@@ -59,7 +64,7 @@ To work on the project, you will need ...
 - [Maven 3.1.0+](https://maven.apache.org/download.cgi);
 - [A Java development environment (JDK 8)](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html);
 - [A local instance of Jenkins](https://jenkins.io/doc/book/installing/);
-- [npm](https://www.npmjs.com/get-npm)
+- [npm](https://www.npmjs.com/get-npm);
 
 ### Compatibility note
 The linked version of Java (JDK 8) is the preferred version for this project, as Maven seems to have trouble building with other versions.
