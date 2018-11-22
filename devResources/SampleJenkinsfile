@@ -1,0 +1,32 @@
+node {
+   def mvnHome
+   stage('Preparation') { // for display purposes
+    sleep 5
+    echo "some text"
+    sleep 10
+   }
+   stage('Build') {
+     echo "build build build"
+     echo "build build build"
+     echo "build build build"
+     echo "build build build"
+     sleep 2
+     error("woops")
+     echo "build build build"
+     echo "build build build"
+     echo "build build build"
+     echo "build build build"
+     echo "build build build"
+     sleep 10
+     echo "build build build"
+     echo "build build build"
+     echo "build build build"
+     echo "build build build"
+     echo "build build build"
+     sleep 5
+   }
+   stage('Results') {
+     echo "result result result"
+     sleep 3
+   }
+}
