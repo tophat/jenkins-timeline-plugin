@@ -119,9 +119,17 @@ workflows:
           - package:
               requires:
                   - test
+              filters:
+                branches:
+                  only:
+                    - master
           - publish-github-release:
               requires:
                   - package
+              filters:
+                branches:
+                  only:
+                    - master
           - website
           - deploy_website:
               requires:
