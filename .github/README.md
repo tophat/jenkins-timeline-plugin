@@ -1,7 +1,17 @@
-![Jenkins timeline](assets/logo.png)
+<div align="center">
+<img src="assets/logo.png" size="200%"/>
+</div>
+<div align="center">
+<strong>
 Jenkins Timeline (TL) Plugin
-
-[![Builds](https://img.shields.io/circleci/project/github/tophat/jenkins-timeline-plugin.svg)](https://circleci.com/gh/tophat/jenkins-timeline-plugin)
+</strong>
+</div>
+<br>
+<div align="center">
+<a href="https://circleci.com/gh/tophat/jenkins-timeline-plugin">
+<img alt="Build" src="https://img.shields.io/circleci/project/github/tophat/jenkins-timeline-plugin.svg"/>
+</a>
+</div>
 # Overview
 
 Jenkins TL is a Jenkins plugin that allows users to gain knowledge about the execution of their pipeline builds.
