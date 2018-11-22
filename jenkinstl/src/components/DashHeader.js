@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Row, Label, Container, TopBar, Title, LogoBox, BackButton } from './DashHeader.style'
-import { statusMap } from '../constants'
+import { statusMap, buildStatuses } from '../constants'
 import Logo from '../assets/logo.png'
 
 export default class DashHeader extends React.PureComponent {
@@ -24,40 +24,57 @@ export default class DashHeader extends React.PureComponent {
         return parts.join(', ')
     }
 
-    render() {
-        const formattedTime = this.formatTime(this.props.duration)
-        const formattedStatus = statusMap[this.props.buildStatus]
-        const buildStatus = `Status: ${formattedStatus}`
-        const startTime = `Started on ${this.props.startTime}`
-        const runningTimePrefix = this.props.buildStatus === 'IN_PROGRESS' ? `Running` : `Ran`
-        const runningTime = `${runningTimePrefix} for ${formattedTime}`
+    onBackButtonClick = () => {
+        window.location.assign(this.props.buildUrl)
+    }
 
-        const backLink = <BackButton href={this.props.buildUrl}>Back to Jenkins</BackButton>
+    getTopBar = () => (
+        <TopBar>
+            <LogoBox>
+                <img
+                    alt="Build timeline"
+                    src={Logo}
+                />
+                <Title>Build timeline > {this.props.buildName}</Title>
+            </LogoBox>
+            <BackButton onClick={this.onBackButtonClick} href={this.props.buildUrl}>Back to Jenkins</BackButton>
+        </TopBar>
+    )
+
+    getDetailsBar = () => {
+        const buildStatus = `Status: ${statusMap[this.props.buildStatus]}`
+        const startTime = `Started on ${this.props.startTime}`
+        const runningTimePrefix = this.props.buildStatus === buildStatuses.IN_PROGRESS ? `Running` : `Ran`
+        const runningTime = `${runningTimePrefix} for ${this.formatTime(this.props.duration)}`
+        const longestStage =
+            `Longest stage: ${this.props.longestStage.title} (${this.formatTime(this.props.longestStage.duration)})`
+        const endedOn = this.props.end ? `Ended at ${this.props.end}` : null
+
+        return (
+            <React.Fragment>
+                <Row>
+                    <Label>{buildStatus}</Label>
+                    <Label>{startTime}</Label>
+                    <Label>{runningTime}</Label>
+                </Row>
+                <Row>
+                    <Label>{longestStage}</Label>
+                    <Label>{endedOn}</Label>
+                    <Label></Label>
+                </Row>
+            </React.Fragment>
+        )
+    }
+
+    render() {
+
 
         return (
             <Container
                 status={this.props.buildStatus}
             >
-                <TopBar>
-                    <LogoBox>
-                        <img
-                            alt="Build timeline"
-                            src={Logo}
-                        />
-                        <Title>Build timeline</Title>
-                    </LogoBox>
-                    <Label>{backLink}</Label>
-                </TopBar>
-                <Row>
-                    <Label>{buildStatus}</Label>
-                    <Label>{startTime}</Label>
-                    <Label>{runningTime}</Label>
-                </Row>
-                <Row>
-                    <Label>{buildStatus}</Label>
-                    <Label>{startTime}</Label>
-                    <Label>{runningTime}</Label>
-                </Row>
+                {this.getTopBar()}
+                {this.getDetailsBar()}
             </Container>
         )
     }

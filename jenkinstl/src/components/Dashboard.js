@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import Chart from 'react-google-charts'
+import moment from 'moment'
 
 import DashHeader from './DashHeader'
 import {DashContainer} from './Dashboard.style'
@@ -13,8 +14,6 @@ export default class Dashboard extends React.Component {
             stages: [],
             status: 'N/A'
         }
-
-        this.interval = null
     }
 
     buildApiURL = url => {
@@ -31,22 +30,21 @@ export default class Dashboard extends React.Component {
                     const stageLink = stage._links.self.href
                     return this.getStageInfo(stageLink)
                 })
-                Promise.all(promises).then(r => {
+                Promise.all(promises).then(stages => {
+                    const longestStage = this.findLongestStage(stages)
                     this.setState(
                         {
-                            stages: r,
-                            start: result.data.startTimeMillis,
+                            title: result.data.name,
+                            longestStage,
+                            stages,
+                            start: moment(result.data.startTimeMillis),
                             duration: result.data.durationMillis,
-                            end: result.data.startTimeMillis + result.data.durationMillis,
+                            end: moment(result.data.startTimeMillis + result.data.durationMillis),
                             status: result.data.status,
                         }
                     )
                 })
             })
-    }
-
-    componentDidUpdate() {
-        if (this.state.status !== 'IN_PROGRESS') clearInterval(this.interval)
     }
 
     getStageInfo = stageEndpoint => {
@@ -55,32 +53,48 @@ export default class Dashboard extends React.Component {
             .then(result => {
                 const stageData = result.data
                 const stage = {
-                title: stageData.name,
-                start: stageData.startTimeMillis,
-                steps: result.data.stageFlowNodes.map(node => {
-                    return {
-                        start: new Date(node.startTimeMillis),
-                        end: new Date(node.startTimeMillis + node.durationMillis),
-                        title: node.name,
-                        status: node.status,
-                        stage: stageData.name,
-                    }
-                })
+                    title: stageData.name,
+                    start: moment(stageData.startTimeMillis),
+                    duration: moment(stageData.durationMillis),
+                    steps: result.data.stageFlowNodes.map(node => {
+                        return {
+                            start: moment(node.startTimeMillis),
+                            end: moment(node.startTimeMillis + node.durationMillis),
+                            title: node.name,
+                            status: node.status,
+                            stage: stageData.name,
+                        }
+                    })
                 }
                 
                 return stage
             })
     }
 
+    findLongestStage = stages => {
+        return stages.reduce((currentMaximum, stage) => {
+            if (currentMaximum === null)
+                return {
+                    title: stage.title,
+                    duration: stage.duration,
+                }
+            
+            const currentMaxDuration = currentMaximum.duration
+            const currentStageDuration = stage.duration
+
+            if (currentStageDuration > currentMaxDuration)
+                return {
+                    title: stage.title,
+                    duration: stage.duration,
+                }
+            else {
+                return currentMaximum
+            }
+        }, null)
+    }
+
     formatChartRows = () => {
-        const data = [
-        [
-            { type: 'string', id: 'Stage' },
-            { type: 'string', id: 'Step' },
-            { type: 'date', id: 'Start' },
-            { type: 'date', id: 'End' },
-        ],
-        ]
+        const data = []
 
         this.state.stages.forEach(stage => {
             stage.steps.forEach(step => {
@@ -88,26 +102,37 @@ export default class Dashboard extends React.Component {
                     stage.title,
                     step.title,
                     step.start,
-                    step.end
+                    step.end,
                 ])
             })
         })
-        return data
+
+        const columns = [
+            { type: 'string', id: 'Stage' },
+            { type: 'string', id: 'Step' },
+            { type: 'date', id: 'Start' },
+            { type: 'date', id: 'End' },
+        ]
+
+        return [columns, ...data]
     }
 
     render() {
         if (this.state.stages.length === 0) return null
 
         const startDate = new Date(this.state.start).toString()
-        const duration = this.state.duration
+        const endTime = this.state.status !== 'IN_PROGRESS' ? new Date(this.state.end) : null
 
         return (
             <React.Fragment>
                 <DashHeader
                     buildStatus={this.state.status}
                     startTime={startDate}
-                    duration={duration}
+                    duration={this.state.duration}
                     buildUrl={this.props.buildUrl}
+                    buildName={this.state.title}
+                    longestStage={this.state.longestStage}
+                    end={endTime}
                 />
                 <DashContainer>
                     <Chart

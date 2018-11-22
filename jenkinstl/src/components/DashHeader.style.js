@@ -5,6 +5,7 @@ import { Colours } from '../constants'
 const getStatusColour = status => {
     if (status === 'SUCCESS') return Colours.SUCCESS
     else if (status === 'IN_PROGRESS') return Colours.PROGRESS
+    else if (status === 'FAILED') return Colours.FAILURE
 }
 
 export const Container = styled.header`
@@ -35,7 +36,7 @@ export const Subcontainer = styled.aside`
 `
 
 export const TopBar = styled.div`
-    box-shadow: inset 9999px 0 0 0 rgba(0, 0, 0, 0.2);
+    background-color:rgba(0, 0, 0, 0.1);
     padding: 10px;
     display: flex;
     align-items: center;
