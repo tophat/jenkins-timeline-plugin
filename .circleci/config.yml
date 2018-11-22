@@ -85,7 +85,7 @@ workflows:
       jobs:
           - lint_webapp
           - test_webapp
-          - test
+          - test:
               requires:
                 - test_webapp
                 - lint_webapp
