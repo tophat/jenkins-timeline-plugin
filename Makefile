@@ -35,8 +35,8 @@ clean_install:
 
 .PHONY: lint_webapp
 lint_webapp:
-	cd $(WEBAPP_ROOT) && npm run lint
+	cd $(WEBAPP_ROOT) && npm install && npm run lint
 
 .PHONY: lintfix_webapp
 lintfix_webapp:
-	cd $(WEBAPP_ROOT) && npm run lint-fix
+	cd $(WEBAPP_ROOT) && npm install && npm run lint-fix
