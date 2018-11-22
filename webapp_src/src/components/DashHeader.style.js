@@ -23,11 +23,6 @@ export const Row = styled.div`
     padding: 10px;
 `
 
-export const Rows = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-
 export const Label = styled.span`
     display: flex;
     flex: 1 0;
@@ -45,12 +40,8 @@ export const Label = styled.span`
     }
 `
 
-export const Subcontainer = styled.aside`
-    box-shadow: inset 1000px 0 0 0 rgba(255, 255, 255, 0.5);
-`
-
 export const TopBar = styled.div`
-    background-color:rgba(0, 0, 0, 0.1);
+    background-color:rgba(0, 0, 0, 0.2);
     padding: 10px;
     display: flex;
     align-items: center;

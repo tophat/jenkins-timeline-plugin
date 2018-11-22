@@ -9,12 +9,14 @@ export const statusMap = {
     SUCCESS: 'Build completed successfully',
     IN_PROGRESS: 'Build is in progress',
     FAILED: 'Build failed',
+    NOT_AVAILABLE: 'N/A'
 }
 
 export const buildStatuses = {
     IN_PROGRESS: 'IN_PROGRESS',
     FAILED: 'FAILED',
     SUCCESS: 'SUCCESS',
+    NOT_AVAILABLE: 'NOT_AVAILABLE',
 }
 
 export const validStatuses = Object.values(buildStatuses)
