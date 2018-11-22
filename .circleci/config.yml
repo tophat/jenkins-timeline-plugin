@@ -70,6 +70,33 @@ jobs:
             git config --global user.name "CircleCI Codewatch"
             USE_SSH=true yarn publish-gh-pages
 
+  package:
+    working_directory: ~/jenkins-timeline-plugin
+    docker:
+      - image: maven:3.6.0-jdk-8-alpine
+    steps:
+      - checkout
+      - run: apk add make npm
+      - run: make package
+      - run: mkdir -p /tmp/artifacts
+      - run: cp target/*.hpi /tmp/artifacts
+      - persist_to_workspace:
+          root: /tmp
+          paths:
+            - artifacts
+  publish-github-release:
+    docker:
+      - image: circleci/golang:1.8
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - run:
+          name: "Publish Release on GitHub"
+          command: |
+            go get github.com/tcnksm/ghr
+            VERSION=$(my-binary --version)
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete "test" /tmp/artifacts/
+
 
 workflows:
   version: 2
