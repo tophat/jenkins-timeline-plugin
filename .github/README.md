@@ -1,10 +1,8 @@
-# Overview
+![Jenkins timeline](assets/logo.png)
+Jenkins Timeline (TL) Plugin
 
 [![Builds](https://img.shields.io/circleci/project/github/tophat/jenkins-timeline-plugin.svg)](https://circleci.com/gh/tophat/jenkins-timeline-plugin)
-
-![Jenkins timeline](assets/logo.png)
-
-Jenkins Timeline (TL) Plugin
+# Overview
 
 Jenkins TL is a Jenkins plugin that allows users to gain knowledge about the execution of their pipeline builds.
 
@@ -30,7 +28,7 @@ _Available soon!_
 
 The plugin adds a __Build Timeline__ link in every Pipeline build page menu. Clicking it will open up the build timeline in a new tab.
 
-<center><img src="assets/jenkins_menu.png"/></center>
+<div style="text-align:center'"><img src="assets/jenkins_menu.png"/></div>
 
 The timeline can be opened during a build for an incremental breakdown of the job or after a build is completed for an overview of old jobs.
 
