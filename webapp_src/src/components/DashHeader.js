@@ -31,8 +31,8 @@ export default class DashHeader extends React.PureComponent {
     static defaultProps = {
         buildStatus: buildStatuses.NOT_AVAILABLE,
         duration: 0,
-        endTime: moment(),
-        startTime: moment(),
+        endTime: null,
+        startTime: null,
     }
 
     formatTime = timestamp => {
