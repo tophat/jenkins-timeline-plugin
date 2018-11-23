@@ -50,11 +50,14 @@ jobs:
       - run: make build_all
       - run: make test
       - run: mkdir -p /tmp/artifacts
+      - run: mkdir -p /tmp/versioning
       - run: cp target/*.hpi /tmp/artifacts
+      - run: cp version.txt /tmp/versioning
       - persist_to_workspace:
           root: /tmp
           paths:
             - artifacts
+            - versioning
   website:
     <<: *website_docker_defaults
     working_directory: ~/repo/website
@@ -93,7 +96,8 @@ jobs:
           name: "Publish Release on GitHub"
           command: |
             go get github.com/tcnksm/ghr
-            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${CIRCLE_SHA1} /tmp/artifacts/
+            VERSION=`cat /tmp/versioning/version.txt`
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} /tmp/artifacts/
 
 
 workflows:
