@@ -92,11 +92,11 @@ jobs:
     steps:
       - attach_workspace:
           at: /tmp
-      - run: source /tmp/scripts/ci_release.sh
       - run:
           name: "Publish Release on GitHub"
           command: |
             go get github.com/tcnksm/ghr
+            source /tmp/scripts/ci_release.sh
             ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${RELEASE_VERSION} /tmp/artifacts/
 
 
