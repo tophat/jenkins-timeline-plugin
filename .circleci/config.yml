@@ -113,10 +113,10 @@ workflows:
           - publish-github-release:
               requires:
                   - test
-              # filters:
-              #   branches:
-              #     only:
-              #       - master
+              filters:
+                branches:
+                  only:
+                    - master
           - website
           - deploy_website:
               requires:
