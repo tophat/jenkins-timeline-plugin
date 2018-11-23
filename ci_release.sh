@@ -1,2 +1,0 @@
-export RELEASE_VERSION=`date`
-echo $RELEASE_VERSION
