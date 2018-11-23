@@ -1,1 +1,1 @@
-export VERSION=`date`
+export RELEASE_VERSION=`date`
