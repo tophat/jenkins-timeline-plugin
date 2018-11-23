@@ -1,5 +1,5 @@
 WEBAPP_ROOT = "webapp_src"
-WEBAPP_PUBLIC_URL = "/plugin/jenkins-timeline"
+WEBAPP_PUBLIC_URL = "/plugin/pipeline-timeline"
 
 .PHONY: clean_webapp
 clean_webapp:
@@ -16,10 +16,6 @@ build:
 .PHONY: build_webapp
 build_webapp:
 	make clean_webapp && cd $(WEBAPP_ROOT) && npm install && PUBLIC_URL=$(WEBAPP_PUBLIC_URL) npm run build-to-plugin
-
-.PHONY: package
-package:
-	mvn package -e
 
 .PHONY: test
 test:

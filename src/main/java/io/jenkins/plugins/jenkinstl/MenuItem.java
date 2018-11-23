@@ -11,7 +11,7 @@ public class MenuItem implements Action {
 
     @Override
     public String getIconFileName() {
-        return "plugin/jenkins-timeline/jenkins_assets/logo_sidepanel.png";
+        return "plugin/pipeline-timeline/jenkins_assets/logo_sidepanel.png";
     }
 
     @Override
@@ -21,6 +21,6 @@ public class MenuItem implements Action {
 
     @Override
     public String getUrlName() {
-        return "/plugin/jenkins-timeline/index.html?build_url="+this.buildUrl;
+        return "/plugin/pipeline-timeline/index.html?build_url="+this.buildUrl;
     }
 }
