@@ -96,7 +96,7 @@ jobs:
           name: "Publish Release on GitHub"
           command: |
             go get github.com/tcnksm/ghr
-            echo 'export RELEASE_VERSION=date' >> $BASH_ENV
+            echo 'export RELEASE_VERSION=`date`' >> $BASH_ENV
             source $BASH_ENV
             ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${RELEASE_VERSION} /tmp/artifacts/
 
