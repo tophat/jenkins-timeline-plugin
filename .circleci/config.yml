@@ -89,11 +89,12 @@ jobs:
     steps:
       - attach_workspace:
           at: /tmp
-      - run: VERSION=`date`
+      - run: export VERSION=`date`
       - run:
           name: "Publish Release on GitHub"
           command: |
             go get github.com/tcnksm/ghr
+            echo $VERSION
             ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} /tmp/artifacts/
 
 
