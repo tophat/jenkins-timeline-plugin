@@ -47,8 +47,17 @@ jobs:
     steps:
       - checkout
       - run: apk add make npm
-      - run: make clean_install
+      - run: make build_all
       - run: make test
+      - run: mkdir -p /tmp/artifacts
+      - run: mkdir -p /tmp/versioning
+      - run: cp target/*.hpi /tmp/artifacts
+      - run: cp version.txt /tmp/versioning
+      - persist_to_workspace:
+          root: /tmp
+          paths:
+            - artifacts
+            - versioning
   website:
     <<: *website_docker_defaults
     working_directory: ~/repo/website
@@ -77,6 +86,18 @@ jobs:
             git config --global user.email "circleci-codewatch@users.noreply.github.com"
             git config --global user.name "CircleCI Codewatch"
             USE_SSH=true yarn publish-gh-pages
+  publish-github-release:
+    docker:
+      - image: circleci/golang:1.8
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - run:
+          name: "Publish Release on GitHub"
+          command: |
+            go get github.com/tcnksm/ghr
+            VERSION=`cat /tmp/versioning/version.txt`
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} /tmp/artifacts/
 
 
 workflows:
@@ -87,8 +108,15 @@ workflows:
           - test_webapp
           - test:
               requires:
-                - test_webapp
-                - lint_webapp
+                  - lint_webapp
+                  - test_webapp
+          - publish-github-release:
+              requires:
+                  - test
+              filters:
+                branches:
+                  only:
+                    - master
           - website
           - deploy_website:
               requires:
