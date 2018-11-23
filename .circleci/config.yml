@@ -47,7 +47,7 @@ jobs:
     steps:
       - checkout
       - run: apk add make npm
-      - run: make package
+      - run: make build_all
       - run: make test
       - run: mkdir -p /tmp/artifacts
       - run: cp target/*.hpi /tmp/artifacts
@@ -89,6 +89,7 @@ jobs:
     steps:
       - attach_workspace:
           at: /tmp
+      - run: sh ci_release.sh
       - run:
           name: "Publish Release on GitHub"
           command: |
