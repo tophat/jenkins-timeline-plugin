@@ -47,8 +47,14 @@ jobs:
     steps:
       - checkout
       - run: apk add make npm
-      - run: make clean_install
+      - run: make package
       - run: make test
+      - run: mkdir -p /tmp/artifacts
+      - run: cp target/*.hpi /tmp/artifacts
+      - persist_to_workspace:
+          root: /tmp
+          paths:
+            - artifacts
   website:
     <<: *website_docker_defaults
     working_directory: ~/repo/website
@@ -77,21 +83,6 @@ jobs:
             git config --global user.email "circleci-codewatch@users.noreply.github.com"
             git config --global user.name "CircleCI Codewatch"
             USE_SSH=true yarn publish-gh-pages
-
-  package:
-    working_directory: ~/jenkins-timeline-plugin
-    docker:
-      - image: maven:3.6.0-jdk-8-alpine
-    steps:
-      - checkout
-      - run: apk add make npm
-      - run: make package
-      - run: mkdir -p /tmp/artifacts
-      - run: cp target/*.hpi /tmp/artifacts
-      - persist_to_workspace:
-          root: /tmp
-          paths:
-            - artifacts
   publish-github-release:
     docker:
       - image: circleci/golang:1.8
@@ -103,7 +94,7 @@ jobs:
           command: |
             go get github.com/tcnksm/ghr
             VERSION=$(date)
-            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} /tmp/artifacts
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} /tmp/artifacts/
 
 
 workflows:
@@ -116,20 +107,13 @@ workflows:
               requires:
                   - lint_webapp
                   - test_webapp
-          - package:
-              requires:
-                  - test
-              filters:
-                branches:
-                  only:
-                    - master
           - publish-github-release:
               requires:
-                  - package
-              filters:
-                branches:
-                  only:
-                    - master
+                  - test
+              # filters:
+              #   branches:
+              #     only:
+              #       - master
           - website
           - deploy_website:
               requires:
