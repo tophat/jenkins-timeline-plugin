@@ -116,6 +116,8 @@ export default class Dashboard extends React.Component {
         const endTime =
             this.state.status !== 'IN_PROGRESS' ? this.state.end : null
 
+        const headerHeight = `150px`
+
         return (
             <React.Fragment>
                 <DashHeader
@@ -130,7 +132,7 @@ export default class Dashboard extends React.Component {
                 <DashContainer>
                     <Chart
                         width={`100%`}
-                        height={`calc(100vh - 150px)`}
+                        height={`calc(100vh - ${headerHeight})`}
                         chartType="Timeline"
                         loader={<div>Loading...</div>}
                         data={this.formatChartRows()}
