@@ -130,6 +130,7 @@ export default class Dashboard extends React.Component {
                 <DashContainer>
                     <Chart
                         width={`100%`}
+                        height={`calc(100vh - 150px)`}
                         chartType="Timeline"
                         loader={<div>Loading...</div>}
                         data={this.formatChartRows()}
