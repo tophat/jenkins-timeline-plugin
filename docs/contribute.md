@@ -63,4 +63,4 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 ## Have a question that wasn't answered?
 
-Join our [slack community](https://tophat-opensource.slack.com) and ask!
+Join our [slack community](https://opensource.tophat.com/slack) and ask!
