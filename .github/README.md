@@ -20,9 +20,12 @@ Jenkins Timeline (TL) Plugin
 <a href="https://www.npmjs.com/package/react">
 <img alt="React version" src="https://img.shields.io/badge/ReactJS-%3E%3D16.6.3-brightgreen.svg"/>
 </a>
+<<<<<<< HEAD
 <a href="#contributors">
     <img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square"/>
 </a>
+=======
+>>>>>>> docs: update slack link
 <a href="https://opensource.tophat.com/slack">
 <img alt="Slack workspace" src="https://slackinvite.dev.tophat.com/badge.svg"/>
 </a>
