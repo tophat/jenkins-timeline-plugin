@@ -1,0 +1,62 @@
+{
+  "projectName": "jenkins-timeline-plugin",
+  "projectOwner": "tophat",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    ".github/README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "mcataford",
+      "name": "Marc Cataford",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6210361?v=4",
+      "profile": "https://marccataford.com",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "platform"
+      ]
+    },
+    {
+      "login": "brandonbaksh",
+      "name": "Brandon Baksh",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/39271619?v=4",
+      "profile": "https://www.linkedin.com/in/brandonbaksh/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jakebolam",
+      "name": "Jake Bolam",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3534236?v=4",
+      "profile": "https://jakebolam.com",
+      "contributions": [
+        "doc",
+        "infra"
+      ]
+    },
+    {
+      "login": "syavash",
+      "name": "Siavash Mahmoudian",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/445636?v=4",
+      "profile": "https://breezio.com",
+      "contributions": [
+        "infra"
+      ]
+    },
+    {
+      "login": "sdcosta",
+      "name": "Shouvik DCosta",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6020693?v=4",
+      "profile": "https://opensource.tophat.com",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ]
+}
