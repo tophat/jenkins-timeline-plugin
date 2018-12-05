@@ -16,7 +16,7 @@ function flushPromises() {
 }
 
 describe('Dashboard', () => {
-    const mockBuildUrl = 'mock'
+    const mockBuildUrl = '/test_url'
     const mockState = {
         stages: [
             {
