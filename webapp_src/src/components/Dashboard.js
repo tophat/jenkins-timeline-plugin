@@ -58,13 +58,22 @@ export default class Dashboard extends React.Component {
                 title: stageData.name,
                 start: moment(stageData.startTimeMillis),
                 duration: stageData.durationMillis,
-                steps: result.data.stageFlowNodes.map(node => ({
-                    start: moment(node.startTimeMillis),
-                    end: moment(node.startTimeMillis + node.durationMillis),
-                    title: node.name,
-                    status: node.status,
-                    stage: stageData.name,
-                })),
+                steps: result.data.stageFlowNodes.map(node => {
+                    /*
+                        Note: a negative step duration means the step was queued.
+                            Add better handling once the queue time is used as a
+                            metric.
+                    */
+                    const stepDuration =
+                        node.durationMillis >= 0 ? node.durationMillis : 0
+                    return {
+                        start: moment(node.startTimeMillis),
+                        end: moment(node.startTimeMillis + stepDuration),
+                        title: node.name,
+                        status: node.status,
+                        stage: stageData.name,
+                    }
+                }),
             }
             return stage
         })

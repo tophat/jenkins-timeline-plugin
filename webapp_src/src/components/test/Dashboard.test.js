@@ -5,7 +5,11 @@ import React from 'react'
 import moment from 'moment'
 
 import Dashboard from '../Dashboard'
-import { mockWfApiResponse, mockNodeApiResponse } from './mockData'
+import {
+    mockNegativeDurationStepStage,
+    mockNodeApiResponse,
+    mockWfApiResponse,
+} from './mockData'
 
 function flushPromises() {
     return new Promise(resolve => setImmediate(resolve))
@@ -97,6 +101,26 @@ describe('Dashboard', () => {
                     mockNodeApiResponse.data.stageFlowNodes.length,
                 )
                 expect(stage).toEqual(expectedStage)
+            })
+        })
+
+        it('Negative step durations are normalized to 0', () => {
+            jest.spyOn(axios, 'get')
+                .mockImplementationOnce(() =>
+                    Promise.resolve(mockWfApiResponse),
+                )
+                .mockImplementationOnce(() =>
+                    Promise.resolve(mockNegativeDurationStepStage),
+                )
+                .mockImplementation(() => Promise.resolve())
+
+            const dashboard = mount(<Dashboard buildUrl={mockBuildUrl} />)
+            return flushPromises().then(() => {
+                const state = dashboard.state()
+                const negativeDurationStage = state.stages[0].steps
+                expect(negativeDurationStage.start).toEqual(
+                    negativeDurationStage.end,
+                )
             })
         })
     })

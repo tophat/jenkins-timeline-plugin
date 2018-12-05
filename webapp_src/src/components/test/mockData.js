@@ -107,3 +107,42 @@ export const mockNodeApiResponse = {
         ],
     },
 }
+
+export const mockNegativeDurationStepStage = {
+    data: {
+        _links: {
+            self: {
+                href: '/job/test-pipeline/3/execution/node/6/wfapi/describe',
+            },
+        },
+        id: '6',
+        name: 'Preparation',
+        execNode: '',
+        status: 'SUCCESS',
+        startTimeMillis: 1542726719790,
+        durationMillis: -50,
+        pauseDurationMillis: 0,
+        stageFlowNodes: [
+            {
+                _links: {
+                    self: {
+                        href:
+                            '/job/test-pipeline/3/execution/node/7/wfapi/describe',
+                    },
+                    log: {
+                        href: '/job/test-pipeline/3/execution/node/7/wfapi/log',
+                    },
+                },
+                id: '7',
+                name: 'Sleep',
+                execNode: '',
+                status: 'SUCCESS',
+                parameterDescription: '5',
+                startTimeMillis: 1542726719818,
+                durationMillis: -100,
+                pauseDurationMillis: 0,
+                parentNodes: ['6'],
+            },
+        ],
+    },
+}
