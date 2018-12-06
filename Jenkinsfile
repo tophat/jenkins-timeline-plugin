@@ -8,11 +8,6 @@ node() {
 
     docker.image('maven:3.6.0-jdk-8-alpine').inside {
         try {
-            stage('Building Everything') {
-                sh 'apk add make npm'
-                sh 'make build_all'
-            }
-
             buildPlugin(
                 platforms: ['linux'],
                 tests: [skip: true]
