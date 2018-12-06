@@ -55,7 +55,7 @@
                 </goals>
                 <configuration>
                     <executable>make</executable>
-            	    <commandlineArgs>build_webapp</commandlineArgs>
+                    <commandlineArgs>build_webapp</commandlineArgs>
                 </configuration>
             </execution>
         </executions>
