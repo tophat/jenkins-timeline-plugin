@@ -9,12 +9,30 @@
     </parent>
     <groupId>io.jenkins.plugins</groupId>
     <artifactId>pipeline-timeline</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <packaging>hpi</packaging>
     <properties>
         <jenkins.version>2.7.3</jenkins.version>
         <java.level>7</java.level>
     </properties>
+    <build><plugins><plugin>
+        <artifactId>exec-maven-plugin</artifactId>
+    <version>1.6.0</version>
+        <groupId>org.codehaus.mojo</groupId>
+        <executions>
+            <execution>
+                <id>Building webapp component</id>
+                <phase>compile</phase>
+                <goals>
+                    <goal>exec</goal>
+                </goals>
+                <configuration>
+                    <executable>make</executable>
+            <commandlineArgs>build_webapp</commandlineArgs>
+                </configuration>
+            </execution>
+        </executions>
+    </plugin></plugins></build>
     <name>Pipeline timeline</name>
     <description>An interactive build timeline to help you visualize your build pipeline and identify bottlenecks.</description>
     <licenses>
