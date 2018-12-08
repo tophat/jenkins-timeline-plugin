@@ -114,12 +114,11 @@ workflows:
       jobs:
           - lint_webapp
           - test_webapp
-          - test:
+          - test
+          - publish-github-release:
               requires:
                   - lint_webapp
                   - test_webapp
-          - publish-github-release:
-              requires:
                   - test
               filters:
                 branches:
