@@ -48,11 +48,11 @@ jobs:
       - checkout
       - run: apk add make npm
       - restore_cache:
-          name: Restore node_modules cache
+          name: Restore maven cache
           key: website-{{ checksum "pom.xml" }}-{{ .Branch }}
       - run: make build_all
       - save_cache:
-          name: Save node_modules cache
+          name: Save maven cache
           key: website-{{ checksum "pom.xml" }}-{{ .Branch }}
           paths:
             - ~/.m2
