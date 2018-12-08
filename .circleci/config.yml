@@ -47,7 +47,15 @@ jobs:
     steps:
       - checkout
       - run: apk add make npm
+      - restore_cache:
+          name: Restore maven cache
+          key: website-{{ checksum "pom.xml" }}-{{ .Branch }}
       - run: make build_all
+      - save_cache:
+          name: Save maven cache
+          key: website-{{ checksum "pom.xml" }}-{{ .Branch }}
+          paths:
+            - ~/.m2
       - run: make test
       - run: mkdir -p /tmp/artifacts
       - run: mkdir -p /tmp/versioning
@@ -106,12 +114,11 @@ workflows:
       jobs:
           - lint_webapp
           - test_webapp
-          - test:
+          - test
+          - publish-github-release:
               requires:
                   - lint_webapp
                   - test_webapp
-          - publish-github-release:
-              requires:
                   - test
               filters:
                 branches:

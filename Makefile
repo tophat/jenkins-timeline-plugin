@@ -11,7 +11,7 @@ build_all:
 
 .PHONY: build
 build:
-	mvn install -e
+	mvn install -e dependency:resolve-plugins dependency:go-offline
 
 .PHONY: build_webapp
 build_webapp:
