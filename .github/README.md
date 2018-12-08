@@ -9,7 +9,7 @@ Jenkins Timeline (TL) Plugin
 <br>
 <div align="center">
 <a href="https://circleci.com/gh/tophat/jenkins-timeline-plugin">
-<img alt="Build" src="https://img.shields.io/circleci/project/github/tophat/jenkins-timeline-plugin.svg"/>
+<img alt="Build" src="https://img.shields.io/circleci/project/github/tophat/jenkins-timeline-plugin/master.svg"/>
 </a>
 <a href="https://jenkins.io">
 <img alt="Jenkins version" src="https://img.shields.io/badge/jenkinsci-%3E%3D2.7.3-brightgreen.svg"/>
