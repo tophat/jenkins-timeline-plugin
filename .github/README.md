@@ -8,7 +8,6 @@ Jenkins Timeline (TL) Plugin
 </div>
 <br>
 <div align="center">
-    
     <a href="https://jenkins.io/projects/pipeline-timeline/">
         <img alt="Package" src="https://img.shields.io/jenkins/plugin/v/pipeline-timeline.svg"/>
     </a>
