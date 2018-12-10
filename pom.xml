@@ -114,10 +114,5 @@
             <artifactId>workflow-step-api</artifactId>
             <version>2.1</version>
         </dependency>
-        <!-- <dependency>
-            <groupId>com.github.eirslett</groupId>
-            <artifactId>frontend-maven-plugin</artifactId>
-            <version>1.6</version>
-        </dependency> -->
     </dependencies>
 </project>
