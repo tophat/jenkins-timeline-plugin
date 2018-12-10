@@ -17,49 +17,61 @@
         <node.version>6.4.0</node.version>
         <npm.version>3.10.3</npm.version>
     </properties>
-    <build><plugins><plugin>
-        <artifactId>exec-maven-plugin</artifactId>
-    <version>1.6.0</version>
-        <groupId>org.codehaus.mojo</groupId>
-        <executions>
-	    <execution>
-		<phase>initialize</phase>
-		<id>install node and npm</id>
-		<goals>
-		    <goal>install-node-and-npm</goal>
-		</goals>
-		<configuration>
-		    <nodeVersion>v${node.version}</nodeVersion>
-		    <npmVersion>${npm.version}</npmVersion>
-		    <nodeDownloadRoot>https://repo.jenkins-ci.org/nodejs-dist/</nodeDownloadRoot>
-		    <npmDownloadRoot>https://repo.jenkins-ci.org/npm-dist/</npmDownloadRoot>
-		</configuration>
-	    </execution>
-
-	    <execution>
-		<phase>initialize</phase>
-		<id>npm install</id>
-		<goals>
-		    <goal>npm</goal>
-		</goals>
-		<configuration>
-		    <!-- Note that this may not be omitted lest maven-release-plugin be confused (frontend-maven-plugin #109): -->
-		    <arguments>install ${npm.loglevel}</arguments>
-		</configuration>
-	    </execution>
-            <execution>
-                <id>Building webapp component</id>
-                <phase>compile</phase>
-                <goals>
-                    <goal>exec</goal>
-                </goals>
-                <configuration>
-                    <executable>make</executable>
-                    <commandlineArgs>build_webapp</commandlineArgs>
-                </configuration>
-            </execution>
-        </executions>
-    </plugin></plugins></build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <!-- Use the latest released version:
+                https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/ -->
+                <version>1.6</version>
+                <executions>
+	                <execution>
+                        <phase>initialize</phase>
+                        <id>install node and npm</id>
+                        <goals>
+                            <goal>install-node-and-npm</goal>
+                        </goals>
+                        <configuration>
+                            <nodeVersion>v${node.version}</nodeVersion>
+                            <npmVersion>${npm.version}</npmVersion>
+                            <nodeDownloadRoot>https://repo.jenkins-ci.org/nodejs-dist/</nodeDownloadRoot>
+                            <npmDownloadRoot>https://repo.jenkins-ci.org/npm-dist/</npmDownloadRoot>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <id>npm install</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>npm</executable>
+                            <arguments>install ${npm.loglevel}</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>Building webapp component</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>make</executable>
+                            <commandlineArgs>build_webapp</commandlineArgs>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
     <name>Pipeline timeline</name>
     <description>An interactive build timeline to help you visualize your build pipeline and identify bottlenecks.</description>
     <licenses>
@@ -102,5 +114,10 @@
             <artifactId>workflow-step-api</artifactId>
             <version>2.1</version>
         </dependency>
+        <!-- <dependency>
+            <groupId>com.github.eirslett</groupId>
+            <artifactId>frontend-maven-plugin</artifactId>
+            <version>1.6</version>
+        </dependency> -->
     </dependencies>
 </project>
