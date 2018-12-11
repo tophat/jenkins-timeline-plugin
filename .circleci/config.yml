@@ -50,7 +50,7 @@ jobs:
       - restore_cache:
           name: Restore maven cache
           key: website-{{ checksum "pom.xml" }}-{{ .Branch }}
-      - run: make build_all
+      - run: make build
       - save_cache:
           name: Save maven cache
           key: website-{{ checksum "pom.xml" }}-{{ .Branch }}

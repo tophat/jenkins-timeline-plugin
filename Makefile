@@ -5,10 +5,6 @@ WEBAPP_PUBLIC_URL = "/plugin/pipeline-timeline"
 clean_webapp:
 	find ./src/main/webapp/* | grep -v "jenkins_assets*" | xargs rm -rf
 
-.PHONY: build_all
-build_all:
-	make build_webapp && make build
-
 .PHONY: build
 build:
 	mvn install -e dependency:resolve-plugins dependency:go-offline
