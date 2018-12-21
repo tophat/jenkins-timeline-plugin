@@ -46,7 +46,8 @@ jobs:
       - image: maven:3.6.0-jdk-8
     steps:
       - checkout
-      - run: apt-get install make -y
+      - run: apt-get update
+      - run: apt-get install make
       - restore_cache:
           name: Restore maven cache
           key: website-{{ checksum "pom.xml" }}-{{ .Branch }}
