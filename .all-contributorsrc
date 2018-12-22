@@ -4,7 +4,7 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
-    ".github/README.md"
+    "README.md"
   ],
   "imageSize": 100,
   "commit": false,
@@ -56,6 +56,15 @@
       "profile": "https://opensource.tophat.com",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "jenkins-timeline-bot",
+      "name": "jenkins-timeline-bot",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/46076627?v=4",
+      "profile": "https://jenkinstimeline.com",
+      "contributions": [
+        "infra"
       ]
     }
   ]
