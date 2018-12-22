@@ -88,13 +88,13 @@ jobs:
           at: ./
       - add_ssh_keys:
           fingerprints:
-            - "67:43:3a:9c:23:66:bb:e1:00:03:d3:ab:1c:28:a5:f8"
+            - "a8:c1:2f:d9:fe:0b:f1:69:57:b0:02:6c:53:f5:bd:29"
       - run:
           name: Setup git user and deploy website
           command: |
             git config --global user.email "circleci-codewatch@users.noreply.github.com"
             git config --global user.name "CircleCI Codewatch"
-            USE_SSH=true yarn publish-gh-pages
+            CUSTOM_COMMIT_MESSAGE="[skip ci]" USE_SSH=true yarn publish-gh-pages
   publish-github-release:
     docker:
       - image: circleci/golang:1.8
