@@ -1,17 +1,9 @@
 WEBAPP_ROOT = "webapp_src"
 WEBAPP_PUBLIC_URL = "/plugin/pipeline-timeline"
 
-.PHONY: clean_webapp
-clean_webapp:
-	find ./src/main/webapp/* | grep -v "jenkins_assets*" | xargs rm -rf
-
 .PHONY: build
 build:
 	mvn install -e dependency:resolve-plugins dependency:go-offline
-
-.PHONY: build_webapp
-build_webapp:
-	make clean_webapp && cd $(WEBAPP_ROOT) && npm install && PUBLIC_URL=$(WEBAPP_PUBLIC_URL) npm run build-to-plugin
 
 .PHONY: test
 test:
