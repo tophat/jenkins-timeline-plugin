@@ -19,7 +19,7 @@
     "lint": "eslint src --ignore-pattern *.style.js --ignore-pattern serviceWorker.js",
     "lint-fix": "eslint src --ignore-pattern *.style.js --ignore-pattern serviceWorker.js --fix",
     "test-watch": "react-scripts test",
-    "build-to-plugin": "PUBLIC_URL=/plugin/pipeline-timeline npm run build && cp build/* ../src/main/webapp",
+    "build-to-plugin": "PUBLIC_URL=/plugin/pipeline-timeline npm run build && cp -r build/* ../src/main/webapp",
     "deploy": "npm run test && npm run build-to-plugin"
   },
   "eslintConfig": {
