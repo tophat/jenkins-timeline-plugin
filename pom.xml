@@ -9,24 +9,28 @@
     </parent>
     <groupId>io.jenkins.plugins</groupId>
     <artifactId>pipeline-timeline</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>hpi</packaging>
     <properties>
         <jenkins.version>2.7.3</jenkins.version>
         <java.level>7</java.level>
-        <node.version>6.4.0</node.version>
-        <npm.version>3.10.3</npm.version>
+        <node.version>8.0.0</node.version>
+        <npm.version>6.5.0</npm.version>
     </properties>
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration><useSystemClassLoader>false</useSystemClassLoader></configuration>
+            </plugin>
+            <plugin>
                 <groupId>com.github.eirslett</groupId>
                 <artifactId>frontend-maven-plugin</artifactId>
-                <!-- Use the latest released version:
-                https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/ -->
                 <version>1.6</version>
+                <inherited>false</inherited>
                 <executions>
-	                <execution>
+                        <execution>
                         <phase>initialize</phase>
                         <id>install node and npm</id>
                         <goals>
@@ -37,35 +41,31 @@
                             <npmVersion>${npm.version}</npmVersion>
                             <nodeDownloadRoot>https://repo.jenkins-ci.org/nodejs-dist/</nodeDownloadRoot>
                             <npmDownloadRoot>https://repo.jenkins-ci.org/npm-dist/</npmDownloadRoot>
+                            <installDirectory>mvn_node</installDirectory>
                         </configuration>
                     </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version>
-                <groupId>org.codehaus.mojo</groupId>
-                <executions>
                     <execution>
                         <phase>initialize</phase>
                         <id>npm install</id>
                         <goals>
-                            <goal>exec</goal>
+                            <goal>npm</goal>
                         </goals>
                         <configuration>
-                            <executable>npm</executable>
-                            <arguments>install ${npm.loglevel}</arguments>
+                            <arguments>install</arguments>
+                            <workingDirectory>webapp_src</workingDirectory>
+                            <installDirectory>mvn_node</installDirectory>
                         </configuration>
                     </execution>
                     <execution>
                         <id>Building webapp component</id>
                         <phase>compile</phase>
                         <goals>
-                            <goal>exec</goal>
+                            <goal>npm</goal>
                         </goals>
                         <configuration>
-                            <executable>make</executable>
-                            <commandlineArgs>build_webapp</commandlineArgs>
+                          <workingDirectory>webapp_src</workingDirectory>
+                          <installDirectory>mvn_node</installDirectory>
+                          <arguments>run build-to-plugin</arguments>
                         </configuration>
                     </execution>
                 </executions>
@@ -91,11 +91,11 @@
             <id>repo.jenkins-ci.org</id>
             <url>https://repo.jenkins-ci.org/public/</url>
         </repository>
-	<repository>
-		<id>jenkins-releases</id>
-		<name>Jenkins Releases</name>
-		<url>http://repo.jenkins-ci.org/releases</url>
-	</repository>
+        <repository>
+                <id>jenkins-releases</id>
+                <name>Jenkins Releases</name>
+                <url>http://repo.jenkins-ci.org/releases</url>
+        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>

@@ -43,14 +43,15 @@ jobs:
   test:
     working_directory: ~/jenkins-timeline-plugin
     docker:
-      - image: maven:3.6.0-jdk-8-alpine
+      - image: maven:3.6.0-jdk-8
     steps:
       - checkout
-      - run: apk add make npm
+      - run: apt-get update
+      - run: apt-get install make
       - restore_cache:
           name: Restore maven cache
           key: website-{{ checksum "pom.xml" }}-{{ .Branch }}
-      - run: make build_all
+      - run: make build
       - save_cache:
           name: Save maven cache
           key: website-{{ checksum "pom.xml" }}-{{ .Branch }}
