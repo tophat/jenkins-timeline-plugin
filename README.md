@@ -1,5 +1,5 @@
 <div align="center">
-<img src="../website/static/img/logo.png"/>
+<img src="website/static/img/logo.png"/>
 </div>
 <div align="center">
 <strong>
@@ -21,7 +21,7 @@ Jenkins Timeline (TL) Plugin
 <img alt="React version" src="https://img.shields.io/badge/ReactJS-%3E%3D16.6.3-brightgreen.svg"/>
 </a>
 <a href="#contributors">
-    <img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square"/>
+    <img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square"/>
 </a>
 <a href="https://opensource.tophat.com/slack">
 <img alt="Slack workspace" src="https://slackinvite.dev.tophat.com/badge.svg"/>
@@ -138,8 +138,8 @@ Thanks goes to these wonderful people [emoji key](https://github.com/kentcdodds/
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/6210361?v=4" width="100px;"/><br /><sub><b>Marc Cataford</b></sub>](https://marccataford.com)<br />[💻](https://github.com/tophat/jenkins-timeline-plugin/commits?author=mcataford "Code") [📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=mcataford "Documentation") [🚇](#infra-mcataford "Infrastructure (Hosting, Build-Tools, etc)") [📦](#platform-mcataford "Packaging/porting to new platform") | [<img src="https://avatars1.githubusercontent.com/u/39271619?v=4" width="100px;"/><br /><sub><b>Brandon Baksh</b></sub>](https://www.linkedin.com/in/brandonbaksh/)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=brandonbaksh "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/3534236?v=4" width="100px;"/><br /><sub><b>Jake Bolam</b></sub>](https://jakebolam.com)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=jakebolam "Documentation") [🚇](#infra-jakebolam "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars1.githubusercontent.com/u/445636?v=4" width="100px;"/><br /><sub><b>Siavash Mahmoudian</b></sub>](https://breezio.com)<br />[🚇](#infra-syavash "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars0.githubusercontent.com/u/6020693?v=4" width="100px;"/><br /><sub><b>Shouvik DCosta</b></sub>](https://opensource.tophat.com)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=sdcosta "Documentation") |
-| :---: | :---: | :---: | :---: | :---: |
+| [<img src="https://avatars2.githubusercontent.com/u/6210361?v=4" width="100px;"/><br /><sub><b>Marc Cataford</b></sub>](https://marccataford.com)<br />[💻](https://github.com/tophat/jenkins-timeline-plugin/commits?author=mcataford "Code") [📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=mcataford "Documentation") [🚇](#infra-mcataford "Infrastructure (Hosting, Build-Tools, etc)") [📦](#platform-mcataford "Packaging/porting to new platform") | [<img src="https://avatars1.githubusercontent.com/u/39271619?v=4" width="100px;"/><br /><sub><b>Brandon Baksh</b></sub>](https://www.linkedin.com/in/brandonbaksh/)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=brandonbaksh "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/3534236?v=4" width="100px;"/><br /><sub><b>Jake Bolam</b></sub>](https://jakebolam.com)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=jakebolam "Documentation") [🚇](#infra-jakebolam "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars1.githubusercontent.com/u/445636?v=4" width="100px;"/><br /><sub><b>Siavash Mahmoudian</b></sub>](https://breezio.com)<br />[🚇](#infra-syavash "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars0.githubusercontent.com/u/6020693?v=4" width="100px;"/><br /><sub><b>Shouvik DCosta</b></sub>](https://opensource.tophat.com)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=sdcosta "Documentation") | [<img src="https://avatars0.githubusercontent.com/u/46076627?v=4" width="100px;"/><br /><sub><b>jenkins-timeline-bot</b></sub>](https://jenkinstimeline.com)<br />[🚇](#infra-jenkins-timeline-bot "Infrastructure (Hosting, Build-Tools, etc)") |
+| :---: | :---: | :---: | :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 We welcome contributions from the community, Top Hatters and non-Top Hatters alike. Check out our [contributing guidelines](CONTRIBUTING.md) for more details.

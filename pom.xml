@@ -86,6 +86,13 @@
         <developerConnection>scm:git:git@github.com:tophat/jenkins-timeline-plugin.git</developerConnection>
         <url></url>
     </scm>
+    <developers>
+        <developer>
+            <id>mcataford</id>
+            <name>Marc Cataford</name>
+            <email>marc.cataford@tophatmonocle.com</email>
+        </developer>
+    </developers>
     <repositories>
         <repository>
             <id>repo.jenkins-ci.org</id>
