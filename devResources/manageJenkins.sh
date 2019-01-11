@@ -3,10 +3,11 @@
 JENKINS_CONTAINER=local_jenkins
 DOES_CONTAINER_ALREADY_EXIST=`docker ps -aq -f name=$JENKINS_CONTAINER`
 IS_CONTAINER_RUNNING=`docker ps -aq -f status=running -f name=$JENKINS_CONTAINER`
+IMAGE=jenkinsci/blueocean
 
 start_jenkins () {
     echo "Starting fresh $JENKINS_CONTAINER"
-    docker run -p 8080:8080 -p 50000:50000 --name $JENKINS_CONTAINER --detach jenkinsci/blueocean
+    docker run -p 8080:8080 -p 50000:50000 --name $JENKINS_CONTAINER --detach $IMAGE
     echo "Jenkins machine available at http://locahost:/8080"
     return
 }
