@@ -24,3 +24,15 @@ lint_webapp:
 .PHONY: lintfix_webapp
 lintfix_webapp:
 	cd $(WEBAPP_ROOT) && npm install && npm run lint-fix
+
+.PHONY: start_jenkins
+start_jenkins:
+	sh devResources/manageJenkins.sh start
+
+.PHONY: stop_jenkins
+stop_jenkins::
+	sh devResources/manageJenkins.sh stop
+
+.PHONY: clean_jenkins
+clean_jenkins:
+	sh devResources/manageJenkins.sh clean
