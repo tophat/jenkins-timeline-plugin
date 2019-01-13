@@ -31,6 +31,12 @@ exec_env () {
     return
 }
 
+build_and_export_hpi () {
+    docker exec -ti $ENV_CONTAINER sh -c "cd /home && mvn install"
+    docker cp $ENV_CONTAINER:/home/target/pipeline-timeline.hpi .
+    return
+}
+
 if [[ $1 = "start" ]]; then
     if [[ -n $DOES_CONTAINER_ALREADY_EXIST ]]; then
         echo "Container $ENV_CONTAINER is already exists!"
@@ -60,7 +66,16 @@ elif [[ $1 = "clean" ]]; then
 elif [[ $1 = "exec" ]]; then
     if [[ -n $IS_CONTAINER_RUNNING ]]; then
         exec_env
+    else
+        echo "Build environment container is not running."
+    fi
+elif [[ $1 = "build_plugin" ]]; then
+    if [[ -n $IS_CONTAINER_RUNNING ]]; then
+        echo "Building the hpi package in $ENV_CONTAINER and exporting it to the host."
+        build_and_export_hpi
+        HPI_LOC=`pwd`
+        echo "All done! The hpi package has been copied to $HPI_LOC"
+    else
+        echo "Build environment container is not running."
     fi
 fi
-
-echo "All done!"

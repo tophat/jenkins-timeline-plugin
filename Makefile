@@ -52,3 +52,7 @@ clean_env:
 .PHONY: exec_env
 exec_env:
 	sh devResources/manageBuildEnvironment.sh exec
+
+.PHONY: build_and_export
+build_and_export:
+	sh devResources/manageBuildEnvironment.sh build_plugin
