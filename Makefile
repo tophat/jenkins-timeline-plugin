@@ -36,3 +36,19 @@ stop_jenkins::
 .PHONY: clean_jenkins
 clean_jenkins:
 	sh devResources/manageJenkins.sh clean
+
+.PHONY: start_env
+start_env:
+	sh devResources/manageBuildEnvironment.sh start
+
+.PHONY: stop_env
+stop_env::
+	sh devResources/manageBuildEnvironment.sh stop
+
+.PHONY: clean_env
+clean_env:
+	sh devResources/manageBuildEnvironment.sh clean
+
+.PHONY: exec_env
+exec_env:
+	sh devResources/manageBuildEnvironment.sh exec
