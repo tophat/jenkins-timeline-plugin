@@ -33,6 +33,8 @@ Jenkins Timeline (TL) Plugin
 
 # Overview
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tophat/jenkins-timeline-plugin.svg)](https://greenkeeper.io/)
+
 Jenkins TL is a Jenkins plugin that allows users to gain knowledge about the execution of their pipeline builds.
 
 ## Motivation
