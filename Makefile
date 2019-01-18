@@ -11,7 +11,7 @@ test:
 
 .PHONY: test_webapp
 test_webapp:
-	cd $(WEBAPP_ROOT) && npm install && npm run test
+	npm --prefix $(WEBAPP_ROOT) install && npm --prefix $(WEBAPP_ROOT) run test
 
 .PHONY: clean_install
 clean_install:
@@ -19,11 +19,11 @@ clean_install:
 
 .PHONY: lint_webapp
 lint_webapp:
-	cd $(WEBAPP_ROOT) && npm install && npm run lint
+	npm --prefix $(WEBAPP_ROOT) install && npm --prefix $(WEBAPP_ROOT) run lint
 
 .PHONY: lintfix_webapp
 lintfix_webapp:
-	cd $(WEBAPP_ROOT) && npm install && npm run lint-fix
+	npm --prefix $(WEBAPP_ROOT) install && npm --prefix $(WEBAPP_ROOT) run lint-fix
 
 .PHONY: start_jenkins
 start_jenkins:
