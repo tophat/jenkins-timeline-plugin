@@ -33,6 +33,8 @@ Jenkins Timeline (TL) Plugin
 
 # Overview
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tophat/jenkins-timeline-plugin.svg)](https://greenkeeper.io/)
+
 Jenkins TL is a Jenkins plugin that allows users to gain knowledge about the execution of their pipeline builds.
 
 ## Motivation
@@ -83,6 +85,25 @@ To work on the project, you will need ...
 - [A Java development environment (JDK 8)](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html);
 - [A local instance of Jenkins](https://jenkins.io/doc/book/installing/);
 - [npm](https://www.npmjs.com/get-npm);
+
+__You can either install all of these on your machine, or use the Docker-based shortcuts included in the `Makefile`.__
+
+### Docker-based development environment
+
+You can leverage the power of Docker to avoid having to set up the development environment on your machine:
+
+Any of the following can be used by typing `make <cmd>` given you have Docker installed:
+
+| Command | Definition |
+|:---|:---|
+|`start_jenkins`|Starts a Jenkins docker machine bound to port 8080. Terminates any previous instance of itself.|
+|`stop_jenkins`|Stops a running instance of the Jenkins docker machine.|
+|`clean_jenkins`|Removes an existing instance of the Jenkins docker machine.|
+|`start_env`|Starts a docker machine set up with a copy of the local plugin files and Maven.|
+|`stop_env`|Stops a runnign instance of the build environment docker machine.|
+|`clean_env`|Removes an existing instance of the build environment.|
+|`exec_env`|Gives you console access to the build environment docker machine.|
+|`build_and_export`|Builds the plugin package from the local files in the build environment and exports the `hpi` artifact to your local work directory.|
 
 ### Compatibility note
 The linked version of Java (JDK 8) is the preferred version for this project, as Maven seems to have trouble building with other versions.
