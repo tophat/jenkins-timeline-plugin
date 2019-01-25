@@ -1,5 +1,5 @@
 <div align="center">
-<img src="../website/static/img/logo.png"/>
+<img src="website/static/img/logo.png"/>
 </div>
 <div align="center">
 <strong>
@@ -36,6 +36,8 @@ Jenkins Timeline (TL) Plugin
 </div>
 
 # Overview
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/tophat/jenkins-timeline-plugin.svg)](https://greenkeeper.io/)
 
 Jenkins TL is a Jenkins plugin that allows users to gain knowledge about the execution of their pipeline builds.
 
@@ -87,6 +89,25 @@ To work on the project, you will need ...
 - [A Java development environment (JDK 8)](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html);
 - [A local instance of Jenkins](https://jenkins.io/doc/book/installing/);
 - [npm](https://www.npmjs.com/get-npm);
+
+__You can either install all of these on your machine, or use the Docker-based shortcuts included in the `Makefile`.__
+
+### Docker-based development environment
+
+You can leverage the power of Docker to avoid having to set up the development environment on your machine:
+
+Any of the following can be used by typing `make <cmd>` given you have Docker installed:
+
+| Command | Definition |
+|:---|:---|
+|`start_jenkins`|Starts a Jenkins docker machine bound to port 8080. Terminates any previous instance of itself.|
+|`stop_jenkins`|Stops a running instance of the Jenkins docker machine.|
+|`clean_jenkins`|Removes an existing instance of the Jenkins docker machine.|
+|`start_env`|Starts a docker machine set up with a copy of the local plugin files and Maven.|
+|`stop_env`|Stops a runnign instance of the build environment docker machine.|
+|`clean_env`|Removes an existing instance of the build environment.|
+|`exec_env`|Gives you console access to the build environment docker machine.|
+|`build_and_export`|Builds the plugin package from the local files in the build environment and exports the `hpi` artifact to your local work directory.|
 
 ### Compatibility note
 The linked version of Java (JDK 8) is the preferred version for this project, as Maven seems to have trouble building with other versions.
@@ -142,8 +163,8 @@ Thanks goes to these wonderful people [emoji key](https://github.com/kentcdodds/
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/6210361?v=4" width="100px;"/><br /><sub><b>Marc Cataford</b></sub>](https://marccataford.com)<br />[💻](https://github.com/tophat/jenkins-timeline-plugin/commits?author=mcataford "Code") [📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=mcataford "Documentation") [🚇](#infra-mcataford "Infrastructure (Hosting, Build-Tools, etc)") [📦](#platform-mcataford "Packaging/porting to new platform") | [<img src="https://avatars1.githubusercontent.com/u/39271619?v=4" width="100px;"/><br /><sub><b>Brandon Baksh</b></sub>](https://www.linkedin.com/in/brandonbaksh/)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=brandonbaksh "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/3534236?v=4" width="100px;"/><br /><sub><b>Jake Bolam</b></sub>](https://jakebolam.com)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=jakebolam "Documentation") [🚇](#infra-jakebolam "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars1.githubusercontent.com/u/445636?v=4" width="100px;"/><br /><sub><b>Siavash Mahmoudian</b></sub>](https://breezio.com)<br />[🚇](#infra-syavash "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars0.githubusercontent.com/u/6020693?v=4" width="100px;"/><br /><sub><b>Shouvik DCosta</b></sub>](https://opensource.tophat.com)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=sdcosta "Documentation") |
-| :---: | :---: | :---: | :---: | :---: |
+| [<img src="https://avatars2.githubusercontent.com/u/6210361?v=4" width="100px;"/><br /><sub><b>Marc Cataford</b></sub>](https://marccataford.com)<br />[💻](https://github.com/tophat/jenkins-timeline-plugin/commits?author=mcataford "Code") [📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=mcataford "Documentation") [🚇](#infra-mcataford "Infrastructure (Hosting, Build-Tools, etc)") [📦](#platform-mcataford "Packaging/porting to new platform") | [<img src="https://avatars1.githubusercontent.com/u/39271619?v=4" width="100px;"/><br /><sub><b>Brandon Baksh</b></sub>](https://www.linkedin.com/in/brandonbaksh/)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=brandonbaksh "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/3534236?v=4" width="100px;"/><br /><sub><b>Jake Bolam</b></sub>](https://jakebolam.com)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=jakebolam "Documentation") [🚇](#infra-jakebolam "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars1.githubusercontent.com/u/445636?v=4" width="100px;"/><br /><sub><b>Siavash Mahmoudian</b></sub>](https://breezio.com)<br />[🚇](#infra-syavash "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars0.githubusercontent.com/u/6020693?v=4" width="100px;"/><br /><sub><b>Shouvik DCosta</b></sub>](https://opensource.tophat.com)<br />[📖](https://github.com/tophat/jenkins-timeline-plugin/commits?author=sdcosta "Documentation") | [<img src="https://avatars0.githubusercontent.com/u/46076627?v=4" width="100px;"/><br /><sub><b>jenkins-timeline-bot</b></sub>](https://jenkinstimeline.com)<br />[🚇](#infra-jenkins-timeline-bot "Infrastructure (Hosting, Build-Tools, etc)") |
+| :---: | :---: | :---: | :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 We welcome contributions from the community, Top Hatters and non-Top Hatters alike. Check out our [contributing guidelines](CONTRIBUTING.md) for more details.
