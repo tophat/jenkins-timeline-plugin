@@ -8,27 +8,31 @@ Jenkins Timeline (TL) Plugin
 </div>
 <br>
 <div align="center">
-<a href="https://circleci.com/gh/tophat/jenkins-timeline-plugin">
-<img alt="Build" src="https://img.shields.io/circleci/project/github/tophat/jenkins-timeline-plugin/master.svg"/>
-</a>
-<a href="https://jenkins.io">
-<img alt="Jenkins version" src="https://img.shields.io/badge/jenkinsci-%3E%3D2.7.3-brightgreen.svg"/>
-</a>
-<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">
-<img alt="Java version" src="https://img.shields.io/badge/JDK-8-brightgreen.svg"/>
-</a>
-<a href="https://www.npmjs.com/package/react">
-<img alt="React version" src="https://img.shields.io/badge/ReactJS-%3E%3D16.6.3-brightgreen.svg"/>
-</a>
-<a href="#contributors">
-    <img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square"/>
-</a>
-<a href="https://opensource.tophat.com/slack">
-<img alt="Slack workspace" src="https://slackinvite.dev.tophat.com/badge.svg"/>
-</a>
-<a href="https://github.com/tophat/getting-started/blob/master/scorecard.md">
-<img alt="Maturity Score" src="https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg"/>
-</a>
+    <a href="https://plugins.jenkins.io/pipeline-timeline">
+        <img alt="Package" src="https://img.shields.io/jenkins/plugin/v/pipeline-timeline.svg"/>
+    </a>
+    <a href="https://circleci.com/gh/tophat/jenkins-timeline-plugin">
+        <img alt="Build" src="https://img.shields.io/circleci/project/github/tophat/jenkins-timeline-plugin/master.svg"/>
+    </a>
+    <a href="https://jenkins.io">
+        <img alt="Jenkins version" src="https://img.shields.io/badge/jenkinsci-%3E%3D2.7.3-brightgreen.svg"/>
+    </a>
+    <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">
+        <img alt="Java version" src="https://img.shields.io/badge/JDK-8-brightgreen.svg"/>
+    </a>
+    <a href="https://www.npmjs.com/package/react">
+        <img alt="React version" src="https://img.shields.io/badge/ReactJS-%3E%3D16.6.3-brightgreen.svg"/>
+    </a>
+    <br />
+    <a href="#contributors">
+        <img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square"/>
+    </a>
+    <a href="https://opensource.tophat.com/slack">
+        <img alt="Slack workspace" src="https://slackinvite.dev.tophat.com/badge.svg"/>
+    </a>
+    <a href="https://github.com/tophat/getting-started/blob/master/scorecard.md">
+        <img alt="Maturity Score" src="https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg"/>
+    </a>
 </div>
 
 # Overview
