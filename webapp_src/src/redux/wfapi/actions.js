@@ -18,7 +18,7 @@ export const fetchWfApiData = endpointUrl => ({
 })
 
 export const fetchWfApiDataSuccess = responseData => ({
-    payload: { responseData },
+    payload: responseData,
     type: FETCH_WFAPI_DATA_SUCCESS,
 })
 

@@ -12,7 +12,7 @@ export function* wfapiBuildSaga(action) {
 
     try {
         const response = yield call(axios.get, payload.endpointUrl)
-        yield put(fetchWfApiDataSuccess(response))
+        yield put(fetchWfApiDataSuccess(response.data))
     } catch (e) {
         yield put(fetchWfApiDataFailed())
     }
