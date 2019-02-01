@@ -1,40 +1,41 @@
+import Immutable from 'immutable'
+
 import {
     FETCH_WFAPI_DATA,
     FETCH_WFAPI_DATA_FAILED,
     FETCH_WFAPI_DATA_SUCCESS,
 } from './actions'
 
-export const initialState = {
+export const initialState = Immutable.fromJS({
     isLoading: false,
     hasErrored: false,
     buildData: null,
-}
+})
 
 const fetchWfApiDataHandler = state => {
-    const newState = Object.assign({}, state)
-    newState.isLoading = true
-
-    return newState
+    return state.merge({
+        isLoading: true,
+    })
 }
 
 const fetchWfApiDataSuccessHandler = (state, payload) => {
-    const newState = Object.assign({}, state)
-    newState.isLoading = false
-    newState.buildData = payload
-
-    return newState
+    return state.merge({
+        isLoading: false,
+        buildData: payload,
+    })
 }
 
 const fetchWfApiDataFailedHandler = state => {
-    const newState = Object.assign({}, state)
-    newState.isLoading = false
-    newState.hasErrored = true
-
-    return newState
+    return state.merge({
+        isLoading: false,
+        hasErrored: true,
+    })
 }
 
 export default (state = initialState, action) => {
     const { payload, type } = action
+
+    console.log(state)
 
     switch (type) {
         case FETCH_WFAPI_DATA:
