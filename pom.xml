@@ -80,7 +80,7 @@
             <url>https://opensource.org/licenses/Apache-2.0</url>
         </license>
     </licenses>
-    <url>https://wiki.jenkins.io/display/JENKINS/TODO+Plugin</url>
+    <url>https://wiki.jenkins.io/display/JENKINS/Pipeline+timeline</url>
     <scm>
         <connection>scm:git:git://github.com/jenkinsci/jenkins-timeline-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:tophat/jenkins-timeline-plugin.git</developerConnection>
