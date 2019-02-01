@@ -66,6 +66,17 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "sjoanes",
+      "name": "sjoanes",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5768264?v=4",
+      "profile": "https://github.com/sjoanes",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
     }
-  ]
+  ],
+  "contributorsPerLine": 7
 }
