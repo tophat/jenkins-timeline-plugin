@@ -9,5 +9,9 @@
   },
   "devDependencies": {
     "all-contributors-cli": "^5.4.1"
+  },
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12",
+    "redux-immutable": "^4.0.0"
   }
 }

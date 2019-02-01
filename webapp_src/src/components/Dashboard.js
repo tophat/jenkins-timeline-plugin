@@ -4,10 +4,23 @@ import Chart from 'react-google-charts'
 import PropTypes from 'prop-types'
 import moment from 'moment'
 
+import { connect } from 'react-redux'
+
+import { fetchWfApiData } from '../redux/wfapi/actions'
+import {
+    isBuildDataLoadingSelector,
+    buildStatusSelector,
+    buildNameSelector,
+    buildEndTimeSelector,
+    buildStartTimeSelector,
+    buildDurationSelector,
+    stageDataSelector,
+} from '../redux/wfapi/selectors'
+
 import DashHeader from './DashHeader'
 import { DashContainer } from './Dashboard.style'
 
-export default class Dashboard extends React.Component {
+export class UnconnectedDashboard extends React.Component {
     static propTypes = {
         buildUrl: PropTypes.string.isRequired,
     }
@@ -15,10 +28,10 @@ export default class Dashboard extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            stages: [],
-            status: 'N/A',
-        }
+        // this.state = {
+        //     stages: [],
+        //     status: 'N/A',
+        // }
     }
 
     buildApiURL = url => {
@@ -27,50 +40,54 @@ export default class Dashboard extends React.Component {
 
     componentDidMount() {
         const buildEndpoint = this.buildApiURL(this.props.buildUrl)
-        axios.get(buildEndpoint).then(result => {
-            const stages = result.data.stages
-            const promises = stages.map(stage => {
-                const stageLink = stage._links.self.href
-                return this.getStageInfo(stageLink)
-            })
-            Promise.all(promises).then(stages => {
-                const longestStage = this.findLongestStage(stages)
-                this.setState({
-                    title: result.data.name,
-                    longestStage,
-                    stages,
-                    start: moment(result.data.startTimeMillis),
-                    duration: result.data.durationMillis,
-                    end: moment(
-                        result.data.startTimeMillis +
-                            result.data.durationMillis,
-                    ),
-                    status: result.data.status,
-                })
-            })
-        })
+        this.props.fetchWfApiData(buildEndpoint)
+        // axios.get(buildEndpoint).then(result => {
+        //     const stages = result.data.stages
+        //     const promises = stages.map(stage => {
+        //         const stageLink = stage._links.self.href
+        //         return this.getStageInfo(stageLink)
+        //     })
+        //     Promise.all(promises).then(stages => {
+        //         const longestStage = this.findLongestStage(stages)
+        //         this.setState({
+        //             title: result.data.name,
+        //             longestStage,
+        //             stages,
+        //             start: moment(result.data.startTimeMillis),
+        //             duration: result.data.durationMillis,
+        //             end: moment(
+        //                 result.data.startTimeMillis +
+        //                     result.data.durationMillis,
+        //             ),
+        //             status: result.data.status,
+        //         })
+        //     })
+        // })
     }
 
-    getStageInfo = stageEndpoint => {
-        return axios.get(stageEndpoint).then(result => {
-            const stageData = result.data
-            const stage = {
-                title: stageData.name,
-                start: moment(stageData.startTimeMillis),
-                duration: stageData.durationMillis,
-                steps: result.data.stageFlowNodes.map(node => ({
-                    start: moment(node.startTimeMillis),
-                    end: moment(node.startTimeMillis + node.durationMillis),
-                    title: node.name,
-                    status: node.status,
-                    stage: stageData.name,
-                })),
-            }
-            return stage
-        })
-    }
+    // getStageInfo = stageEndpoint => {
+    //     stageEndpoint = `http://localhost:8080${stageEndpoint}`
+    //     return axios.get(stageEndpoint).then(result => {
+    //         const stageData = result.data
+    //         const stage = {
+    //             title: stageData.name,
+    //             start: moment(stageData.startTimeMillis),
+    //             duration: stageData.durationMillis,
+    //             steps: result.data.stageFlowNodes.map(node => ({
+    //                 start: moment(node.startTimeMillis),
+    //                 end: moment(node.startTimeMillis + node.durationMillis),
+    //                 title: node.name,
+    //                 status: node.status,
+    //                 stage: stageData.name,
+    //             })),
+    //         }
+    //         return stage
+    //     })
+    // }
 
-    findLongestStage = stages => {
+    findLongestStage = () => {
+        if (!this.props.stages) return null
+        const stages = this.props.stages
         return stages.reduce((currentMaximum, stage) => {
             if (currentMaximum === null)
                 return {
@@ -93,8 +110,10 @@ export default class Dashboard extends React.Component {
 
     formatChartRows = () => {
         const data = []
+        return []
+        if(!this.props.stages) return []
 
-        this.state.stages.forEach(stage => {
+        this.props.stages.forEach(stage => {
             stage.steps.forEach(step => {
                 data.push([stage.title, step.title, step.start, step.end])
             })
@@ -111,23 +130,23 @@ export default class Dashboard extends React.Component {
     }
 
     render() {
-        if (this.state.stages.length === 0) return null
+        if (this.props.isLoading) return null
 
         const endTime =
-            this.state.status !== 'IN_PROGRESS' ? this.state.end : null
+            this.props.status !== 'IN_PROGRESS' ? this.props.buildEndTime : null
 
         const headerHeight = `150px`
 
         return (
             <React.Fragment>
                 <DashHeader
-                    buildStatus={this.state.status}
-                    startTime={this.state.start}
-                    duration={this.state.duration}
+                    buildStatus={this.props.buildStatus}
+                    startTime={this.props.buildStartTime}
+                    duration={this.props.buildDuration}
                     buildUrl={this.props.buildUrl}
-                    buildName={this.state.title}
-                    longestStage={this.state.longestStage}
-                    endTime={endTime}
+                    buildName={this.props.buildName}
+                    longestStage={this.findLongestStage()}
+                    endTime={this.props.buildEndTime}
                 />
                 <DashContainer>
                     <Chart
@@ -142,3 +161,22 @@ export default class Dashboard extends React.Component {
         )
     }
 }
+
+const mapDispatchToProps = {
+    fetchWfApiData,
+}
+
+const mapStateToProps = state => ({
+    buildStatus: buildStatusSelector(state),
+    isLoading: isBuildDataLoadingSelector(state),
+    buildName: buildNameSelector(state),
+    buildStartTime: moment(buildStartTimeSelector(state)),
+    buildEndTime: moment(buildEndTimeSelector(state)),
+    buildDuration: moment(buildDurationSelector(state)),
+    stages: stageDataSelector(state),
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(UnconnectedDashboard)
