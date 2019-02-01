@@ -22,6 +22,16 @@
       ]
     },
     {
+      "login": "sjoanes",
+      "name": "sjoanes",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5768264?v=4",
+      "profile": "https://github.com/sjoanes",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    },
+    {
       "login": "brandonbaksh",
       "name": "Brandon Baksh",
       "avatar_url": "https://avatars1.githubusercontent.com/u/39271619?v=4",
@@ -65,16 +75,6 @@
       "profile": "https://jenkinstimeline.com",
       "contributions": [
         "infra"
-      ]
-    },
-    {
-      "login": "sjoanes",
-      "name": "sjoanes",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/5768264?v=4",
-      "profile": "https://github.com/sjoanes",
-      "contributions": [
-        "ideas",
-        "code"
       ]
     }
   ],
