@@ -1,4 +1,4 @@
-#!~/bin/sh
+#!/bin/bash
 
 JENKINS_CONTAINER=local_jenkins
 DOES_CONTAINER_ALREADY_EXIST=`docker ps -aq -f name=$JENKINS_CONTAINER`
