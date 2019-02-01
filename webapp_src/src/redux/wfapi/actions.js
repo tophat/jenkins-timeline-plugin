@@ -22,6 +22,6 @@ export const fetchWfApiDataSuccess = responseData => ({
     type: FETCH_WFAPI_DATA_SUCCESS,
 })
 
-export const fetchWfApiDataFailed = () => ({
+export const fetchWfApiDataFailed = {
     type: FETCH_WFAPI_DATA_FAILED,
-})
+}
