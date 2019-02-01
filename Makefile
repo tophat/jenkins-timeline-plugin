@@ -27,7 +27,7 @@ lintfix_webapp:
 
 .PHONY: start_jenkins
 start_jenkins:
-	bash ./devResources/manageJenkins.sh start
+	bash devResources/manageJenkins.sh start
 
 .PHONY: stop_jenkins
 stop_jenkins::
