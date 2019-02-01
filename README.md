@@ -145,6 +145,14 @@ __Make sure to revert those two changes before opening up a PR or building the p
 
 From within the `webapp_src` directory, you can use the scripts defined in `packages.json`: `npm run start` and `npm run test` to start the application and run the test suites, respectively.
 
+## Releasing a new version
+
+_Before you can release, you will need to have write access on [the Jenkinsci repo](https://github.com/jenkinsci/pipeline-timeline-plugin)_
+
+To release, clone the _jenkinsci_ fork locally and set up Maven according to [the documentation](https://wiki.jenkins.io/display/JENKINS/Hosting+Plugins#HostingPlugins-Releasingtojenkins-ci.org) (see the section about `settings.xml` and `settings-security.xml`.
+
+When you are all set up, just run `make publish` to start the process.
+
 ## Common errors
 
 ### `java.nio.file.NoSuchFileException` during builds

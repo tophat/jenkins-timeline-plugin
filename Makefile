@@ -56,3 +56,7 @@ exec_env:
 .PHONY: build_and_export
 build_and_export:
 	bash devResources/manageBuildEnvironment.sh build_plugin
+
+.PHONY: publish
+publish:
+	mvn release:clean release:prepare release:perform
