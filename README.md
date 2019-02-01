@@ -33,11 +33,10 @@ Jenkins Timeline (TL) Plugin
     <a href="https://github.com/tophat/getting-started/blob/master/scorecard.md">
         <img alt="Maturity Score" src="https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg"/>
     </a>
+    <a href="https://greenkeeper.io/"><img alt="Greenkeeper badge" src="https://badges.greenkeeper.io/tophat/jenkins-timeline-plugin.svg"/></a>
 </div>
 
 # Overview
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/tophat/jenkins-timeline-plugin.svg)](https://greenkeeper.io/)
 
 Jenkins TL is a Jenkins plugin that allows users to gain knowledge about the execution of their pipeline builds.
 
