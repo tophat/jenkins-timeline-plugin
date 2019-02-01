@@ -76,6 +76,15 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "chrono",
+      "name": "Martin Ringehahn",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/76803?v=4",
+      "profile": "https://github.com/chrono",
+      "contributions": [
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7
