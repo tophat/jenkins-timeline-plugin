@@ -1,4 +1,4 @@
-#!~/bin/sh
+#!/bin/bash
 
 ENV_CONTAINER=pipeline_timeline_build_env
 DOES_CONTAINER_ALREADY_EXIST=`docker ps -aq -f name=$ENV_CONTAINER`

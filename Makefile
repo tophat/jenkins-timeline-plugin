@@ -27,32 +27,32 @@ lintfix_webapp:
 
 .PHONY: start_jenkins
 start_jenkins:
-	sh devResources/manageJenkins.sh start
+	bash devResources/manageJenkins.sh start
 
 .PHONY: stop_jenkins
 stop_jenkins::
-	sh devResources/manageJenkins.sh stop
+	bash devResources/manageJenkins.sh stop
 
 .PHONY: clean_jenkins
 clean_jenkins:
-	sh devResources/manageJenkins.sh clean
+	bash devResources/manageJenkins.sh clean
 
 .PHONY: start_env
 start_env:
-	sh devResources/manageBuildEnvironment.sh start
+	bash devResources/manageBuildEnvironment.sh start
 
 .PHONY: stop_env
 stop_env::
-	sh devResources/manageBuildEnvironment.sh stop
+	bash devResources/manageBuildEnvironment.sh stop
 
 .PHONY: clean_env
 clean_env:
-	sh devResources/manageBuildEnvironment.sh clean
+	bash devResources/manageBuildEnvironment.sh clean
 
 .PHONY: exec_env
 exec_env:
-	sh devResources/manageBuildEnvironment.sh exec
+	bash devResources/manageBuildEnvironment.sh exec
 
 .PHONY: build_and_export
 build_and_export:
-	sh devResources/manageBuildEnvironment.sh build_plugin
+	bash devResources/manageBuildEnvironment.sh build_plugin
