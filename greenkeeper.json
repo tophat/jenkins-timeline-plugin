@@ -7,6 +7,5 @@
         "website/package.json"
       ]
     }
-  },
-  "ignore": ["eslint"]
+  }
 }
