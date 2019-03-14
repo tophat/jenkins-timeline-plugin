@@ -31,7 +31,7 @@ Jenkins Timeline (TL) Plugin
         <img alt="Slack workspace" src="https://slackinvite.dev.tophat.com/badge.svg"/>
     </a>
     <a href="https://github.com/tophat/getting-started/blob/master/scorecard.md">
-        <img alt="Maturity Score" src="https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg"/>
+        <img alt="Maturity Score" src="https://img.shields.io/badge/Maturity-Level%203%20--%20Stable-green.svg"/>
     </a>
     <a href="https://greenkeeper.io/"><img alt="Greenkeeper badge" src="https://badges.greenkeeper.io/tophat/jenkins-timeline-plugin.svg"/></a>
 </div>
