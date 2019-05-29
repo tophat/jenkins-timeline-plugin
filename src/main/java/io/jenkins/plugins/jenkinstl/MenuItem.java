@@ -21,6 +21,6 @@ public class MenuItem implements Action {
 
     @Override
     public String getUrlName() {
-        return "/plugin/pipeline-timeline/index.html?build_url="+this.buildUrl;
+        return "plugin/pipeline-timeline/index.html?build_url="+this.buildUrl;
     }
 }
