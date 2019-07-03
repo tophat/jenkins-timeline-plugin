@@ -46,7 +46,7 @@
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-jest": "^22.0.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "install": "^0.12.2",
+    "install": "^0.13.0",
     "npm": "^6.4.1",
     "prettier": "^1.15.2"
   }
