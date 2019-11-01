@@ -39,7 +39,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@tophat/eslint-config": "^0.1.4",
+    "@tophat/eslint-config": "^0.2.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.8.0",
     "eslint": "5.6.0",
