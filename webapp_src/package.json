@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "prop-types": "^15.6.2",
     "moment": "^2.22.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-google-charts": "^3.0.10",
-    "react-scripts": "2.1.3",
+    "react-scripts": "3.3.0",
     "styled-components": "^4.1.1"
   },
   "scripts": {
@@ -39,14 +39,14 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@tophat/eslint-config": "^0.1.4",
+    "@tophat/eslint-config": "^0.4.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.8.0",
-    "eslint": "5.6.0",
-    "eslint-config-prettier": "^5.0.0",
-    "eslint-plugin-jest": "^22.0.0",
+    "eslint": "6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-jest": "^23.1.1",
     "eslint-plugin-prettier": "^3.0.0",
-    "install": "^0.12.2",
+    "install": "^0.13.0",
     "npm": "^6.4.1",
     "prettier": "^1.15.2"
   }
