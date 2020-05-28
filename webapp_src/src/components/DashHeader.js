@@ -38,7 +38,7 @@ export default class DashHeader extends React.PureComponent {
     formatTime = timestamp => {
         const seconds = parseInt(timestamp / 1000) % 60
         const minutes = parseInt(timestamp / (1000 * 60)) % 60
-        const hours = parseInt(timestamp / (1000 * 3600)) % 60
+        const hours = parseInt(timestamp / (1000 * 3600))
 
         const parts = []
 
