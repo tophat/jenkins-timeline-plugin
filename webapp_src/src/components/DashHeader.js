@@ -44,7 +44,7 @@ export default class DashHeader extends React.PureComponent {
 
         if (hours >= 1) {
             const plural = hours > 1 ? 's' : ''
-            parts.push(`${hours} hours${plural}`)
+            parts.push(`${hours} hour${plural}`)
         }
 
         if (minutes >= 1) {
