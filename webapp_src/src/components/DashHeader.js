@@ -38,8 +38,14 @@ export default class DashHeader extends React.PureComponent {
     formatTime = timestamp => {
         const seconds = parseInt(timestamp / 1000) % 60
         const minutes = parseInt(timestamp / (1000 * 60)) % 60
+        const hours = parseInt(timestamp / (1000 * 3600))
 
         const parts = []
+
+        if (hours >= 1) {
+            const plural = hours > 1 ? 's' : ''
+            parts.push(`${hours} hour${plural}`)
+        }
 
         if (minutes >= 1) {
             const plural = minutes > 1 ? `s` : ``
