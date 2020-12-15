@@ -6,6 +6,7 @@ const getStatusColour = status => {
     if (status === 'SUCCESS') return Colours.SUCCESS
     else if (status === 'IN_PROGRESS') return Colours.PROGRESS
     else if (status === 'FAILED') return Colours.FAILURE
+    return Colours.ABORTED
 }
 
 export const Container = styled.header`

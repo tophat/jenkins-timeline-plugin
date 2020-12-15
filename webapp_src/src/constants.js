@@ -3,6 +3,7 @@ export const Colours = {
     PROGRESS: '#4a90e2',
     FAILURE: '#d54c53',
     TEXT: '#fff',
+    ABORTED: '#949393',
 }
 
 export const statusMap = {
@@ -10,6 +11,7 @@ export const statusMap = {
     IN_PROGRESS: 'Build is in progress',
     FAILED: 'Build failed',
     NOT_AVAILABLE: 'N/A',
+    ABORTED: 'Build was aborted',
 }
 
 export const buildStatuses = {
