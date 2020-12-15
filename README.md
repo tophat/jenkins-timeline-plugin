@@ -52,7 +52,7 @@ Using the Jenkins timeline plugin we are able to identify sequential and paralle
 ## Manual build
 
 _Make sure that you follow the [development setup and building](#Setting-up-a-development-environment) steps before you attempt building your own plugin package._
-- Clone the repository and use `make build_all` to build the plugin `hpi` package.
+- Clone the repository and use `make build_and_export` to build the plugin `hpi` package.
 - _After a successful build, the packaged file is available in `target/jenkins-timeline.hpi`._
 - In Jenkins, head to __Manage Jenkins__ > __Manage Plugins__ and use the __Upload Plugin__ functionality available under the __Advanced__ tab.
 - You might be prompted to restart Jenkins after installing the plugin.
@@ -119,7 +119,7 @@ When installing Jenkins, make sure to allow the installer to add the recommended
 
 ## Building
 
-The makefile is set up with a few useful commands to abstract away `mvn` calls. Call `make build_all` to build the `hpi` file that you can import in your Jenkins instance to install the plugin.
+The makefile is set up with a few useful commands to abstract away `mvn` calls. Call `make build_and_export` to build the `hpi` file that you can import in your Jenkins instance to install the plugin.
 
 You can find a sample [Jenkinsfile](../devResources/SampleJenkinsfile) under `/devResources` if you need a sample pipeline to visualize or start from.
 
@@ -167,6 +167,10 @@ In `~/.bash_profile`, make sure to export it as:
 ```
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 ```
+
+## Have a question that wasn't answered?
+
+Join our [slack community](https://opensource.tophat.com/slack) and ask!
 
 # Contributors
 Thanks goes to these wonderful people [emoji key](https://github.com/kentcdodds/all-contributors#emoji-key):

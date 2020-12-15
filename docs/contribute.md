@@ -20,7 +20,7 @@ When installing Jenkins, make sure to allow the installer to add the recommended
 
 ## Building
 
-The makefile is set up with a few useful commands to abstract away `mvn` calls. Call `make build_all` to build the `hpi` file that you can import in your Jenkins instance to install the plugin.
+The makefile is set up with a few useful commands to abstract away `mvn` calls. Call `make build_and_export` to build the `hpi` file that you can import in your Jenkins instance to install the plugin.
 
 You can find a sample [Jenkinsfile](../devResources/SampleJenkinsfile) under `/devResources` if you need a sample pipeline to visualize or start from.
 
