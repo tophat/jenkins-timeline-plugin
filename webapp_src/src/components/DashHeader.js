@@ -30,9 +30,11 @@ export default class DashHeader extends React.PureComponent {
     }
 
     static defaultProps = {
+        buildName: '',
         buildStatus: buildStatuses.NOT_AVAILABLE,
         duration: 0,
         endTime: null,
+        longestStage: null,
         startTime: null,
     }
 
