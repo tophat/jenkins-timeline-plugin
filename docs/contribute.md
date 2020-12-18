@@ -12,6 +12,25 @@ To work on the project, you will need ...
 - [A local instance of Jenkins](https://jenkins.io/doc/book/installing/);
 - [npm](https://www.npmjs.com/get-npm);
 
+__You can either install all of these on your machine, or use the Docker-based shortcuts included in the `Makefile`.__
+
+### Docker-based development environment
+
+You can leverage the power of Docker to avoid having to set up the development environment on your machine:
+
+Any of the following can be used by typing `make <cmd>` given you have Docker installed:
+
+| Command | Definition |
+|:---|:---|
+|`start_jenkins`|Starts a Jenkins docker machine bound to port 8080. Terminates any previous instance of itself.|
+|`stop_jenkins`|Stops a running instance of the Jenkins docker machine.|
+|`clean_jenkins`|Removes an existing instance of the Jenkins docker machine.|
+|`start_env`|Starts a docker machine set up with a copy of the local plugin files and Maven.|
+|`stop_env`|Stops a runnign instance of the build environment docker machine.|
+|`clean_env`|Removes an existing instance of the build environment.|
+|`exec_env`|Gives you console access to the build environment docker machine.|
+|`build_and_export`|Builds the plugin package from the local files in the build environment and exports the `hpi` artifact to your local work directory.|
+
 ### Compatibility note
 The linked version of Java (JDK 8) is the preferred version for this project, as Maven seems to have trouble building with other versions.
 
@@ -28,7 +47,8 @@ You can find a sample [Jenkinsfile](../devResources/SampleJenkinsfile) under `/d
 
 The Node application that is run by the plugin can be worked on without having to rebuild and reinstall the plugin in Jenkins.
 
-To run the web app independently of the rest of the plugin, deactivate your Jenkins instance's security (__Manage Jenkins__ > __Configure Global Security__, untick the __Enable security__ checkbox and apply/save the changes) and alter the web app code as follows:
+To run the web app independently of the rest of the plugin:
+Alter the web app code as follows:
 
 ```
 //In webapp_src/src/index.js
@@ -43,7 +63,9 @@ getStageInfo = stageEndpoint => {
 ...
 ```
 
-These two changes will ensure that the API requests to Jenkins' Workflow API will reach the endpoints properly. Disabling the security will avoid the web app hitting Jenkins' CORS protection.
+These two changes will ensure that the API requests to Jenkins' Workflow API will reach the endpoints properly.
+
+Disabling the security to avoid the web app hitting Jenkins' CORS protection by using [CORS Filter Plugin](https://plugins.jenkins.io/cors-filter/)
 
 __Make sure to revert those two changes before opening up a PR or building the plugin.__
 
