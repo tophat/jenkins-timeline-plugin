@@ -19,13 +19,13 @@ export default class DashHeader extends React.PureComponent {
     static propTypes = {
         buildStatus: PropTypes.string,
         buildUrl: PropTypes.string.isRequired,
-        buildName: PropTypes.string.isRequired,
+        buildName: PropTypes.string,
         duration: PropTypes.number,
         endTime: PropTypes.instanceOf(moment),
         longestStage: PropTypes.shape({
             title: PropTypes.string,
             duration: PropTypes.number,
-        }).isRequired,
+        }),
         startTime: PropTypes.instanceOf(moment),
     }
 
