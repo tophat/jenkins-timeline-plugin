@@ -65,7 +65,7 @@ getStageInfo = stageEndpoint => {
 
 These two changes will ensure that the API requests to Jenkins' Workflow API will reach the endpoints properly.
 
-Disabling the security to avoid the web app hitting Jenkins' CORS protection by using [CORS Filter Plugin](https://plugins.jenkins.io/cors-filter/)
+Disabling the security and prevent the web app hitting Jenkins' CORS protection by following [these steps](https://www.jenkins.io/doc/book/system-administration/security/#disabling-security) and using [CORS Filter Plugin](https://plugins.jenkins.io/cors-filter/)
 
 __Make sure to revert those two changes before opening up a PR or building the plugin.__
 
