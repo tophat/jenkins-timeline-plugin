@@ -59,6 +59,7 @@
     "eslint-plugin-prettier": "^3.3.0",
     "install": "^0.13.0",
     "npm": "^7.2.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "typescript": "^3.8.3"
   }
 }
