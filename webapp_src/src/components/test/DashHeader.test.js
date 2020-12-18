@@ -3,7 +3,7 @@ import React from 'react'
 import moment from 'moment'
 
 import DashHeader from '../DashHeader'
-import { statusMap, buildStatuses } from '../../constants'
+import { buildStatuses, statusMap } from '../../constants'
 
 describe('DashHeader', () => {
     const defaultProps = {
@@ -76,8 +76,9 @@ describe('DashHeader', () => {
         const label = header.find({ clickId: 'timeline longest stage' })
         expect(label.exists()).toEqual(true)
         expect(label.text()).toEqual(
-            `Longest stage: ${longestStage.title} (${longestStage.duration /
-                1000} seconds)`,
+            `Longest stage: ${longestStage.title} (${
+                longestStage.duration / 1000
+            } seconds)`,
         )
     })
 })

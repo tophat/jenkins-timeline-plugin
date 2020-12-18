@@ -3,21 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
-    "prop-types": "^15.6.2",
-    "moment": "^2.22.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-google-charts": "^3.0.10",
-    "react-scripts": "2.1.3",
-    "styled-components": "^4.1.1"
+    "axios": "^0.21.0",
+    "prop-types": "^15.7.2",
+    "moment": "^2.29.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-google-charts": "^3.0.15",
+    "react-scripts": "4.0.1",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
-    "lint": "eslint src --ignore-pattern *.style.js --ignore-pattern serviceWorker.js",
-    "lint-fix": "eslint src --ignore-pattern *.style.js --ignore-pattern serviceWorker.js --fix",
+    "lint": "eslint src --ignore-pattern serviceWorker.js",
+    "lint-fix": "eslint src --ignore-pattern serviceWorker.js --fix",
     "test-watch": "react-scripts test",
     "build-to-plugin": "PUBLIC_URL=/plugin/pipeline-timeline npm run build && cp -r build/* ../src/main/webapp",
     "deploy": "npm run test && npm run build-to-plugin"
@@ -30,7 +30,16 @@
     ],
     "env": {
       "jest": true
-    }
+    },
+    "overrides": [
+      {
+        "files": ["src/serviceWorker.js"],
+        "rules": {
+          "no-console": "off",
+          "eqeqeq": "off"
+        }
+      }
+    ]
   },
   "browserslist": [
     ">0.2%",
@@ -39,15 +48,15 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@tophat/eslint-config": "^0.1.4",
-    "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.8.0",
-    "eslint": "5.6.0",
-    "eslint-config-prettier": "^5.0.0",
-    "eslint-plugin-jest": "^22.0.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "install": "^0.12.2",
-    "npm": "^6.4.1",
-    "prettier": "^1.15.2"
+    "@tophat/eslint-config": "^0.7.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "eslint": "7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-prettier": "^3.3.0",
+    "install": "^0.13.0",
+    "npm": "^7.2.0",
+    "prettier": "^2.2.1"
   }
 }

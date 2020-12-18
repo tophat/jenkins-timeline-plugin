@@ -2,17 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment'
 
-import {
-    Row,
-    Label,
-    Container,
-    TopBar,
-    Title,
-    LogoBox,
-    BackButton,
-} from './DashHeader.style'
-import { statusMap, buildStatuses } from '../constants'
 import Logo from '../assets/logo.png'
+import { buildStatuses, statusMap } from '../constants'
+
+import {
+    BackButton,
+    Container,
+    Label,
+    LogoBox,
+    Row,
+    Title,
+    TopBar,
+} from './DashHeader.style'
 
 export default class DashHeader extends React.PureComponent {
     static propTypes = {
@@ -48,12 +49,12 @@ export default class DashHeader extends React.PureComponent {
         }
 
         if (minutes >= 1) {
-            const plural = minutes > 1 ? `s` : ``
+            const plural = minutes > 1 ? 's' : ''
             parts.push(`${minutes} minute${plural}`)
         }
 
         if (seconds >= 1) {
-            const plural = seconds > 1 ? `s` : ``
+            const plural = seconds > 1 ? 's' : ''
             parts.push(`${seconds} second${plural}`)
         }
 
@@ -112,8 +113,8 @@ export default class DashHeader extends React.PureComponent {
         if (!this.props.duration) return null
         const runningTimePrefix =
             this.props.buildStatus === buildStatuses.IN_PROGRESS
-                ? `Running`
-                : `Ran`
+                ? 'Running'
+                : 'Ran'
         const runningTime = `${runningTimePrefix} for ${this.formatTime(
             this.props.duration,
         )}`
