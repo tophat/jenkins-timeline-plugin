@@ -14,8 +14,8 @@
     <properties>
         <jenkins.version>2.7.3</jenkins.version>
         <java.level>7</java.level>
-        <node.version>8.0.0</node.version>
-        <npm.version>6.5.0</npm.version>
+        <node.version>14.13.1</node.version>
+        <npm.version>7.2.0</npm.version>
     </properties>
     <build>
         <plugins>
