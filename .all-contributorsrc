@@ -94,6 +94,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Taeloz",
+      "name": "Matthew Brunton",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/32245517?v=4",
+      "profile": "https://github.com/Taeloz",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
