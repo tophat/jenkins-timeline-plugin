@@ -85,7 +85,17 @@
       "contributions": [
         "question"
       ]
+    },
+    {
+      "login": "vuphuong245",
+      "name": "vuphuong245",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/28992225?v=4",
+      "profile": "https://github.com/vuphuong245",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
