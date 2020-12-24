@@ -186,6 +186,7 @@ Thanks goes to these wonderful people [emoji key](https://github.com/kentcdodds/
   <tr>
     <td align="center"><a href="https://github.com/chrono"><img src="https://avatars3.githubusercontent.com/u/76803?v=4" width="100px;" alt=""/><br /><sub><b>Martin Ringehahn</b></sub></a><br /><a href="#question-chrono" title="Answering Questions">💬</a></td>
     <td align="center"><a href="https://github.com/vuphuong245"><img src="https://avatars0.githubusercontent.com/u/28992225?v=4" width="100px;" alt=""/><br /><sub><b>vuphuong245</b></sub></a><br /><a href="https://github.com/tophat/jenkins-timeline-plugin/commits?author=vuphuong245" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Taeloz"><img src="https://avatars2.githubusercontent.com/u/32245517?v=4" width="100px;" alt=""/><br /><sub><b>Matthew Brunton</b></sub></a><br /><a href="https://github.com/tophat/jenkins-timeline-plugin/commits?author=Taeloz" title="Code">💻</a></td>
   </tr>
 </table>
 
