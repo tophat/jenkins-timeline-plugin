@@ -3,18 +3,15 @@ import React from 'react'
 import moment from 'moment'
 
 import DashHeader from '../DashHeader'
-import { statusMap, buildStatuses } from '../../constants'
+import { buildStatuses, statusMap } from '../../constants'
 
 describe('DashHeader', () => {
     const defaultProps = {
+        buildUrl: 'http://localhost:8080/job/test/1/',
         startTime: moment(),
         endTime: moment(),
         duration: 1,
     }
-    it('renders the component', () => {
-        const header = shallow(<DashHeader />)
-        expect(header).toMatchSnapshot()
-    })
 
     it('renders a start time label', () => {
         const header = shallow(<DashHeader {...defaultProps} />)
@@ -76,8 +73,9 @@ describe('DashHeader', () => {
         const label = header.find({ clickId: 'timeline longest stage' })
         expect(label.exists()).toEqual(true)
         expect(label.text()).toEqual(
-            `Longest stage: ${longestStage.title} (${longestStage.duration /
-                1000} seconds)`,
+            `Longest stage: ${longestStage.title} (${
+                longestStage.duration / 1000
+            } seconds)`,
         )
     })
 })

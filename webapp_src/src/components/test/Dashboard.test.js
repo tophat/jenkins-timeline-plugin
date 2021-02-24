@@ -1,11 +1,12 @@
 import axios from 'axios'
 import Chart from 'react-google-charts'
-import { shallow, mount } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 import React from 'react'
 import moment from 'moment'
 
 import Dashboard from '../Dashboard'
-import { mockWfApiResponse, mockNodeApiResponse } from './mockData'
+
+import { mockNodeApiResponse, mockWfApiResponse } from './mockData'
 
 function flushPromises() {
     return new Promise(resolve => setImmediate(resolve))
@@ -90,10 +91,10 @@ describe('Dashboard', () => {
                         }),
                     ),
                 }
-                expect(stages.length).toEqual(
+                expect(stages).toHaveLength(
                     mockWfApiResponse.data.stages.length,
                 )
-                expect(stage.steps.length).toEqual(
+                expect(stage.steps).toHaveLength(
                     mockNodeApiResponse.data.stageFlowNodes.length,
                 )
                 expect(stage).toEqual(expectedStage)
