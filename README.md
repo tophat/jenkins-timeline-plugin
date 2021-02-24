@@ -14,8 +14,8 @@ Jenkins Timeline (TL) Plugin
     <a href="https://plugins.jenkins.io/pipeline-timeline">
         <img alt="Installs" src="https://img.shields.io/jenkins/plugin/i/pipeline-timeline.svg"/>
     </a>
-    <a href="https://circleci.com/gh/tophat/jenkins-timeline-plugin">
-        <img alt="Build" src="https://img.shields.io/circleci/project/github/tophat/jenkins-timeline-plugin/master.svg"/>
+    <a href="https://github.com/tophat/jenkins-timeline-plugin/actions/workflows/main.yml">
+        <img alt="Build" src="https://github.com/tophat/jenkins-timeline-plugin/actions/workflows/main.yml/badge.svg"/>
     </a>
     <a href="https://jenkins.io">
         <img alt="Jenkins version" src="https://img.shields.io/badge/jenkinsci-%3E%3D2.7.3-brightgreen.svg"/>
