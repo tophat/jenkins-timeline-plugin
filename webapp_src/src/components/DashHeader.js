@@ -16,6 +16,7 @@ import Logo from '../assets/logo.png'
 
 export default class DashHeader extends React.PureComponent {
     static propTypes = {
+        buildId: PropTypes.string.isRequired,
         buildStatus: PropTypes.string,
         buildUrl: PropTypes.string.isRequired,
         buildName: PropTypes.string.isRequired,
@@ -142,10 +143,42 @@ export default class DashHeader extends React.PureComponent {
         )
     }
 
+    onBuildNavButtonClick = buildUrl => () => {
+        window.location.assign(buildUrl)
+    }
+
+    getBuildNavigateBar = () => {
+        const prevBuildId = parseInt(this.props.buildId) - 1
+        const nextBuildId = parseInt(this.props.buildId) + 1
+
+        const buildUrlNoId = window.location.href.split('/').slice(0, -1).join('/')
+
+        const prevBuildUrl = buildUrlNoId + `/${prevBuildId}/`
+        const nextBuildUrl = buildUrlNoId + `/${nextBuildId}/`
+
+        return (
+            <React.Fragment>
+                <BackButton
+                    onClick={this.onBuildNavButtonClick(prevBuildUrl)}
+                    href={prevBuildUrl}
+                >
+                    Previous Build
+                </BackButton> 
+                <BackButton
+                    onClick={this.onBuildNavButtonClick(nextBuildUrl)}
+                    href={nextBuildUrl}
+                >
+                    Next Build
+                </BackButton>
+            </React.Fragment>
+        )
+    }
+
     render() {
         return (
             <Container status={this.props.buildStatus}>
                 {this.getTopBar()}
+                {this.getBuildNavigateBar()}
                 {this.getDetailsBar()}
             </Container>
         )

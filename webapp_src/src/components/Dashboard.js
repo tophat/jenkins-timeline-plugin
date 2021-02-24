@@ -36,6 +36,7 @@ export default class Dashboard extends React.Component {
             Promise.all(promises).then(stages => {
                 const longestStage = this.findLongestStage(stages)
                 this.setState({
+                    buildId: result.data.id,
                     title: result.data.name,
                     longestStage,
                     stages,
@@ -121,6 +122,7 @@ export default class Dashboard extends React.Component {
         return (
             <React.Fragment>
                 <DashHeader
+                    buildId={this.state.buildId}
                     buildStatus={this.state.status}
                     startTime={this.state.start}
                     duration={this.state.duration}
