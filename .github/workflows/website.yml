@@ -1,0 +1,17 @@
+name: Website
+
+on: [push]
+
+defaults:
+    run:
+        working-directory: ~/website
+
+jobs:
+    lint_and_test_webapp:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Build
+              run: |
+                  yarn
+                  yarn build
