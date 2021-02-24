@@ -1,6 +1,6 @@
 name: Jenkins Timeline Plugin CI
 
-on: [pull-request]
+on: [pull-request, push]
 
 jobs:
     lint_and_test_webapp:
