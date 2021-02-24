@@ -1,4 +1,4 @@
-me: Jenkins Timeline Plugin CI
+name: Jenkins Timeline Plugin CI
 
 on: [push]
 
