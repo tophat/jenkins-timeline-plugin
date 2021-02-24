@@ -1,6 +1,9 @@
 name: Jenkins Timeline Plugin Releases
 
-on: [push]
+on: 
+    push:
+        tags:
+            - 'v*'
 
 jobs:
     release:
@@ -12,14 +15,17 @@ jobs:
                   java-version: 1.8
             - name: Build
               run: make build
+            - name: Get version from tag ref
+              id: get_version_from_tag
+              run: echo ::set-output name=tag::${GITHUB_REF#ref/*/}
             - name: Create release
               id: create_release
               uses: actions/create-release@v1
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  tag_name: ${{ github.ref }}
-                  release_name: Release ${{ github.ref }}
+                  tag_name: ${{ steps.get_version_from_tag.outputs.tag }}
+                  release_name: Release ${{ steps.get_version_from_tag.outputs.tag }}
                   draft: false
                   prerelease: false
             - name: Upload assets
