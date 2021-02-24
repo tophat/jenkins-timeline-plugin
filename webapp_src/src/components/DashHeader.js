@@ -10,6 +10,7 @@ import {
     Title,
     LogoBox,
     BackButton,
+    BuildNavigationBar
 } from './DashHeader.style'
 import { statusMap, buildStatuses } from '../constants'
 import Logo from '../assets/logo.png'
@@ -147,29 +148,34 @@ export default class DashHeader extends React.PureComponent {
         window.location.assign(buildUrl)
     }
 
+    getBuildNavButton = (baseUrl, buildId, displayText) => {
+        if (buildId < 1) return null
+
+        const buildUrl = baseUrl + `/${buildId}/`
+
+        return (
+            <BackButton
+                onClick={this.onBuildNavButtonClick(buildUrl)}
+                href={buildUrl}
+            >
+                {displayText}
+            </BackButton>
+        )
+    }
+
     getBuildNavigateBar = () => {
-        const prevBuildId = parseInt(this.props.buildId) - 1
-        const nextBuildId = parseInt(this.props.buildId) + 1
+        const currBuildId = parseInt(this.props.buildId)
+        const prevBuildId = currBuildId - 1
+        const nextBuildId = currBuildId + 1
 
-        const buildUrlNoId = window.location.href.split('/').slice(0, -1).join('/')
-
-        const prevBuildUrl = buildUrlNoId + `/${prevBuildId}/`
-        const nextBuildUrl = buildUrlNoId + `/${nextBuildId}/`
+        const buildUrlNoId = window.location.href.split('/').slice(0, -2).join('/')
 
         return (
             <React.Fragment>
-                <BackButton
-                    onClick={this.onBuildNavButtonClick(prevBuildUrl)}
-                    href={prevBuildUrl}
-                >
-                    Previous Build
-                </BackButton> 
-                <BackButton
-                    onClick={this.onBuildNavButtonClick(nextBuildUrl)}
-                    href={nextBuildUrl}
-                >
-                    Next Build
-                </BackButton>
+                <BuildNavigationBar>
+                    {this.getBuildNavButton(buildUrlNoId, prevBuildId, "Previous Build")}
+                    {this.getBuildNavButton(buildUrlNoId, nextBuildId, "Next Build")}
+                </BuildNavigationBar>
             </React.Fragment>
         )
     }

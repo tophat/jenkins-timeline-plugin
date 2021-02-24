@@ -72,3 +72,10 @@ export const BackButton = styled.button`
         border-color: transparent;
     }
 `
+
+export const BuildNavigationBar = styled.div`
+    background-color:rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+`
