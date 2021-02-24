@@ -43,6 +43,22 @@ ShallowWrapper {
         <React.Fragment>
           <ForwardRef>
             <ForwardRef
+              href="http://NaN/"
+              onClick={[Function]}
+            >
+              Previous Build
+            </ForwardRef>
+            <ForwardRef
+              href="http://NaN/"
+              onClick={[Function]}
+            >
+              Next Build
+            </ForwardRef>
+          </ForwardRef>
+        </React.Fragment>,
+        <React.Fragment>
+          <ForwardRef>
+            <ForwardRef
               clickId="timeline build status"
             >
               Status: N/A
@@ -233,6 +249,164 @@ ShallowWrapper {
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <ForwardRef>
+            <ForwardRef
+              href="http://NaN/"
+              onClick={[Function]}
+            >
+              Previous Build
+            </ForwardRef>
+            <ForwardRef
+              href="http://NaN/"
+              onClick={[Function]}
+            >
+              Next Build
+            </ForwardRef>
+          </ForwardRef>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <ForwardRef
+                href="http://NaN/"
+                onClick={[Function]}
+              >
+                Previous Build
+              </ForwardRef>,
+              <ForwardRef
+                href="http://NaN/"
+                onClick={[Function]}
+              >
+                Next Build
+              </ForwardRef>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Previous Build",
+                "href": "http://NaN/",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Previous Build",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bZQynM",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+    padding: 10px;
+    border: 3px solid rgba(0,0,0,0.3);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    color: ",
+                    "#fff",
+                    ";
+
+    &:hover {
+        background-color: rgba(0,0,0,0.3);
+        border-color: transparent;
+    }
+",
+                  ],
+                },
+                "displayName": "styled.button",
+                "render": [Function],
+                "styledComponentId": "sc-bZQynM",
+                "target": "button",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Next Build",
+                "href": "http://NaN/",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Next Build",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bZQynM",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+    padding: 10px;
+    border: 3px solid rgba(0,0,0,0.3);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    color: ",
+                    "#fff",
+                    ";
+
+    &:hover {
+        background-color: rgba(0,0,0,0.3);
+        border-color: transparent;
+    }
+",
+                  ],
+                },
+                "displayName": "styled.button",
+                "render": [Function],
+                "styledComponentId": "sc-bZQynM",
+                "target": "button",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-gzVnrw",
+              "isStatic": true,
+              "rules": Array [
+                "
+    background-color:rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "render": [Function],
+            "styledComponentId": "sc-gzVnrw",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+        "type": Symbol(react.fragment),
       },
       Object {
         "instance": null,
@@ -481,6 +655,22 @@ ShallowWrapper {
           <React.Fragment>
             <ForwardRef>
               <ForwardRef
+                href="http://NaN/"
+                onClick={[Function]}
+              >
+                Previous Build
+              </ForwardRef>
+              <ForwardRef
+                href="http://NaN/"
+                onClick={[Function]}
+              >
+                Next Build
+              </ForwardRef>
+            </ForwardRef>
+          </React.Fragment>,
+          <React.Fragment>
+            <ForwardRef>
+              <ForwardRef
                 clickId="timeline build status"
               >
                 Status: N/A
@@ -671,6 +861,164 @@ ShallowWrapper {
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <ForwardRef>
+              <ForwardRef
+                href="http://NaN/"
+                onClick={[Function]}
+              >
+                Previous Build
+              </ForwardRef>
+              <ForwardRef
+                href="http://NaN/"
+                onClick={[Function]}
+              >
+                Next Build
+              </ForwardRef>
+            </ForwardRef>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <ForwardRef
+                  href="http://NaN/"
+                  onClick={[Function]}
+                >
+                  Previous Build
+                </ForwardRef>,
+                <ForwardRef
+                  href="http://NaN/"
+                  onClick={[Function]}
+                >
+                  Next Build
+                </ForwardRef>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Previous Build",
+                  "href": "http://NaN/",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Previous Build",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bZQynM",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
+    padding: 10px;
+    border: 3px solid rgba(0,0,0,0.3);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    color: ",
+                      "#fff",
+                      ";
+
+    &:hover {
+        background-color: rgba(0,0,0,0.3);
+        border-color: transparent;
+    }
+",
+                    ],
+                  },
+                  "displayName": "styled.button",
+                  "render": [Function],
+                  "styledComponentId": "sc-bZQynM",
+                  "target": "button",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Next Build",
+                  "href": "http://NaN/",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Next Build",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bZQynM",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
+    padding: 10px;
+    border: 3px solid rgba(0,0,0,0.3);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    color: ",
+                      "#fff",
+                      ";
+
+    &:hover {
+        background-color: rgba(0,0,0,0.3);
+        border-color: transparent;
+    }
+",
+                    ],
+                  },
+                  "displayName": "styled.button",
+                  "render": [Function],
+                  "styledComponentId": "sc-bZQynM",
+                  "target": "button",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-gzVnrw",
+                "isStatic": true,
+                "rules": Array [
+                  "
+    background-color:rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "render": [Function],
+              "styledComponentId": "sc-gzVnrw",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+          "type": Symbol(react.fragment),
         },
         Object {
           "instance": null,
