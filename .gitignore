@@ -6,4 +6,4 @@ src/main/webapp/*.html
 work/*
 *.log
 node_modules
-
+*.sw*

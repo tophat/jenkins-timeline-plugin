@@ -1,0 +1,26 @@
+name: Website
+
+on:
+    push:
+        branches: [master]
+
+
+
+defaults:
+    run:
+        working-directory: website
+
+jobs:
+    website:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Build
+              run: |
+                  yarn
+                  yarn build
+            - name: Publish
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: website/build/jenkins-timeline-plugin

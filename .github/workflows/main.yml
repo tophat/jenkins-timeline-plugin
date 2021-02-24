@@ -1,0 +1,26 @@
+name: Jenkins Timeline Plugin CI
+
+on: [pull_request, push]
+
+jobs:
+    lint_and_test_webapp:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Lint
+              run: make lint_webapp
+            - name: Test
+              run: make test_webapp
+
+    plugin_tests:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Setup JDK
+              uses: actions/setup-java@v1
+              with:
+                  java-version: 1.8
+            - name: Test
+              run: make test
