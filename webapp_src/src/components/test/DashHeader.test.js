@@ -19,7 +19,17 @@ describe('DashHeader', () => {
         },
     }
     it('renders the component', () => {
-        const header = shallow(<DashHeader {...defaultProps} />)
+        const requiredProps = {
+            buildId: '3',
+            buildUrl: 'http://localhost:8080/job/test-pipeline/3/',
+            buildName: '#3',
+            longestStage: {
+                title: 'Preparation',
+                duration: 15131,
+            },
+        }
+
+        const header = shallow(<DashHeader {...requiredProps} />)
         expect(header).toMatchSnapshot()
     })
 

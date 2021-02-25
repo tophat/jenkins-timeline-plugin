@@ -8,15 +8,15 @@ ShallowWrapper {
     buildName="#3"
     buildStatus="NOT_AVAILABLE"
     buildUrl="http://localhost:8080/job/test-pipeline/3/"
-    duration={1}
-    endTime={"2021-02-24T23:50:56.797Z"}
+    duration={0}
+    endTime={null}
     longestStage={
       Object {
         "duration": 15131,
         "title": "Preparation",
       }
     }
-    startTime={"2021-02-24T23:50:56.796Z"}
+    startTime={null}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -73,27 +73,12 @@ ShallowWrapper {
             >
               Status: N/A
             </ForwardRef>
-            <ForwardRef
-              clickId="timeline start time"
-            >
-              Started on February 24th 2021, 06:50:56 pm
-            </ForwardRef>
-            <ForwardRef
-              clickId="timeline running time"
-            >
-              Ran for 2 hours
-            </ForwardRef>
           </ForwardRef>
           <ForwardRef>
             <ForwardRef
               clickId="timeline longest stage"
             >
               Longest stage: Preparation (15 seconds)
-            </ForwardRef>
-            <ForwardRef
-              clickId="timeline end time"
-            >
-              Ended on February 24th 2021, 06:50:56 pm
             </ForwardRef>
             <ForwardRef />
           </ForwardRef>
@@ -451,27 +436,12 @@ ShallowWrapper {
               >
                 Status: N/A
               </ForwardRef>
-              <ForwardRef
-                clickId="timeline start time"
-              >
-                Started on February 24th 2021, 06:50:56 pm
-              </ForwardRef>
-              <ForwardRef
-                clickId="timeline running time"
-              >
-                Ran for 2 hours
-              </ForwardRef>
             </ForwardRef>,
             <ForwardRef>
               <ForwardRef
                 clickId="timeline longest stage"
               >
                 Longest stage: Preparation (15 seconds)
-              </ForwardRef>
-              <ForwardRef
-                clickId="timeline end time"
-              >
-                Ended on February 24th 2021, 06:50:56 pm
               </ForwardRef>
               <ForwardRef />
             </ForwardRef>,
@@ -490,16 +460,8 @@ ShallowWrapper {
                 >
                   Status: N/A
                 </ForwardRef>,
-                <ForwardRef
-                  clickId="timeline start time"
-                >
-                  Started on February 24th 2021, 06:50:56 pm
-                </ForwardRef>,
-                <ForwardRef
-                  clickId="timeline running time"
-                >
-                  Ran for 2 hours
-                </ForwardRef>,
+                null,
+                null,
               ],
             },
             "ref": null,
@@ -548,94 +510,8 @@ ShallowWrapper {
                   "withComponent": [Function],
                 },
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": "Started on February 24th 2021, 06:50:56 pm",
-                  "clickId": "timeline start time",
-                },
-                "ref": null,
-                "rendered": "Started on February 24th 2021, 06:50:56 pm",
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-htpNat",
-                    "isStatic": true,
-                    "rules": Array [
-                      "
-    display: flex;
-    flex: 1 0;
-
-    justify-content: center;
-
-    &:first-child {
-        justify-content: flex-start;
-        max-width: 20%;
-    }
-
-    &:last-child {
-        justify-content: flex-end;
-        max-width: 20%;
-    }
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "render": [Function],
-                  "styledComponentId": "sc-htpNat",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                },
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": "Ran for 2 hours",
-                  "clickId": "timeline running time",
-                },
-                "ref": null,
-                "rendered": "Ran for 2 hours",
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-htpNat",
-                    "isStatic": true,
-                    "rules": Array [
-                      "
-    display: flex;
-    flex: 1 0;
-
-    justify-content: center;
-
-    &:first-child {
-        justify-content: flex-start;
-        max-width: 20%;
-    }
-
-    &:last-child {
-        justify-content: flex-end;
-        max-width: 20%;
-    }
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "render": [Function],
-                  "styledComponentId": "sc-htpNat",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                },
-              },
+              null,
+              null,
             ],
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
@@ -671,11 +547,7 @@ ShallowWrapper {
                 >
                   Longest stage: Preparation (15 seconds)
                 </ForwardRef>,
-                <ForwardRef
-                  clickId="timeline end time"
-                >
-                  Ended on February 24th 2021, 06:50:56 pm
-                </ForwardRef>,
+                null,
                 <ForwardRef />,
               ],
             },
@@ -725,50 +597,7 @@ ShallowWrapper {
                   "withComponent": [Function],
                 },
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": "Ended on February 24th 2021, 06:50:56 pm",
-                  "clickId": "timeline end time",
-                },
-                "ref": null,
-                "rendered": "Ended on February 24th 2021, 06:50:56 pm",
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-htpNat",
-                    "isStatic": true,
-                    "rules": Array [
-                      "
-    display: flex;
-    flex: 1 0;
-
-    justify-content: center;
-
-    &:first-child {
-        justify-content: flex-start;
-        max-width: 20%;
-    }
-
-    &:last-child {
-        justify-content: flex-end;
-        max-width: 20%;
-    }
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "render": [Function],
-                  "styledComponentId": "sc-htpNat",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                },
-              },
+              null,
               Object {
                 "instance": null,
                 "key": undefined,
@@ -915,27 +744,12 @@ ShallowWrapper {
               >
                 Status: N/A
               </ForwardRef>
-              <ForwardRef
-                clickId="timeline start time"
-              >
-                Started on February 24th 2021, 06:50:56 pm
-              </ForwardRef>
-              <ForwardRef
-                clickId="timeline running time"
-              >
-                Ran for 2 hours
-              </ForwardRef>
             </ForwardRef>
             <ForwardRef>
               <ForwardRef
                 clickId="timeline longest stage"
               >
                 Longest stage: Preparation (15 seconds)
-              </ForwardRef>
-              <ForwardRef
-                clickId="timeline end time"
-              >
-                Ended on February 24th 2021, 06:50:56 pm
               </ForwardRef>
               <ForwardRef />
             </ForwardRef>
@@ -1293,27 +1107,12 @@ ShallowWrapper {
                 >
                   Status: N/A
                 </ForwardRef>
-                <ForwardRef
-                  clickId="timeline start time"
-                >
-                  Started on February 24th 2021, 06:50:56 pm
-                </ForwardRef>
-                <ForwardRef
-                  clickId="timeline running time"
-                >
-                  Ran for 2 hours
-                </ForwardRef>
               </ForwardRef>,
               <ForwardRef>
                 <ForwardRef
                   clickId="timeline longest stage"
                 >
                   Longest stage: Preparation (15 seconds)
-                </ForwardRef>
-                <ForwardRef
-                  clickId="timeline end time"
-                >
-                  Ended on February 24th 2021, 06:50:56 pm
                 </ForwardRef>
                 <ForwardRef />
               </ForwardRef>,
@@ -1332,16 +1131,8 @@ ShallowWrapper {
                   >
                     Status: N/A
                   </ForwardRef>,
-                  <ForwardRef
-                    clickId="timeline start time"
-                  >
-                    Started on February 24th 2021, 06:50:56 pm
-                  </ForwardRef>,
-                  <ForwardRef
-                    clickId="timeline running time"
-                  >
-                    Ran for 2 hours
-                  </ForwardRef>,
+                  null,
+                  null,
                 ],
               },
               "ref": null,
@@ -1390,94 +1181,8 @@ ShallowWrapper {
                     "withComponent": [Function],
                   },
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "children": "Started on February 24th 2021, 06:50:56 pm",
-                    "clickId": "timeline start time",
-                  },
-                  "ref": null,
-                  "rendered": "Started on February 24th 2021, 06:50:56 pm",
-                  "type": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
-                      "isStatic": true,
-                      "rules": Array [
-                        "
-    display: flex;
-    flex: 1 0;
-
-    justify-content: center;
-
-    &:first-child {
-        justify-content: flex-start;
-        max-width: 20%;
-    }
-
-    &:last-child {
-        justify-content: flex-end;
-        max-width: 20%;
-    }
-",
-                      ],
-                    },
-                    "displayName": "styled.span",
-                    "render": [Function],
-                    "styledComponentId": "sc-htpNat",
-                    "target": "span",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  },
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "children": "Ran for 2 hours",
-                    "clickId": "timeline running time",
-                  },
-                  "ref": null,
-                  "rendered": "Ran for 2 hours",
-                  "type": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
-                      "isStatic": true,
-                      "rules": Array [
-                        "
-    display: flex;
-    flex: 1 0;
-
-    justify-content: center;
-
-    &:first-child {
-        justify-content: flex-start;
-        max-width: 20%;
-    }
-
-    &:last-child {
-        justify-content: flex-end;
-        max-width: 20%;
-    }
-",
-                      ],
-                    },
-                    "displayName": "styled.span",
-                    "render": [Function],
-                    "styledComponentId": "sc-htpNat",
-                    "target": "span",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  },
-                },
+                null,
+                null,
               ],
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
@@ -1513,11 +1218,7 @@ ShallowWrapper {
                   >
                     Longest stage: Preparation (15 seconds)
                   </ForwardRef>,
-                  <ForwardRef
-                    clickId="timeline end time"
-                  >
-                    Ended on February 24th 2021, 06:50:56 pm
-                  </ForwardRef>,
+                  null,
                   <ForwardRef />,
                 ],
               },
@@ -1567,50 +1268,7 @@ ShallowWrapper {
                     "withComponent": [Function],
                   },
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "children": "Ended on February 24th 2021, 06:50:56 pm",
-                    "clickId": "timeline end time",
-                  },
-                  "ref": null,
-                  "rendered": "Ended on February 24th 2021, 06:50:56 pm",
-                  "type": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
-                      "isStatic": true,
-                      "rules": Array [
-                        "
-    display: flex;
-    flex: 1 0;
-
-    justify-content: center;
-
-    &:first-child {
-        justify-content: flex-start;
-        max-width: 20%;
-    }
-
-    &:last-child {
-        justify-content: flex-end;
-        max-width: 20%;
-    }
-",
-                      ],
-                    },
-                    "displayName": "styled.span",
-                    "render": [Function],
-                    "styledComponentId": "sc-htpNat",
-                    "target": "span",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  },
-                },
+                null,
                 Object {
                   "instance": null,
                   "key": undefined,
