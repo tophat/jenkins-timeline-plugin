@@ -15,8 +15,8 @@ describe('DashHeader', () => {
         buildName: '#3',
         longestStage: {
             title: 'Preparation',
-            duration: 15131
-        }
+            duration: 15131,
+        },
     }
     it('renders the component', () => {
         const header = shallow(<DashHeader {...defaultProps} />)
