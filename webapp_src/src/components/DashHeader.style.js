@@ -42,7 +42,7 @@ export const Label = styled.span`
 `
 
 export const TopBar = styled.div`
-    background-color:rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 10px;
     display: flex;
     align-items: center;
@@ -61,21 +61,14 @@ export const LogoBox = styled.div`
 
 export const BackButton = styled.button`
     padding: 10px;
-    border: 3px solid rgba(0,0,0,0.3);
+    border: 3px solid rgba(0, 0, 0, 0.3);
     background-color: transparent;
     cursor: pointer;
     transition: 0.5s;
     color: ${Colours.TEXT};
 
     &:hover {
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0, 0, 0, 0.3);
         border-color: transparent;
     }
-`
-
-export const BuildNavigationBar = styled.div`
-    background-color:rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: flex-start;
-    padding: 10px;
 `

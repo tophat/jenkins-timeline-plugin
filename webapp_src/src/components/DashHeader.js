@@ -10,7 +10,6 @@ import {
     Title,
     LogoBox,
     BackButton,
-    BuildNavigationBar,
 } from './DashHeader.style'
 import { statusMap, buildStatuses } from '../constants'
 import Logo from '../assets/logo.png'
@@ -28,6 +27,8 @@ export default class DashHeader extends React.PureComponent {
             duration: PropTypes.number,
         }).isRequired,
         startTime: PropTypes.instanceOf(moment),
+        onClickBuildNavButton: PropTypes.func.isRequired,
+        runCount: PropTypes.number.isRequired,
     }
 
     static defaultProps = {
@@ -66,20 +67,27 @@ export default class DashHeader extends React.PureComponent {
         window.location.assign(this.props.buildUrl)
     }
 
-    getTopBar = () => (
-        <TopBar>
-            <LogoBox>
-                <img alt="Build timeline" src={Logo} />
-                <Title>{`Build timeline > ${this.props.buildName}`}</Title>
-            </LogoBox>
-            <BackButton
-                onClick={this.onBackButtonClick}
-                href={this.props.buildUrl}
-            >
-                Back to Jenkins
-            </BackButton>
-        </TopBar>
-    )
+    getTopBar = () => {
+        const currBuildId = parseInt(this.props.buildId)
+        const prevBuildId = currBuildId - 1
+        const nextBuildId = currBuildId + 1
+        return (
+            <TopBar>
+                <LogoBox>
+                    <img alt="Build timeline" src={Logo} />
+                    <Title>{`Build timeline > ${this.props.buildName}`}</Title>
+                </LogoBox>
+                {this.getBuildNavButton(prevBuildId, 'Previous Build')}
+                {this.getBuildNavButton(nextBuildId, 'Next Build')}
+                <BackButton
+                    onClick={this.onBackButtonClick}
+                    href={this.props.buildUrl}
+                >
+                    Back to Jenkins
+                </BackButton>
+            </TopBar>
+        )
+    }
 
     getLongestStageLabel = () => {
         if (!this.props.longestStage) return null
@@ -144,50 +152,13 @@ export default class DashHeader extends React.PureComponent {
         )
     }
 
-    onBuildNavButtonClick = buildUrl => () => {
-        window.location.assign(buildUrl)
-    }
-
-    getBuildNavButton = (baseUrl, buildId, displayText) => {
-        if (buildId < 1) return null
-
-        const buildUrl = `${baseUrl}/${buildId}/`
+    getBuildNavButton = (buildId, displayText) => {
+        if (buildId < 1 || buildId > this.props.runCount) return null
 
         return (
-            <BackButton
-                onClick={this.onBuildNavButtonClick(buildUrl)}
-                href={buildUrl}
-            >
+            <BackButton onClick={this.props.onClickBuildNavButton(buildId)}>
                 {displayText}
             </BackButton>
-        )
-    }
-
-    getBuildNavigateBar = () => {
-        const currBuildId = parseInt(this.props.buildId)
-        const prevBuildId = currBuildId - 1
-        const nextBuildId = currBuildId + 1
-
-        const buildUrlNoId = window.location.href
-            .split('/')
-            .slice(0, -2)
-            .join('/')
-
-        return (
-            <React.Fragment>
-                <BuildNavigationBar>
-                    {this.getBuildNavButton(
-                        buildUrlNoId,
-                        prevBuildId,
-                        'Previous Build',
-                    )}
-                    {this.getBuildNavButton(
-                        buildUrlNoId,
-                        nextBuildId,
-                        'Next Build',
-                    )}
-                </BuildNavigationBar>
-            </React.Fragment>
         )
     }
 
@@ -195,7 +166,6 @@ export default class DashHeader extends React.PureComponent {
         return (
             <Container status={this.props.buildStatus}>
                 {this.getTopBar()}
-                {this.getBuildNavigateBar()}
                 {this.getDetailsBar()}
             </Container>
         )
