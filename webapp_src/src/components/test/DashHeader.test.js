@@ -17,6 +17,8 @@ describe('DashHeader', () => {
             title: 'Preparation',
             duration: 15131,
         },
+        onClickBuildNavButton: () => {},
+        runCount: 6,
     }
     it('renders the component', () => {
         const requiredProps = {
@@ -27,6 +29,8 @@ describe('DashHeader', () => {
                 title: 'Preparation',
                 duration: 15131,
             },
+            onClickBuildNavButton: () => {},
+            runCount: 6,
         }
 
         const header = shallow(<DashHeader {...requiredProps} />)

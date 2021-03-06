@@ -107,3 +107,18 @@ export const mockNodeApiResponse = {
         ],
     },
 }
+
+export const mockJobWfApiResponse = {
+    data: {
+        _links: {
+            self: {
+                href: '/job/test/wfapi/describe',
+            },
+            runs: {
+                href: '/job/test/wfapi/runs',
+            },
+        },
+        name: 'test',
+        runCount: 3,
+    },
+}

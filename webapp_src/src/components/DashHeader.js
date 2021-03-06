@@ -77,14 +77,16 @@ export default class DashHeader extends React.PureComponent {
                     <img alt="Build timeline" src={Logo} />
                     <Title>{`Build timeline > ${this.props.buildName}`}</Title>
                 </LogoBox>
-                {this.getBuildNavButton(prevBuildId, 'Previous Build')}
-                {this.getBuildNavButton(nextBuildId, 'Next Build')}
-                <BackButton
-                    onClick={this.onBackButtonClick}
-                    href={this.props.buildUrl}
-                >
-                    Back to Jenkins
-                </BackButton>
+                <div>
+                    {this.getBuildNavButton(prevBuildId, 'Previous Build')}
+                    {this.getBuildNavButton(nextBuildId, 'Next Build')}
+                    <BackButton
+                        onClick={this.onBackButtonClick}
+                        href={this.props.buildUrl}
+                    >
+                        Back to Jenkins
+                    </BackButton>
+                </div>
             </TopBar>
         )
     }
