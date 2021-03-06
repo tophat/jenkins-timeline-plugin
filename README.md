@@ -30,8 +30,8 @@ Jenkins Timeline (TL) Plugin
     <a href="#contributors">
         <img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square"/>
     </a>
-    <a href="https://opensource.tophat.com/slack">
-        <img alt="Slack workspace" src="https://slackinvite.dev.tophat.com/badge.svg"/>
+    <a href="https://discord.gg/YhK3GFcZrk">
+        <img alt="Discord" src="https://img.shields.io/discord/809577721751142410"/>
     </a>
     <a href="https://github.com/tophat/getting-started/blob/master/scorecard.md">
         <img alt="Maturity Score" src="https://img.shields.io/badge/Maturity-Level%203%20--%20Stable-green.svg"/>
