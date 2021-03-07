@@ -4,9 +4,20 @@ exports[`DashHeader renders the component 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DashHeader
+    buildId="3"
+    buildName="#3"
     buildStatus="NOT_AVAILABLE"
+    buildUrl="http://localhost:8080/job/test-pipeline/3/"
     duration={0}
     endTime={null}
+    longestStage={
+      Object {
+        "duration": 15131,
+        "title": "Preparation",
+      }
+    }
+    onClickBuildNavButton={[Function]}
+    runCount={6}
     startTime={null}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -31,14 +42,23 @@ ShallowWrapper {
               src="logo.png"
             />
             <ForwardRef>
-              Build timeline &gt; undefined
+              Build timeline &gt; #3
             </ForwardRef>
           </ForwardRef>
-          <ForwardRef
-            onClick={[Function]}
-          >
-            Back to Jenkins
-          </ForwardRef>
+          <div>
+            <ForwardRef>
+              Previous Build
+            </ForwardRef>
+            <ForwardRef>
+              Next Build
+            </ForwardRef>
+            <ForwardRef
+              href="http://localhost:8080/job/test-pipeline/3/"
+              onClick={[Function]}
+            >
+              Back to Jenkins
+            </ForwardRef>
+          </div>
         </ForwardRef>,
         <React.Fragment>
           <ForwardRef>
@@ -49,6 +69,11 @@ ShallowWrapper {
             </ForwardRef>
           </ForwardRef>
           <ForwardRef>
+            <ForwardRef
+              clickId="timeline longest stage"
+            >
+              Longest stage: Preparation (15 seconds)
+            </ForwardRef>
             <ForwardRef />
           </ForwardRef>
         </React.Fragment>,
@@ -69,14 +94,23 @@ ShallowWrapper {
                 src="logo.png"
               />
               <ForwardRef>
-                Build timeline &gt; undefined
+                Build timeline &gt; #3
               </ForwardRef>
             </ForwardRef>,
-            <ForwardRef
-              onClick={[Function]}
-            >
-              Back to Jenkins
-            </ForwardRef>,
+            <div>
+              <ForwardRef>
+                Previous Build
+              </ForwardRef>
+              <ForwardRef>
+                Next Build
+              </ForwardRef>
+              <ForwardRef
+                href="http://localhost:8080/job/test-pipeline/3/"
+                onClick={[Function]}
+              >
+                Back to Jenkins
+              </ForwardRef>
+            </div>,
           ],
         },
         "ref": null,
@@ -92,7 +126,7 @@ ShallowWrapper {
                   src="logo.png"
                 />,
                 <ForwardRef>
-                  Build timeline &gt; undefined
+                  Build timeline &gt; #3
                 </ForwardRef>,
               ],
             },
@@ -115,10 +149,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": "Build timeline > undefined",
+                  "children": "Build timeline > #3",
                 },
                 "ref": null,
-                "rendered": "Build timeline > undefined",
+                "rendered": "Build timeline > #3",
                 "type": Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
@@ -167,46 +201,157 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "host",
             "props": Object {
-              "children": "Back to Jenkins",
-              "href": undefined,
-              "onClick": [Function],
+              "children": Array [
+                <ForwardRef>
+                  Previous Build
+                </ForwardRef>,
+                <ForwardRef>
+                  Next Build
+                </ForwardRef>,
+                <ForwardRef
+                  href="http://localhost:8080/job/test-pipeline/3/"
+                  onClick={[Function]}
+                >
+                  Back to Jenkins
+                </ForwardRef>,
+              ],
             },
             "ref": null,
-            "rendered": "Back to Jenkins",
-            "type": Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-bZQynM",
-                "isStatic": true,
-                "rules": Array [
-                  "
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Previous Build",
+                  "onClick": undefined,
+                },
+                "ref": null,
+                "rendered": "Previous Build",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bZQynM",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
     padding: 10px;
-    border: 3px solid rgba(0,0,0,0.3);
+    border: 3px solid rgba(0, 0, 0, 0.3);
     background-color: transparent;
     cursor: pointer;
     transition: 0.5s;
     color: ",
-                  "#fff",
-                  ";
+                      "#fff",
+                      ";
 
     &:hover {
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0, 0, 0, 0.3);
         border-color: transparent;
     }
 ",
-                ],
+                    ],
+                  },
+                  "displayName": "styled.button",
+                  "render": [Function],
+                  "styledComponentId": "sc-bZQynM",
+                  "target": "button",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
               },
-              "displayName": "styled.button",
-              "render": [Function],
-              "styledComponentId": "sc-bZQynM",
-              "target": "button",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Next Build",
+                  "onClick": undefined,
+                },
+                "ref": null,
+                "rendered": "Next Build",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bZQynM",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
+    padding: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    color: ",
+                      "#fff",
+                      ";
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-color: transparent;
+    }
+",
+                    ],
+                  },
+                  "displayName": "styled.button",
+                  "render": [Function],
+                  "styledComponentId": "sc-bZQynM",
+                  "target": "button",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Back to Jenkins",
+                  "href": "http://localhost:8080/job/test-pipeline/3/",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Back to Jenkins",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bZQynM",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
+    padding: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    color: ",
+                      "#fff",
+                      ";
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-color: transparent;
+    }
+",
+                    ],
+                  },
+                  "displayName": "styled.button",
+                  "render": [Function],
+                  "styledComponentId": "sc-bZQynM",
+                  "target": "button",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": Object {
@@ -217,7 +362,7 @@ ShallowWrapper {
             "isStatic": true,
             "rules": Array [
               "
-    background-color:rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 10px;
     display: flex;
     align-items: center;
@@ -248,6 +393,11 @@ ShallowWrapper {
               </ForwardRef>
             </ForwardRef>,
             <ForwardRef>
+              <ForwardRef
+                clickId="timeline longest stage"
+              >
+                Longest stage: Preparation (15 seconds)
+              </ForwardRef>
               <ForwardRef />
             </ForwardRef>,
           ],
@@ -347,14 +497,61 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": Array [
-                null,
+                <ForwardRef
+                  clickId="timeline longest stage"
+                >
+                  Longest stage: Preparation (15 seconds)
+                </ForwardRef>,
                 null,
                 <ForwardRef />,
               ],
             },
             "ref": null,
             "rendered": Array [
-              null,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Longest stage: Preparation (15 seconds)",
+                  "clickId": "timeline longest stage",
+                },
+                "ref": null,
+                "rendered": "Longest stage: Preparation (15 seconds)",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
+    display: flex;
+    flex: 1 0;
+
+    justify-content: center;
+
+    &:first-child {
+        justify-content: flex-start;
+        max-width: 20%;
+    }
+
+    &:last-child {
+        justify-content: flex-end;
+        max-width: 20%;
+    }
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
               null,
               Object {
                 "instance": null,
@@ -469,14 +666,23 @@ ShallowWrapper {
                 src="logo.png"
               />
               <ForwardRef>
-                Build timeline &gt; undefined
+                Build timeline &gt; #3
               </ForwardRef>
             </ForwardRef>
-            <ForwardRef
-              onClick={[Function]}
-            >
-              Back to Jenkins
-            </ForwardRef>
+            <div>
+              <ForwardRef>
+                Previous Build
+              </ForwardRef>
+              <ForwardRef>
+                Next Build
+              </ForwardRef>
+              <ForwardRef
+                href="http://localhost:8080/job/test-pipeline/3/"
+                onClick={[Function]}
+              >
+                Back to Jenkins
+              </ForwardRef>
+            </div>
           </ForwardRef>,
           <React.Fragment>
             <ForwardRef>
@@ -487,6 +693,11 @@ ShallowWrapper {
               </ForwardRef>
             </ForwardRef>
             <ForwardRef>
+              <ForwardRef
+                clickId="timeline longest stage"
+              >
+                Longest stage: Preparation (15 seconds)
+              </ForwardRef>
               <ForwardRef />
             </ForwardRef>
           </React.Fragment>,
@@ -507,14 +718,23 @@ ShallowWrapper {
                   src="logo.png"
                 />
                 <ForwardRef>
-                  Build timeline &gt; undefined
+                  Build timeline &gt; #3
                 </ForwardRef>
               </ForwardRef>,
-              <ForwardRef
-                onClick={[Function]}
-              >
-                Back to Jenkins
-              </ForwardRef>,
+              <div>
+                <ForwardRef>
+                  Previous Build
+                </ForwardRef>
+                <ForwardRef>
+                  Next Build
+                </ForwardRef>
+                <ForwardRef
+                  href="http://localhost:8080/job/test-pipeline/3/"
+                  onClick={[Function]}
+                >
+                  Back to Jenkins
+                </ForwardRef>
+              </div>,
             ],
           },
           "ref": null,
@@ -530,7 +750,7 @@ ShallowWrapper {
                     src="logo.png"
                   />,
                   <ForwardRef>
-                    Build timeline &gt; undefined
+                    Build timeline &gt; #3
                   </ForwardRef>,
                 ],
               },
@@ -553,10 +773,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "children": "Build timeline > undefined",
+                    "children": "Build timeline > #3",
                   },
                   "ref": null,
-                  "rendered": "Build timeline > undefined",
+                  "rendered": "Build timeline > #3",
                   "type": Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
@@ -605,46 +825,157 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
               "props": Object {
-                "children": "Back to Jenkins",
-                "href": undefined,
-                "onClick": [Function],
+                "children": Array [
+                  <ForwardRef>
+                    Previous Build
+                  </ForwardRef>,
+                  <ForwardRef>
+                    Next Build
+                  </ForwardRef>,
+                  <ForwardRef
+                    href="http://localhost:8080/job/test-pipeline/3/"
+                    onClick={[Function]}
+                  >
+                    Back to Jenkins
+                  </ForwardRef>,
+                ],
               },
               "ref": null,
-              "rendered": "Back to Jenkins",
-              "type": Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bZQynM",
-                  "isStatic": true,
-                  "rules": Array [
-                    "
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Previous Build",
+                    "onClick": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Previous Build",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bZQynM",
+                      "isStatic": true,
+                      "rules": Array [
+                        "
     padding: 10px;
-    border: 3px solid rgba(0,0,0,0.3);
+    border: 3px solid rgba(0, 0, 0, 0.3);
     background-color: transparent;
     cursor: pointer;
     transition: 0.5s;
     color: ",
-                    "#fff",
-                    ";
+                        "#fff",
+                        ";
 
     &:hover {
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0, 0, 0, 0.3);
         border-color: transparent;
     }
 ",
-                  ],
+                      ],
+                    },
+                    "displayName": "styled.button",
+                    "render": [Function],
+                    "styledComponentId": "sc-bZQynM",
+                    "target": "button",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  },
                 },
-                "displayName": "styled.button",
-                "render": [Function],
-                "styledComponentId": "sc-bZQynM",
-                "target": "button",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Next Build",
+                    "onClick": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Next Build",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bZQynM",
+                      "isStatic": true,
+                      "rules": Array [
+                        "
+    padding: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    color: ",
+                        "#fff",
+                        ";
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-color: transparent;
+    }
+",
+                      ],
+                    },
+                    "displayName": "styled.button",
+                    "render": [Function],
+                    "styledComponentId": "sc-bZQynM",
+                    "target": "button",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  },
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Back to Jenkins",
+                    "href": "http://localhost:8080/job/test-pipeline/3/",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Back to Jenkins",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bZQynM",
+                      "isStatic": true,
+                      "rules": Array [
+                        "
+    padding: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    color: ",
+                        "#fff",
+                        ";
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-color: transparent;
+    }
+",
+                      ],
+                    },
+                    "displayName": "styled.button",
+                    "render": [Function],
+                    "styledComponentId": "sc-bZQynM",
+                    "target": "button",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  },
+                },
+              ],
+              "type": "div",
             },
           ],
           "type": Object {
@@ -655,7 +986,7 @@ ShallowWrapper {
               "isStatic": true,
               "rules": Array [
                 "
-    background-color:rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 10px;
     display: flex;
     align-items: center;
@@ -686,6 +1017,11 @@ ShallowWrapper {
                 </ForwardRef>
               </ForwardRef>,
               <ForwardRef>
+                <ForwardRef
+                  clickId="timeline longest stage"
+                >
+                  Longest stage: Preparation (15 seconds)
+                </ForwardRef>
                 <ForwardRef />
               </ForwardRef>,
             ],
@@ -785,14 +1121,61 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": Array [
-                  null,
+                  <ForwardRef
+                    clickId="timeline longest stage"
+                  >
+                    Longest stage: Preparation (15 seconds)
+                  </ForwardRef>,
                   null,
                   <ForwardRef />,
                 ],
               },
               "ref": null,
               "rendered": Array [
-                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Longest stage: Preparation (15 seconds)",
+                    "clickId": "timeline longest stage",
+                  },
+                  "ref": null,
+                  "rendered": "Longest stage: Preparation (15 seconds)",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-htpNat",
+                      "isStatic": true,
+                      "rules": Array [
+                        "
+    display: flex;
+    flex: 1 0;
+
+    justify-content: center;
+
+    &:first-child {
+        justify-content: flex-start;
+        max-width: 20%;
+    }
+
+    &:last-child {
+        justify-content: flex-end;
+        max-width: 20%;
+    }
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "render": [Function],
+                    "styledComponentId": "sc-htpNat",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  },
+                },
                 null,
                 Object {
                   "instance": null,
@@ -916,4 +1299,4 @@ ShallowWrapper {
     },
   },
 }
-`;
+`

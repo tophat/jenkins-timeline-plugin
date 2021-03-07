@@ -16,6 +16,7 @@ import Logo from '../assets/logo.png'
 
 export default class DashHeader extends React.PureComponent {
     static propTypes = {
+        buildId: PropTypes.string.isRequired,
         buildStatus: PropTypes.string,
         buildUrl: PropTypes.string.isRequired,
         buildName: PropTypes.string.isRequired,
@@ -26,6 +27,8 @@ export default class DashHeader extends React.PureComponent {
             duration: PropTypes.number,
         }).isRequired,
         startTime: PropTypes.instanceOf(moment),
+        onClickBuildNavButton: PropTypes.func.isRequired,
+        runCount: PropTypes.number.isRequired,
     }
 
     static defaultProps = {
@@ -64,20 +67,29 @@ export default class DashHeader extends React.PureComponent {
         window.location.assign(this.props.buildUrl)
     }
 
-    getTopBar = () => (
-        <TopBar>
-            <LogoBox>
-                <img alt="Build timeline" src={Logo} />
-                <Title>{`Build timeline > ${this.props.buildName}`}</Title>
-            </LogoBox>
-            <BackButton
-                onClick={this.onBackButtonClick}
-                href={this.props.buildUrl}
-            >
-                Back to Jenkins
-            </BackButton>
-        </TopBar>
-    )
+    getTopBar = () => {
+        const currBuildId = parseInt(this.props.buildId)
+        const prevBuildId = currBuildId - 1
+        const nextBuildId = currBuildId + 1
+        return (
+            <TopBar>
+                <LogoBox>
+                    <img alt="Build timeline" src={Logo} />
+                    <Title>{`Build timeline > ${this.props.buildName}`}</Title>
+                </LogoBox>
+                <div>
+                    {this.getBuildNavButton(prevBuildId, 'Previous Build')}
+                    {this.getBuildNavButton(nextBuildId, 'Next Build')}
+                    <BackButton
+                        onClick={this.onBackButtonClick}
+                        href={this.props.buildUrl}
+                    >
+                        Back to Jenkins
+                    </BackButton>
+                </div>
+            </TopBar>
+        )
+    }
 
     getLongestStageLabel = () => {
         if (!this.props.longestStage) return null
@@ -139,6 +151,16 @@ export default class DashHeader extends React.PureComponent {
                     <Label />
                 </Row>
             </React.Fragment>
+        )
+    }
+
+    getBuildNavButton = (buildId, displayText) => {
+        if (buildId < 1 || buildId > this.props.runCount) return null
+
+        return (
+            <BackButton onClick={this.props.onClickBuildNavButton(buildId)}>
+                {displayText}
+            </BackButton>
         )
     }
 

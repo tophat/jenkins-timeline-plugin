@@ -25,8 +25,15 @@ export default class Dashboard extends React.Component {
         return `${url}wfapi/describe`
     }
 
-    componentDidMount() {
-        const buildEndpoint = this.buildApiURL(this.props.buildUrl)
+    // endpoint for /job/<jobName>/
+    jobApiURL = () => {
+        return this.props.buildUrl
+            .split('/')
+            .slice(0, -2)
+            .join('/')
+    }
+
+    fetchBuildData = buildEndpoint => {
         axios.get(buildEndpoint).then(result => {
             const stages = result.data.stages
             const promises = stages.map(stage => {
@@ -36,6 +43,7 @@ export default class Dashboard extends React.Component {
             Promise.all(promises).then(stages => {
                 const longestStage = this.findLongestStage(stages)
                 this.setState({
+                    buildId: result.data.id,
                     title: result.data.name,
                     longestStage,
                     stages,
@@ -49,6 +57,23 @@ export default class Dashboard extends React.Component {
                 })
             })
         })
+    }
+
+    componentDidMount() {
+        const buildEndpoint = this.buildApiURL(this.props.buildUrl)
+        axios.get(`${this.jobApiURL()}/wfapi/`).then(result => {
+            this.setState({
+                runCount: result.data.runCount,
+            })
+        })
+        this.fetchBuildData(buildEndpoint)
+    }
+
+    onClickBuildNavButton = buildId => () => {
+        const newBuildEndpoint = this.buildApiURL(
+            `${this.jobApiURL()}/${buildId}/`,
+        )
+        this.fetchBuildData(newBuildEndpoint)
     }
 
     getStageInfo = stageEndpoint => {
@@ -121,6 +146,7 @@ export default class Dashboard extends React.Component {
         return (
             <React.Fragment>
                 <DashHeader
+                    buildId={this.state.buildId}
                     buildStatus={this.state.status}
                     startTime={this.state.start}
                     duration={this.state.duration}
@@ -128,6 +154,8 @@ export default class Dashboard extends React.Component {
                     buildName={this.state.title}
                     longestStage={this.state.longestStage}
                     endTime={endTime}
+                    onClickBuildNavButton={this.onClickBuildNavButton}
+                    runCount={this.state.runCount}
                 />
                 <DashContainer>
                     <Chart

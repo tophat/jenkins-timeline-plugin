@@ -5,7 +5,11 @@ import React from 'react'
 import moment from 'moment'
 
 import Dashboard from '../Dashboard'
-import { mockWfApiResponse, mockNodeApiResponse } from './mockData'
+import {
+    mockWfApiResponse,
+    mockNodeApiResponse,
+    mockJobWfApiResponse,
+} from './mockData'
 
 function flushPromises() {
     return new Promise(resolve => setImmediate(resolve))
@@ -49,6 +53,9 @@ describe('Dashboard', () => {
             const spy = jest
                 .spyOn(axios, 'get')
                 .mockImplementationOnce(() =>
+                    Promise.resolve(mockJobWfApiResponse),
+                )
+                .mockImplementationOnce(() =>
                     Promise.resolve(mockWfApiResponse),
                 )
                 .mockImplementationOnce(() =>
@@ -56,12 +63,15 @@ describe('Dashboard', () => {
                 )
             mount(<Dashboard buildUrl={mockBuildUrl} />)
             return flushPromises().then(() => {
-                expect(spy).toHaveBeenCalledTimes(2)
+                expect(spy).toHaveBeenCalledTimes(3)
             })
         })
 
         it('sets the state correctly from the api data', () => {
             jest.spyOn(axios, 'get')
+                .mockImplementationOnce(() =>
+                    Promise.resolve(mockJobWfApiResponse),
+                )
                 .mockImplementationOnce(() =>
                     Promise.resolve(mockWfApiResponse),
                 )

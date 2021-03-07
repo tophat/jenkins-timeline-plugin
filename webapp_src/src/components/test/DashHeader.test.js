@@ -7,12 +7,33 @@ import { statusMap, buildStatuses } from '../../constants'
 
 describe('DashHeader', () => {
     const defaultProps = {
-        startTime: moment(),
-        endTime: moment(),
+        startTime: moment('2021-02-24T23:50:56.796Z'),
+        endTime: moment('2021-02-24T23:50:56.797Z'),
         duration: 1,
+        buildId: '3',
+        buildUrl: 'http://localhost:8080/job/test-pipeline/3/',
+        buildName: '#3',
+        longestStage: {
+            title: 'Preparation',
+            duration: 15131,
+        },
+        onClickBuildNavButton: () => {},
+        runCount: 6,
     }
     it('renders the component', () => {
-        const header = shallow(<DashHeader />)
+        const requiredProps = {
+            buildId: '3',
+            buildUrl: 'http://localhost:8080/job/test-pipeline/3/',
+            buildName: '#3',
+            longestStage: {
+                title: 'Preparation',
+                duration: 15131,
+            },
+            onClickBuildNavButton: () => {},
+            runCount: 6,
+        }
+
+        const header = shallow(<DashHeader {...requiredProps} />)
         expect(header).toMatchSnapshot()
     })
 
@@ -71,7 +92,7 @@ describe('DashHeader', () => {
             duration: 55000,
         }
         const header = shallow(
-            <DashHeader longestStage={longestStage} {...defaultProps} />,
+            <DashHeader {...defaultProps} longestStage={longestStage} />,
         )
         const label = header.find({ clickId: 'timeline longest stage' })
         expect(label.exists()).toEqual(true)
