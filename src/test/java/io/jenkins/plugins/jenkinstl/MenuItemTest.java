@@ -9,7 +9,7 @@ public class MenuItemTest {
         String mockUrl = "http://jenkinsbox.com/job/1";
         MenuItem item = new MenuItem(mockUrl);
         String composedUrl = item.getUrlName();
-        String expected = "/plugin/pipeline-timeline/index.html?build_url="+mockUrl;
+        String expected = "plugin/pipeline-timeline/index.html?build_url="+mockUrl;
         Assert.assertEquals(composedUrl, expected);
     }
 }
